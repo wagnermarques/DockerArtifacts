@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 
 CONTAINER_NAME=fzl_apache;
 VOLUME_PATH=$1;
@@ -20,6 +20,7 @@ docker rm $CONTAINER_NAME
 
 docker run \
        --name $CONTAINER_NAME -d \
+       -h fzl_apache \
        -p 8080:8090 \
        -v "$VOLUME_PATH":/var/www/html \
        wagnermarques/fzl_apache 

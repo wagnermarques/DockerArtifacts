@@ -1,4 +1,5 @@
-FROM fedora
+FROM fedora:25
+
 MAINTAINER http://fedoraproject.org/wiki/Cloud
 
 #from:https://hub.docker.com/r/fedora/apache/~/dockerfile/           
@@ -7,7 +8,9 @@ LABEL RUN='docker run -d -p 80:80 $IMAGE'
 
 
 # Updating dependencies, installing Apache and cleaning dnf caches to reduce container size
-RUN dnf -y update && dnf -y install httpd && dnf clean all
+# php-fpm.x86_64 : PHP FastCGI Process Manager
+#
+RUN dnf -y update && dnf -y install httpd php php-common php-fpm php-pdo php-gd php-pgsql php-mysqlInd php-xml php-pecl-memcache php-pecl-memcached php-mcrypt php-mbstring -y && dnf clean all
 
 
 ENV APACHE_RUN_USER www-data
@@ -17,6 +20,7 @@ ENV APACHE_LOG_DIR /var/log/apache2
 
 # Creating placeholder file to be served by apache
 RUN echo "Apache index.html Response from Container" >> /var/www/html/index.html
+# We are acception volume whe docker run this container
 
 # We open 80 port, the default one for HTTP for Apache server to listen on
 EXPOSE 80

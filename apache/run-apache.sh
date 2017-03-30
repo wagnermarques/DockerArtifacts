@@ -4,6 +4,7 @@
 # context after restarting the container.  httpd won't start correctly
 # if it thinks it is already running.
 rm -rf /run/httpd/* /tmp/httpd*
-
+echo "Versao do PHP:";
+php -v
 exec /usr/sbin/httpd -D FOREGROUND
 

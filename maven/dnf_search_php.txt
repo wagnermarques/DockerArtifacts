@@ -1,0 +1,1018 @@
+Última verificação de data de vencimento de metadados: 1 day, 2:17:12 atrás em Tue Mar 28 21:13:25 2017.
+============================ N/S Correspondeu: php =============================
+php.x86_64 : PHP scripting language for creating dynamic web sites
+php-punic.noarch : PHP-Unicode CLDR
+php-geos.x86_64 : PHP module for GEOS
+php-Slim.noarch : PHP micro framework
+syck-php.x86_64 : YAML module for php
+php-slim3.noarch : PHP micro framework
+geos-php.x86_64 : PHP modules for GEOS
+sphinx-php.x86_64 : PHP API for Sphinx
+php-jsonlint.noarch : JSON Lint for PHP
+php-common.i686 : Common files for PHP
+php-common.x86_64 : Common files for PHP
+php-nusoap.noarch : SOAP Toolkit for PHP
+php-pear-Auth-OpenID.noarch : PHP OpenID
+php-sentry.noarch : PHP client for Sentry
+php-Raven.noarch : A PHP client for Sentry
+php-gliph.noarch : A graph library for PHP
+php-Kohana.noarch : The Swift PHP Framework
+php-lightopenid.noarch : PHP OpenID library
+remctl-php.x86_64 : PHP interface to remctl
+php-MythTV.noarch : PHP bindings for MythTV
+php-fpm.x86_64 : PHP FastCGI Process Manager
+php-goutte.noarch : A simple PHP web scraper
+devassistant-dap-php.noarch : PHP assistants
+mlt-php.x86_64 : PHP package to work with MLT
+php-Analog.noarch : PHP micro logging package
+php-dbg.x86_64 : The interactive PHP debugger
+php-getid3.noarch : The PHP media file parser
+php-tracy.noarch : Tracy: useful PHP debugger
+php-Assetic.noarch : Asset Management for PHP
+php-libdmtx.x86_64 : PHP bindings for libdmtx
+php-pecl-parsekit.x86_64 : PHP Opcode Analyser
+php-pecl-rrd.x86_64 : PHP Bindings for rrdtool
+php-cli.i686 : Command-line interface for PHP
+php-cli.x86_64 : Command-line interface for PHP
+php-magickwand.x86_64 : PHP API for ImageMagick
+php-sabre-dav.noarch : WebDAV Framework for PHP
+php-when-tests.noarch : Test files for php-when
+php-pecl-mongodb.x86_64 : MongoDB driver for PHP
+php-fpdf-doc.noarch : Documentation for php-fpdf
+php-wikimedia-cdb.noarch : CDB functions for PHP
+phpesp.noarch : PHP-based survey web application
+php-php-gettext.noarch : Gettext emulation in PHP
+gphpedit.x86_64 : A PHP source editor for GNOME 2
+php-fpdf.noarch : PHP class to generate PDF Files
+php-libpuzzle.x86_64 : PHP extension for libpuzzle
+php-PHPParser.noarch : A PHP parser written in PHP
+php-hamcrest.noarch : PHP port of Hamcrest Matchers
+php-libguestfs.x86_64 : PHP bindings for libguestfs
+php-onelogin-php-saml.noarch : SAML support for PHP
+php-pecl-gearman.x86_64 : PHP wrapper to libgearman
+php-smbclient.x86_64 : PHP wrapper for libsmbclient
+php-symfony.noarch : PHP framework for web projects
+php-markdown.noarch : Markdown implementation in PHP
+php-nette-php-generator.noarch : Nette PHP Generator
+php-phpmd-PHP-PMD.noarch : PHPMD - PHP Mess Detector
+php-nrk-Predis.noarch : PHP client library for Redis
+php-pecl-oauth.x86_64 : PHP OAuth consumer extension
+php-phpSmug.noarch : PHP wrapper for the SmugMug API
+php-xmlseclibs.noarch : PHP library for XML Security
+php-league-plates.noarch : Native PHP template system
+php-swiftmailer.noarch : Free Feature-rich PHP Mailer
+php-adodb.noarch : Database abstraction layer for PHP
+php-phpseclib-file-asn1.noarch : Pure-PHP ASN1 parser
+php-solarium.noarch : Solarium PHP Solr client library
+php-EasyRdf-doc.noarch : Documentation for php-EasyRdf
+php-libvirt.x86_64 : PHP language bindings for Libvirt
+php-libvirt-doc.noarch : Documentation for php-libvirt
+php-pear-Auth.noarch : Authentication provider for PHP
+php-pgsql.x86_64 : A PostgreSQL database module for PHP
+php-phpunit-DbUnit.noarch : DbUnit port for PHP/PHPUnit
+php-scssphp.noarch : A compiler for SCSS written in PHP
+php-channel-phpdoc.noarch : Adds phpdoc channel to PEAR
+php-guzzlehttp-guzzle6.noarch : PHP HTTP client library
+php-lessphp.noarch : A compiler for LESS written in PHP
+php-alcaeus-mongo-php-adapter.noarch : Mongo PHP Adapter
+uwsgi-plugin-php.x86_64 : uWSGI - Plugin for PHP support
+php-htmLawed.noarch : PHP code to purify and filter HTML
+php-phpseclib.noarch : PHP Secure Communications Library
+phpFlickr.noarch : PHP client for the Flickr web service
+php-Faker.noarch : A PHP library that generates fake data
+php-JsonSchema.noarch : PHP implementation of JSON schema
+php-nikic-php-parser.noarch : A PHP parser written in PHP
+php-pear-Log.noarch : Abstracted logging facility for PHP
+php-when.noarch : Date/Calendar recursion library for PHP
+php-nikic-php-parser3.noarch : A PHP parser written in PHP
+php-react.noarch : Event-driven, non-blocking I/O with PHP
+php-symfony-phpunit-bridge.noarch : Symfony PHPUnit Bridge
+php-aws-sdk.noarch : Amazon Web Services framework for PHP
+php-mock.noarch : PHP-Mock can mock built-in PHP functions
+php-aws-sdk3.noarch : Amazon Web Services framework for PHP
+php-devel.i686 : Files needed for building PHP extensions
+php-devel.x86_64 : Files needed for building PHP extensions
+php-echonest-api.noarch : PHP classes for the Echo Nest API
+php-phpunit-PHP-Timer.noarch : PHP Utility class for timing
+php-phpunit-PHPUnit.noarch : The PHP Unit Testing framework
+php-Smarty.noarch : Template/Presentation Framework for PHP
+php-opencloud.noarch : PHP SDK for OpenStack/Rackspace APIs
+php-pear-Text-Password.noarch : Creating passwords with PHP
+php-nette-reflection.noarch : Nette PHP Reflection Component
+php-xml.x86_64 : A module for PHP applications which use XML
+php-Smarty2.noarch : Template/Presentation Framework for PHP
+php-ZendFramework.noarch : Leading open-source PHP framework
+php-pear-Auth-samba.noarch : Samba support for php-pear-Auth
+php-redland.x86_64 : PHP modules for the Redland RDF library
+php-wikimedia-assert.noarch : An alternative to PHP's assert
+php-imap.x86_64 : A module for PHP applications that use IMAP
+php-latte.noarch : Latte: the amazing template engine for PHP
+php-ldap.x86_64 : A module for PHP applications that use LDAP
+php-phpunit-environment.noarch : Handle HHVM/PHP environments
+php-Slim-tests.noarch : Test for the PHP Slim Micro Framework
+php-jdorn-sql-formatter.noarch : PHP SQL highlighting library
+php-wikimedia-avro.noarch : A library for using Avro with PHP
+php-json.i686 : JavaScript Object Notation extension for PHP
+php-json.x86_64 : JavaScript Object Notation extension for PHP
+php-mock-integration.noarch : Integration package for PHP-Mock
+php-pear-Auth-radius.noarch : RADIUS support for php-pear-Auth
+php-embedded.x86_64 : PHP library for embedding in applications
+php-pecl-xdebug.x86_64 : PECL package for debugging PHP scripts
+php-phpunit-comparator.noarch : Compare PHP values for equality
+php-zendframework-zend-stratigility.noarch : Middleware for PHP
+php-captchaphp.noarch : PHP very user-friendly CAPTCHA solution
+php-channel-phpqatools.noarch : Adds phpqatools channel to PEAR
+php-pdb.noarch : PHP classes for manipulating Palm OS databases
+php-pear-Net-Curl.noarch : OO interface to PHP's cURL extension
+php-phpseclib-crypt-aes.noarch : Pure-PHP implementation of AES
+php-phpseclib-crypt-des.noarch : Pure-PHP implementation of DES
+php-phpseclib-crypt-rc4.noarch : Pure-PHP implementation of RC4
+php-phpseclib-net-sftp.noarch : Pure-PHP implementation of SFTP
+php-xmpphp.noarch : XMPPHP is the successor to Class.Jabber.PHP
+php-cs-fixer.noarch : A tool to automatically fix PHP code style
+php-phpmyadmin-shapefile.noarch : ESRI ShapeFile library for PHP
+php-simplepie.noarch : A simple Atom/RSS parsing library for PHP
+php-fedora-autoloader-devel.noarch : php-fedora-autoloader devel
+php-pecl-cairo-devel.x86_64 : Header files for php cairo package
+php-phpseclib-net-ssh2.noarch : Pure-PHP implementation of SSHv2
+php-phpspec.noarch : Specification-oriented BDD framework for PHP
+emacs-php-mode.noarch : Major GNU Emacs mode for editing PHP code
+php-channel-phpseclib.noarch : Adds the phpseclib channel to PEAR
+php-di-symfony2-bridge.noarch : PHP-DI integration with Symfony 2
+php-layers-menu.noarch : Hierarchical PHP based DHTML menu system
+php-phpunit-phpcov.noarch : TextUI front-end for PHP_CodeCoverage
+php-phpunit-phpdcd.noarch : Dead Code Detector (DCD) for PHP code
+php-facedetect.x86_64 : PHP extension to access the OpenCV library
+php-phpunit-phpcpd.noarch : Copy/Paste Detector (CPD) for PHP code
+php-robrichards-xmlseclibs.noarch : A PHP library for XML Security
+php-theseer-fDOMDocument.noarch : An Extension to PHP standard DOM
+php-gecko-packages-gecko-php-unit.noarch : Additional PHPUnit tests
+php-nette-tester.noarch : An easy-to-use PHP unit testing framework
+php-phpunit-PHP-CodeCoverage.noarch : PHP code coverage information
+php-tidy.x86_64 : Standard PHP module provides tidy library support
+php-mock-phpunit.noarch : Mock built-in PHP functions with PHPUnit.
+php-enchant.x86_64 : Enchant spelling extension for PHP applications
+php-pear.noarch : PHP Extension and Application Repository framework
+php-phpunit-exporter.noarch : Export PHP variables for visualization
+php-mnapoli-phpunit-easymock.noarch : Helpers to build PHPUnit mocks
+php-pecl-selinux.x86_64 : SELinux binding for PHP scripting language
+php-pimple1.noarch : A simple dependency injection container for PHP
+php-intl.x86_64 : Internationalization extension for PHP applications
+php-simplesamlphp-saml2.noarch : SAML2 PHP library from SimpleSAMLphp
+php-LightweightPicasaAPI.noarch : A lightweight API for Picasa in PHP
+php-channel-dropbox-php.noarch : Adds the Dropbox-PHP channel to PEAR
+php-manual-en.noarch : Documentation for the PHP programming language
+php-pecl-raphf-devel.x86_64 : php-pecl-raphf developer files (header)
+php-pecl-igbinary.i686 : Replacement for the standard PHP serializer
+php-pecl-igbinary.x86_64 : Replacement for the standard PHP serializer
+php-tcpdf.noarch : PHP class for generating PDF documents and barcodes
+php-ZendFramework-Search-Lucene.noarch : Apache Lucene engine PHP port
+php-guzzlehttp-ringphp-tests.noarch : Tests for php-guzzlehttp-ringphp
+php-pear-Cache-Lite.noarch : Fast and Safe little cache system for PHP
+php-pecl-uuid.x86_64 : Universally Unique Identifier extension for PHP
+php-silex.noarch : PHP micro-framework based on the Symfony components
+php-PHPMailer.noarch : PHP email transport class with a lot of features
+php-icewind-smb.noarch : php wrapper for smbclient and libsmbclient-php
+php-mcrypt.x86_64 : Standard PHP module provides mcrypt library support
+php-odbc.x86_64 : A module for PHP applications that use ODBC databases
+php-pear-PHP-CodeSniffer.noarch : PHP coding standards enforcement tool
+php-phpunit-PHPUnit-MockObject.noarch : Mock Object library for PHPUnit
+php-behat-mink.noarch : Browser controller/emulator abstraction for PHP
+php-guzzlehttp-guzzle.noarch : PHP HTTP client and webservice framework
+php-pecl-propro-devel.x86_64 : php-pecl-propro developer files (header)
+php-phpseclib-crypt-twofish.noarch : Pure-PHP implementation of Twofish
+php-twig.noarch : The flexible, fast, and secure template engine for PHP
+vim-syntastic-php.noarch : A syntax checker for php programming language
+kdevelop-php.i686 : Php language and documentation plugins for KDevelop
+kdevelop-php.x86_64 : Php language and documentation plugins for KDevelop
+php-dba.x86_64 : A database abstraction layer module for PHP applications
+php-phpunit-PHPUnit-Selenium.noarch : Selenium RC integration for PHPUnit
+php-twig2.noarch : The flexible, fast, and secure template engine for PHP
+php-doctrine-annotations.noarch : PHP docblock annotations parser library
+php-dropbox-php-Dropbox.noarch : Library for integrating dropbox with PHP
+php-password-compat.noarch : PHP password_* functions for PHP 5.3 and 5.4
+php-phpseclib-crypt-blowfish.noarch : Pure-PHP implementation of Blowfish
+php-phpseclib-crypt-rijndael.noarch : Pure-PHP implementation of Rijndael
+php-whitehat101-apr1-md5.noarch : Apache's APR1-MD5 algorithm in pure PHP
+php-pdo.x86_64 : A database access abstraction module for PHP applications
+php-pear-Net-IDNA2.noarch : PHP library for punycode encoding and decoding
+php-phpspec-prophecy.noarch : Highly opinionated mocking framework for PHP
+php-sebastian-recursion-context.noarch : Recursively process PHP variables
+php-soap.x86_64 : A module for PHP applications that use the SOAP protocol
+php-bartlett-PHP-Reflect.noarch : Adds the ability to reverse-engineer PHP
+php-pear-CAS.noarch : Central Authentication Service client library in php
+php-pear-HTML_Template_PHPLIB.noarch : PHP template system based on preg_*
+php-gmp.x86_64 : A module for PHP applications for using the GNU MP library
+php-mysqlnd.x86_64 : A module for PHP applications that use MySQL databases
+php-phpunit-PHP-TokenStream.noarch : Wrapper around PHP tokenizer extension
+php-process.x86_64 : Modules for PHP script using system process interfaces
+php-pear-PhpDocumentor.noarch : The complete documentation solution for PHP
+php-pear-XML-Parser.noarch : XML parsing class based on PHP's bundled expat
+php-di-phpdoc-reader.noarch : Parses @var and @param values in PHP docblocks
+php-mikey179-vfsstream.noarch : PHP stream wrapper for a virtual file system
+php-pecl-cairo.x86_64 : PECL package for drawing using cairo via PHP scripts
+php-phpseclib-crypt-tripledes.noarch : Pure-PHP implementation of Triple DES
+php-pspell.x86_64 : A module for PHP applications for using pspell interfaces
+php-oauth.noarch : PHP Authentication library for desktop to web applications
+php-bcmath.x86_64 : A module for PHP applications for using the bcmath library
+php-recode.x86_64 : A module for PHP applications for using the recode library
+php-rmccue-requests.noarch : Requests for PHP is a humble HTTP request library
+php-bartlett-umlwriter.noarch : Create UML class diagrams from your PHP source
+php-gd.x86_64 : A module for PHP applications for using the gd graphics library
+php-snmp.x86_64 : A module for PHP applications that query SNMP-managed devices
+php-pimple.noarch : A simple dependency injection container for PHP (extension)
+php-robrichards-xmlseclibs1.noarch : A PHP library for XML Security (version 1)
+php-xmlrpc.x86_64 : A module for PHP applications which use the XML-RPC protocol
+php-domxml-php4-php5.noarch : XML transition from PHP4 domxml to PHP5 dom module
+php-email-address-validation.noarch : A PHP class for validating email addresses
+php-hkit.noarch : Simple PHP5 API for extracting common microformats from a page
+php-zetacomponents-graph-doc.noarch : Documentation for php-zetacomponents-graph
+php-pdepend-PHP-Depend.noarch : PHP_Depend design quality metrics for PHP
+                              : package
+php-opencloud-doc.noarch : Documentation for PHP SDK for OpenStack/Rackspace
+                         : APIs
+php-pear-SOAP.noarch : Simple Object Access Protocol (SOAP) Client/Server for
+                     : PHP
+php-phpseclib-crypt-base.noarch : Base class for phpseclib cipher
+                                : implementations
+php-pimple-lib.noarch : A simple dependency injection container for PHP
+                      : (library)
+php-zipstream.noarch : Streaming dynamic zip from PHP without writing to the
+                     : disk
+php-phpunit-phploc.noarch : A tool for quickly measuring the size of a PHP
+                          : project
+php-evenement.noarch : Événement is a very simple event dispatching library for
+                     : PHP
+php-phpmyadmin-motranslator.noarch : Translation API for PHP using Gettext MO
+                                   : files
+php-phpunit-Version.noarch : Managing the version number of Git-hosted PHP
+                           : projects
+php-simplesamlphp-saml2_1.noarch : SAML2 PHP library from SimpleSAMLphp (version
+                                 : 1)
+php-phpass.noarch : Portable password hashing framework for use in PHP
+                  : applications
+php-phpunit-bytekit.noarch : A command-line tool built on the PHP Bytekit
+                           : extension
+php-pear-Net-DNS2.noarch : PHP Resolver library used to communicate with a DNS
+                         : server
+php-voms-admin.noarch : Web based interface to control VOMS parameters written
+                      : in PHP
+php-react-promise.noarch : A lightweight implementation of CommonJS Promises/A
+                         : for PHP
+nntpgrab-php.x86_64 : PHP module which allows PHP scripts to communicate with
+                    : NNTPGrab
+php-EasyRdf.noarch : A PHP library designed to make it easy to consume and
+                   : produce RDF
+php-bantu-ini-get-wrapper.noarch : Convenience wrapper around PHP's ini_get()
+                                 : function
+php-clue-stream-filter.noarch : A simple and modern approach to stream filtering
+                              : in PHP
+php-deepend-Mockery.noarch : Mockery is a simple but flexible PHP mock object
+                           : framework
+php-phpseclib-crypt-rsa.noarch : Pure-PHP PKCS#1 (v2.1) compliant implementation
+                               : of RSA
+php-mikealmond-musicbrainz.noarch : A PHP library to access MusicBrainz's Web
+                                  : Service v2
+php-pecl-mailparse.x86_64 : PHP PECL package for parsing and working with email
+                          : messages
+php-mbstring.x86_64 : A module for PHP applications which need multi-byte string
+                    : handling
+php-symfony-var-dumper.noarch : Symfony mechanism for exploring and dumping PHP
+                              : variables
+php-interbase.x86_64 : A module for PHP applications that use Interbase/Firebird
+                     : databases
+php-symfony-polyfill.noarch : Symfony polyfills backporting features to lower
+                            : PHP versions
+php-jakub-onderka-php-console-highlighter.noarch : Highlight PHP code in console
+                                                 : (terminal)
+php-maennchen-zipstream-php.noarch : A fast and simple streaming zip file
+                                   : downloader for PHP
+php-andrewsville-php-token-reflection.noarch : Library emulating the PHP
+                                             : internal reflection
+php-digitalsandwich-Phake.noarch : Phake is a PHP mocking framework that is
+                                 : based on Mockito
+php-liuggio-statsd-php-client.noarch : Object Oriented Client for etsy/statsd
+                                     : written in php
+php-phpoffice-phpexcel.noarch : A pure PHP library for reading and writing
+                              : spreadsheet files
+php-tecnickcom-tc-lib-color.noarch : PHP library to manipulate various color
+                                   : representations
+php-paragonie-constant-time-encoding.noarch : Constant-Time Character Encoding
+                                            : in PHP Projects
+php-guzzlehttp-ringphp.noarch : Simple handler system used to power clients and
+                              : servers in PHP
+php-phpseclib-math-biginteger.noarch : Pure-PHP arbitrary precision integer
+                                     : arithmetic library
+php-pear-Net-FTP.noarch : Provides an OO interface to the PHP FTP functions plus
+                        : some additions
+php-phpdocumentor-reflection.noarch : Reflection library to do Static Analysis
+                                    : for PHP Projects
+php-phpseclib-crypt-hash.noarch : Pure-PHP implementations of keyed HMACs and
+                                : hashing functions
+php-patchwork-utf8.noarch : Portable and performant UTF-8, Unicode and Grapheme
+                          : Clusters for PHP
+php-tecnickcom-tc-lib-barcode.noarch : PHP library to generate linear and
+                                     : bidimensional barcodes
+php-zetacomponents-console-tools-doc.noarch : Documentation for
+                                            : php-zetacomponents-console-tools
+php-zordius-lightncandy.noarch : An extremely fast PHP implementation of
+                               : handlebars and mustache
+php-bartlett-php-compatinfo-db.noarch : Reference Database to be used with
+                                      : php-compatinfo library
+php-clue-block-react.noarch : Integrate async React PHP components into your
+                            : blocking environment
+php-doctrine-instantiator.noarch : Instantiate objects in PHP without invoking
+                                 : their constructors
+php-ocramius-instantiator.noarch : Instantiate objects in PHP without invoking
+                                 : their constructors
+mod_suphp.x86_64 : An apache2 module for executing PHP scripts with the
+                 : permissions of their owners
+php-dnoegel-php-xdg-base-dir.noarch : Implementation of the XDG Base Directory
+                                    : Specification for PHP
+php-paragonie-random-compat.noarch : PHP 5.x polyfill for random_bytes() and
+                                   : random_int() from PHP 7
+php-ocramius-code-generator-utils.noarch : A set of code generator utilities
+                                         : built on top of PHP-Parsers
+js-php-date-formatter.noarch : A JS date-time formatting/manipulation library
+                             : using PHP date-time formats
+php-guzzle-Guzzle.noarch : PHP HTTP client library and framework for building
+                         : RESTful web service clients
+php-phpunit-PHPUnit-Story.noarch : Story extension for PHPUnit to facilitate
+                                 : Behaviour-Driven Development
+php-ZendFramework-Serializer-Adapter-Igbinary.noarch : Drop-in replacement for
+     ...: the standard PHP serializer
+php-firephp-firephp-core.noarch : Traditional FirePHPCore library for sending
+                                : PHP variables to the browser
+perl-PHP-Serialization.noarch : Converts between PHP's serialize() output and
+                              : the equivalent Perl structure
+php-zendframework-zend-expressive-zendviewrenderer.noarch : zend-view
+     ...: PhpRenderer integration for Expressive
+php-sebastian-resource-operations.noarch : Provides a list of PHP built-in
+                                         : functions that operate on resources
+php-di.noarch : The dependency injection container for humans
+php-ast.x86_64 : Abstract Syntax Tree
+php-zmq.x86_64 : ZeroMQ messaging
+php-geshi.noarch : Generic syntax highlighter
+php-nette.noarch : Nette Framework
+phplogcon.noarch : A syslog data viewer for the web
+php-PsrLog.noarch : Common interface for logging libraries
+phpMyAdmin.noarch : Handle the administration of MySQL over the World Wide Web
+php-gitter.noarch : Object oriented interaction with Git repositories
+php-pclzip.noarch : Compression and extraction functions for Zip formatted
+                  : archives
+phpPgAdmin.noarch : Web-based PostgreSQL administration
+phpwapmail.noarch : WAP-based e-mail client
+php-Monolog.noarch : Sends your logs to files, sockets, inboxes, databases and
+                   : various web services
+php-mongodb.noarch : MongoDB driver library
+php-opcache.x86_64 : The Zend OPcache
+php-aura-di.noarch : Dependency injection container system
+php-pear-DB.noarch : PEAR: Database Abstraction Layer
+php-pecl-pq.x86_64 : PostgreSQL client library (libpq) binding
+php-nette-di.noarch : Nette Dependency Injection Component
+php-pecl-dio.x86_64 : Direct I/O functions
+php-cssjanus.noarch : Convert CSS stylesheets between left-to-right and
+                    : right-to-left
+php-pear-OLE.noarch : Package for reading and writing OLE containers
+php-pecl-lzf.x86_64 : Extension to handle LZF de/compression
+php-pecl-yac.x86_64 : Lockless user data cache
+php-pecl-zip.x86_64 : A ZIP archive management extension
+phpldapadmin.noarch : Web-based tool for managing LDAP servers
+php-horde-imp.noarch : A web based webmail system
+php-horde-nag.noarch : A web based task list manager
+php-pdo-dblib.x86_64 : PDO driver Microsoft SQL Server and Sybase databases
+php-pecl-amqp.x86_64 : Communicate with any AMQP compliant server
+php-pecl-apcu.i686 : APC User Cache
+php-pecl-apcu.x86_64 : APC User Cache
+php-pecl-http.i686 : Extended HTTP support
+php-pecl-http.x86_64 : Extended HTTP support
+php-pecl-krb5.i686 : Kerberos authentification extension
+php-pecl-krb5.x86_64 : Kerberos authentification extension
+php-pecl-ssh2.x86_64 : Bindings for the libssh2 library
+php-phpiredis.x86_64 : Client extension for Redis
+php-react-dns.noarch : Async DNS resolver
+php-sabre-uri.noarch : Functions for making sense out of URIs
+php-pear-Date.noarch : Date and Time Zone Classes
+php-pear-File.noarch : Common file and directory routines
+php-pear-HTTP.noarch : Miscellaneous HTTP utilities
+php-pear-MDB2.noarch : Database Abstraction Layer
+php-pear-Mail.noarch : Class that provides multiple interfaces for sending
+                     : emails
+php-pecl-apfd.x86_64 : Always Populate Form Data
+php-pecl-fann.x86_64 : Wrapper for FANN Library
+php-pecl-uopz.x86_64 : User Operations for Zend
+php-pecl-yaml.x86_64 : Support for YAML 1.1 serialization using the LibYAML
+                     : library
+php-psr-cache.noarch : PSR Cache: Common interface for caching libraries
+php-sabre-xml.noarch : XML library that you may not hate
+php-horde-ingo.noarch : An email filter rules manager
+php-nette-http.noarch : Nette HTTP Component
+php-nette-mail.noarch : Nette Mail: Sending E-mails
+php-nette-neon.noarch : Nette NEON: parser and generator for Nette Object
+                      : Notation
+php-pear-phing.noarch : A project build system based on Apache Ant
+php-pecl-redis.x86_64 : Extension for communicating with the Redis key-value
+                      : store
+php-react-http.noarch : Library for building an evented http server
+php-sabre-http.noarch : Library for dealing with http requests and responses
+php-di-invoker.noarch : Generic and extensible callable invoker
+php-pear-Cache.noarch : Framework for caching of arbitrary data
+php-pear-Pager.noarch : Data paging class
+php-pecl-event.x86_64 : Provides interface to libevent library
+php-pecl-geoip.x86_64 : Extension to map IP addresses to geographic places
+php-pecl-raphf.x86_64 : Resource and persistent handles factory
+php-pecl-solr2.x86_64 : Object oriented API to Apache Solr
+php-pecl-xattr.x86_64 : Extended attributes
+php-horde-horde.noarch : Horde Application Framework
+php-horde-mnemo.noarch : A web based notes manager
+php-horde-turba.noarch : A web based address book
+php-nette-forms.noarch : Nette Forms: greatly facilitates web forms
+php-nette-utils.noarch : Nette Utility Classes
+php-pecl-sphinx.x86_64 : PECL extension for Sphinx SQL full-text search engine
+php-phpunit-git.noarch : Simple wrapper for Git
+php-react-cache.noarch : Async caching
+php-aura-router.noarch : A web router implementation
+php-channel-nrk.noarch : Adds pear.nrk.io channel to PEAR
+php-feedcreator.noarch : Create RSS feeds
+php-pecl-propro.x86_64 : Property proxy
+php-pecl-radius.x86_64 : Radius client library
+php-pecl-runkit.x86_64 : Mangle with user defined functions and classes
+php-pecl-ssdeep.x86_64 : Wrapper for libfuzzy library
+php-pirum-Pirum.noarch : A simple PEAR channel server manager
+php-sabre-event.noarch : Lightweight library for event-based programming
+php-doctrine-orm.noarch : Doctrine Object-Relational-Mapper (ORM)
+php-horde-passwd.noarch : Horde password changing application
+php-horde-wicked.noarch : Wiki application
+php-oojs-oojs-ui.noarch : Object-Oriented JavaScript – User Interface
+php-pear-XML-RSS.noarch : RSS parser
+php-react-socket.noarch : Async, streaming plaintext TCP/IP and secure TLS
+                        : socket server
+php-react-stream.noarch : Basic readable and writable stream interfaces that
+                        : support piping
+php-symfony-form.noarch : Symfony Form Component
+php-symfony-intl.noarch : Symfony Intl Component
+php-symfony-ldap.noarch : Symfony LDAP Component
+php-symfony-yaml.noarch : Symfony Yaml Component
+php-IDNA_Convert.noarch : Provides conversion of internationalized strings to
+                        : UTF8
+php-kdyby-events.noarch : Events for Nette Framework
+php-nette-finder.noarch : Nette Finder: Files Searching
+php-pear-CodeGen.noarch : Framework to create code generators that operate on
+                        : XML descriptions
+php-pear-Net-URL.noarch : Easy parsing of URLs
+php-pear-XML-SVG.noarch : API for building SVG documents
+php-pecl-apcu-bc.x86_64 : APCu Backwards Compatibility Module
+php-pecl-gmagick.x86_64 : Provides a wrapper to the GraphicsMagick library
+php-pecl-imagick.x86_64 : Provides a wrapper to the ImageMagick library
+php-pecl-msgpack.x86_64 : API for communicating with MessagePack serialization
+php-pecl-xmldiff.x86_64 : Pecl package for XML diff and merge
+php-phpunit-diff.noarch : Diff implementation
+php-symfony-YAML.noarch : The Symfony YAML Component
+php-doctrine-dbal.noarch : Doctrine Database Abstraction Layer (DBAL)
+php-nette-caching.noarch : Nette Caching Component
+php-pear-Net-SMTP.noarch : Provides an implementation of the SMTP protocol
+php-psr-container.noarch : Common Container Interface
+php-symfony-asset.noarch : Symfony Asset Component
+php-symfony-debug.noarch : Symfony Debug Component
+php-channel-drush.noarch : Adds pear.drush.org channel to PEAR
+php-channel-horde.noarch : Adds pear.horde.org channel to PEAR
+php-channel-phing.noarch : Adds phing channel to PEAR
+php-channel-pirum.noarch : Adds pear.pirum-project.org channel to PEAR
+php-horde-content.noarch : Tagging application
+php-kukulich-fshl.noarch : FSHL: fast syntax highlighter
+php-natxet-cssmin.noarch : Configurable CSS parser and minifier
+php-pear-File-CSV.noarch : Read and write of CSV files
+php-pear-Net-DIME.noarch : Implements Direct Internet Message Encapsulation
+                         : (DIME)
+php-pear-Net-IMAP.noarch : Provides an implementation of the IMAP protocol
+php-pear-Net-POP3.noarch : Provides a POP3 class to access POP3 server
+php-pear-Net-Ping.noarch : Execute ping
+php-pear-Net-URL2.noarch : Class for parsing and handling URL
+php-pear-Validate.noarch : Validation Class for Various Data Types
+php-pecl-memcache.x86_64 : Extension to work with the Memcached caching daemon
+php-sabre-vobject.noarch : Library to parse and manipulate iCalendar and vCard
+                         : objects
+php-stack-builder.noarch : Builder for stack middlewares based on
+                         : HttpKernelInterface
+php-true-punycode.noarch : A Bootstring encoding of Unicode for IDNA
+php-zendframework.noarch : Zend Framework
+php-doctrine-cache.noarch : Doctrine Cache
+php-horde-Horde-Db.noarch : Horde Database Libraries
+php-nette-database.noarch : Nette Database Component
+php-nette-security.noarch : Nette Security: Access Control Component
+php-pear-Auth-SASL.noarch : Abstraction of various SASL mechanism responses
+php-pear-crypt-gpg.noarch : GNU Privacy Guard (GnuPG)
+php-pecl-memcached.x86_64 : Extension to work with the Memcached caching daemon
+php-sabre-vobject4.noarch : Library to parse and manipulate iCalendar and vCard
+                          : objects
+php-symfony-common.noarch : Symfony common files
+php-symfony-config.noarch : Symfony Config Component
+php-symfony-finder.noarch : Symfony Finder Component
+php-symfony-locale.noarch : Symfony Locale Component
+php-PHP-CSS-Parser.noarch : A Parser for CSS Files
+php-doctrine-lexer.noarch : Base library for a lexer that can be used in
+                          : top-down, recursive descent parsers
+php-league-climate.noarch : Allows you to easily output colored text, special
+                          : formats, and more
+php-pear-Auth_HTTP.noarch : Class providing HTTP authentication methods
+php-pear-File-Find.noarch : Class which facilitates the search of filesystems
+php-pear-File-Util.noarch : Common file and directory utility functions
+php-pear-Mail-Mime.noarch : Classes to create MIME messages
+php-pear-Net-LDAP2.noarch : Object oriented interface for searching and
+                          : manipulating LDAP-entries
+php-pear-Net-Sieve.noarch : Handles talking to a sieve server
+php-pear-Text-Diff.noarch : Engine for performing and rendering text diffs
+php-pear-text-wiki.noarch : Transforms Wiki and BBCode markup into XHTML, LaTeX
+                          : or plain text
+php-pecl-json-post.x86_64 : JSON POST handler
+php-pecl-libsodium.x86_64 : Wrapper for the Sodium cryptographic library
+php-sabredav-Sabre.noarch : Base for Sabre_DAV packages
+php-composer-semver.noarch : Semver library that offers utilities, version
+                           : constraint parsing and validation
+php-guzzlehttp-psr7.noarch : PSR-7 message implementation
+php-horde-Horde-Dav.noarch : Horde library for WebDAV, CalDAV, CardDAV
+php-horde-Horde-Log.noarch : Horde Logging library
+php-horde-Horde-Nls.noarch : Native Language Support (NLS)
+php-horde-Horde-Vfs.noarch : Virtual File System API
+php-horde-kronolith.noarch : A web based calendar
+php-icewind-streams.noarch : A set of generic stream wrappers
+php-nette-bootstrap.noarch : Nette Bootstrap
+php-pear-Net-Socket.noarch : Network Socket Interface
+php-pecl-apcu-devel.i686 : APCu developer files (header)
+php-pecl-apcu-devel.x86_64 : APCu developer files (header)
+php-pecl-http-devel.i686 : Extended HTTP support developer files (header)
+php-pecl-http-devel.x86_64 : Extended HTTP support developer files (header)
+php-pecl-krb5-devel.i686 : Kerberos extension developer files (header)
+php-pecl-krb5-devel.x86_64 : Kerberos extension developer files (header)
+php-seld-cli-prompt.noarch : Allows you to prompt for user input on the command
+                           : line
+php-seld-phar-utils.noarch : PHAR file format utilities
+php-symfony-console.noarch : Symfony Console Component
+php-symfony-process.noarch : Symfony Process Component
+php-symfony-routing.noarch : Symfony Routing Component
+php-twig-extensions.noarch : Twig extensions
+php-channel-deepend.noarch : Survive The Deep End PEAR Channel
+php-channel-symfony.noarch : Adds symfony project channel to PEAR
+php-doctrine-common.noarch : Common library for Doctrine projects
+php-horde-Horde-Cli.noarch : Horde Command Line Interface API
+php-horde-Horde-Pdf.noarch : Horde PDF library
+php-horde-Horde-Rdo.noarch : Rampage Data Objects
+php-horde-Horde-Rpc.noarch : Horde RPC API
+php-horde-Horde-Url.noarch : Horde Url class
+php-horde-horde-lz4.x86_64 : Horde LZ4 Compression Extension
+php-kolab-net-ldap3.noarch : Advanced functionality for accessing LDAP
+                           : directories
+php-nette-tokenizer.noarch : Nette Tokenizer
+php-pear-Crypt-CHAP.noarch : Class to generate CHAP packets
+php-pear-File-Fstab.noarch : Read and write fstab files
+php-pear-HTTP-OAuth.noarch : Implementation of the OAuth spec
+php-pear-Image-Text.noarch : Advanced text manipulations in images
+php-horde-Horde-Auth.noarch : Horde Authentication API
+php-horde-Horde-Core.noarch : Horde Core Framework libraries
+php-horde-Horde-Date.noarch : Horde Date package
+php-horde-Horde-Idna.noarch : IDNA backend normalization package
+php-horde-Horde-Ldap.noarch : Horde LDAP libraries
+php-horde-Horde-Mime.noarch : Horde MIME Library
+php-horde-Horde-Pack.noarch : Horde Pack Utility
+php-horde-Horde-Smtp.noarch : Horde SMTP Client
+php-horde-Horde-Test.noarch : Horde testing base classes
+php-league-flysystem.noarch : Filesystem abstraction: Many filesystems, one API
+php-nikic-fast-route.noarch : Fast implementation of a regular expression based
+                            : router
+php-react-event-loop.noarch : Event loop abstraction layer that libraries can
+                            : use for evented I/O
+php-symfony-security.noarch : Symfony Security Component
+php-theseer-autoload.noarch : A tool and library to generate autoload code
+php-webmozart-assert.noarch : Assertions to validate method input/output with
+                            : nice error messages
+php-asm89-stack-cors.noarch : Cross-origin resource sharing library and stack
+                            : middleware
+php-channel-pearplex.noarch : Adds the PearPlex channel to PEAR
+php-channel-sabredav.noarch : Adds the SabreDAV channel to PEAR
+php-channel-symfony2.noarch : Adds pear.symfony.com channel to PEAR
+php-google-apiclient.noarch : Client library for Google APIs
+php-horde-Horde-Argv.noarch : Horde command-line argument parsing package
+php-horde-Horde-Data.noarch : Horde Data API
+php-horde-Horde-Feed.noarch : Horde Feed libraries
+php-horde-Horde-Form.noarch : Horde Form API
+php-horde-Horde-Http.noarch : Horde HTTP libraries
+php-horde-Horde-Imsp.noarch : IMSP API
+php-horde-Horde-Itip.noarch : iTip invitation response handling
+php-horde-Horde-Lock.noarch : Horde Resource Locking System
+php-horde-Horde-Mail.noarch : Horde Mail Library
+php-horde-Horde-Mapi.noarch : MAPI utility library
+php-horde-Horde-Role.noarch : PEAR installer role used to install Horde
+                            : components
+php-horde-Horde-Tree.noarch : Horde Tree API
+php-horde-Horde-Util.noarch : Horde Utility Libraries
+php-horde-Horde-View.noarch : Horde View API
+php-nette-deprecated.noarch : APIs and features removed from Nette Framework
+php-pear-Auth-RADIUS.noarch : Wrapper Classes for the RADIUS PECL
+php-pear-Auth-Yubico.noarch : Authentication class for verifying Yubico OTP
+                            : tokens
+php-pear-File-Passwd.noarch : Manipulate many kinds of password files
+php-pear-HTML-Common.noarch : Base class for other HTML classes
+php-pear-HTTP-Client.noarch : Easy way to perform multiple HTTP requests and
+                            : process their results
+php-pear-HTTP-Upload.noarch : Secure managment of files submitted via HTML Forms
+php-pear-MDB2-Schema.noarch : Database Abstraction Layer
+php-pear-Text-Figlet.noarch : Render text using FIGlet fonts
+php-phpspec-php-diff.noarch : A library for generating differences between two
+                            : hashable objects
+php-psr-http-message.noarch : Common interface for HTTP messages (PSR-7)
+php-wikimedia-ip-set.noarch : Library to match IP addresses against CIDR
+                            : specifications
+php-SymfonyCmfRouting.noarch : Extends the Symfony2 routing component for
+                             : dynamic routes and chaining
+php-gettext-languages.noarch : Generate gettext language lists with plural rules
+php-horde-Horde-Cache.noarch : Horde Caching API
+php-horde-Horde-Crypt.noarch : Horde Cryptography API
+php-horde-Horde-Prefs.noarch : Horde Preferences API
+php-horde-Horde-Share.noarch : Horde Shared Permissions System
+php-myclabs-deep-copy.noarch : Create deep copies (clones) of your objects
+php-nette-application.noarch : Nette Application MVC Component
+php-react-http-client.noarch : Asynchronous HTTP client library
+php-symfony-stopwatch.noarch : Symfony Stopwatch Component
+php-symfony-validator.noarch : Symfony Validator Component
+php-udan11-sql-parser.noarch : A validating SQL lexer and parser with a focus on
+                             : MySQL dialect
+php-ZendFramework-Pdf.noarch : PDF file handling helper
+php-container-interop.noarch : Promoting the interoperability of container
+                             : objects (DIC, SL, etc.)
+php-fedora-autoloader.noarch : Fedora Autoloader
+php-horde-Horde-Alarm.noarch : Horde Alarm Libraries
+php-horde-Horde-Group.noarch : Horde User Groups System
+php-horde-Horde-Image.noarch : Horde Image API
+php-horde-Horde-Mongo.noarch : Horde Mongo Configuration
+php-horde-Horde-Oauth.noarch : Horde OAuth client/server
+php-horde-Horde-Perms.noarch : Horde Permissions System
+php-horde-Horde-Queue.noarch : Horde Queue
+php-horde-Horde-Token.noarch : Horde Token API
+php-masterminds-html5.noarch : An HTML5 parser and serializer
+php-mediawiki-at-ease.noarch : Safe replacement to @ for suppressing warnings
+php-nette-safe-stream.noarch : Nette SafeStream: Atomic Operations
+php-ocramius-lazy-map.noarch : Lazy instantiation logic for a map of objects
+php-pear-CodeGen-PECL.noarch : Tool to generate PECL extensions from an XML
+                             : description
+php-pear-HTTP-Request.noarch : Provides an easy way to perform HTTP requests
+php-pear-Text-CAPTCHA.noarch : Generation of CAPTCHAs
+php-composer-ca-bundle.noarch : Lets you find a path to the system CA
+php-nette-robot-loader.noarch : Nette RobotLoader: comfortable autoloading
+php-symfony-filesystem.noarch : Symfony Filesystem Component
+php-symfony-serializer.noarch : Symfony Serializer Component
+php-symfony-templating.noarch : Symfony Templating Component
+php-ZendFramework-Dojo.noarch : Zend Framework Dojo Toolkit integration
+                              : component
+php-ZendFramework-Feed.noarch : Live syndication feeds helper
+php-ZendFramework-Ldap.noarch : Basic LDAP operations API
+php-ZendFramework-Soap.noarch : SOAP web services server part helper
+php-ZendFramework-full.noarch : Meta package to install full Zend Framework
+php-doctrine-inflector.noarch : Common string manipulations with regard to
+                              : casing and singular/plural rules
+php-guzzlehttp-streams.noarch : Provides a simple abstraction over streams of
+                              : data
+php-horde-Horde-Editor.noarch : Horde Editor API
+php-horde-Horde-Routes.noarch : Horde Routes URL mapping system
+php-horde-Horde-Scribe.noarch : Scribe
+php-horde-Horde-Secret.noarch : Secret Encryption API
+php-horde-Horde-Stream.noarch : Horde stream handler
+php-horde-Horde-SyncMl.noarch : Horde_SyncMl provides an API for processing
+                              : SyncML requests
+php-horde-Horde-Thrift.noarch : Thrift
+php-patchwork-jsqueeze.noarch : Efficient JavaScript minification
+php-pear-Console-Table.noarch : Class that makes it easy to build console style
+                              : tables
+php-pear-DB-DataObject.noarch : An SQL Builder, Object Interface to Database
+                              : Tables
+php-pear-Date-Holidays.noarch : Driver based class to calculate holidays
+php-pear-HTTP-Request2.noarch : Provides an easy way to perform HTTP requests
+php-pear-Numbers-Words.noarch : Methods for spelling numerals in words
+php-pecl-msgpack-devel.x86_64 : MessagePack developer files (header)
+php-guzzlehttp-promises.noarch : Guzzle promises library
+php-horde-Horde-Browser.noarch : Horde Browser API
+php-horde-Horde-Support.noarch : Horde support package
+php-pear-HTML-QuickForm.noarch : Class for creating, validating, processing HTML
+                               : forms
+php-pecl-igbinary-devel.i686 : Igbinary developer files (header)
+php-pecl-igbinary-devel.x86_64 : Igbinary developer files (header)
+php-react-child-process.noarch : Library for executing child processes
+php-react-promise-timer.noarch : Trivial timeout implementation for Promises
+php-react-socket-client.noarch : Async connector to open TCP/IP and SSL/TLS
+                               : based connections
+php-symfony-browser-kit.noarch : Symfony BrowserKit Component
+php-symfony-dom-crawler.noarch : Symfony DomCrawler Component
+php-symfony-http-kernel.noarch : Symfony HttpKernel Component
+php-symfony-translation.noarch : Symfony Translation Component
+php-symfony-twig-bridge.noarch : Symfony Twig Bridge
+php-symfony-twig-bundle.noarch : Symfony Twig Bundle
+php-ZendFramework-demos.noarch : Demos for the Zend Framework
+php-composer-installers.noarch : A multi-framework Composer library installer
+php-horde-Horde-History.noarch : API for tracking the history of an object
+php-iamcal-lib-autolink.noarch : Adds anchors to urls in a text
+php-mcnetic-zipstreamer.noarch : Stream zip files without i/o overhead
+php-pear-Crypt-Blowfish.noarch : Quick two-way blowfish encryption
+php-pear-File-SMBPasswd.noarch : Class for managing SAMBA style password files
+php-pear-Net-URL-Mapper.noarch : Simple and flexible way to build nice URLs for
+                               : web applications
+php-pear-XML-Beautifier.noarch : Class to format XML documents
+php-pear-XML-Serializer.noarch : Swiss-army knife for reading and writing XML
+                               : files
+php-pear-console-color2.noarch : Easily use ANSI console colors in your
+                               : application
+php-phpunit-PHP-Invoker.noarch : Utility class for invoking callables with a
+                               : timeout
+php-webmozart-path-util.noarch : Cross-platform utilities for file paths
+php-wikimedia-utfnormal.noarch : Unicode normalization functions
+php-zetacomponents-base.noarch : Zeta Base Component
+php-doctrine-collections.noarch : Collections abstraction library
+php-horde-Horde-Compress.noarch : Horde Compression API
+php-horde-Horde-Timezone.noarch : Timezone library
+php-symfony-class-loader.noarch : Symfony ClassLoader Component
+php-symfony-css-selector.noarch : Symfony CssSelector Component
+php-symfony-debug-bundle.noarch : Symfony Debug Bundle
+php-ZendFramework-extras.noarch : Zend Framework Extras (ZendX)
+php-apigen-theme-default.noarch : Default Theme for Apigen
+php-channel-htmlpurifier.noarch : Adds htmlpurifier channel to PEAR
+php-horde-Horde-Injector.noarch : Horde dependency injection container
+php-horde-Horde-Memcache.noarch : Horde Memcache API
+php-horde-Horde-Template.noarch : Horde Template System
+php-ircmaxell-random-lib.noarch : A Library For Generating Secure Random Numbers
+php-owncloud-tarstreamer.noarch : Streaming dynamic tar files
+php-pear-Console-Getargs.noarch : Command-line arguments and parameters parser
+php-pear-HTML_Javascript.noarch : Class for creating simple JS scripts
+php-pear-Mail-mimeDecode.noarch : Class to decode mime messages
+php-phpunit-FinderFacade.noarch : Wrapper for Symfony Finder component
+php-symfony-security-acl.noarch : Symfony Security Component - ACL (Access
+                                : Control List)
+php-zetacomponents-graph.noarch : Zeta Graph Component
+php-fig-http-message-util.noarch : PSR Http Message Util
+php-horde-Horde-CssMinify.noarch : CSS Minification
+php-horde-Horde-Icalendar.noarch : iCalendar API
+php-phpunit-File-Iterator.noarch : FilterIterator implementation that filters
+                                 : files based on a list of suffixes
+php-symfony-property-info.noarch : Symfony Property Info Component
+php-zendframework-zendpdf.noarch : Zend Framework ZendPdf component
+php-ZendFramework-Captcha.noarch : Zend Framework CAPTCHA component
+php-doctrine-datafixtures.noarch : Data Fixtures for all Doctrine Object
+                                 : Managers
+php-horde-Horde-Exception.noarch : Horde Exception Handler
+php-horde-Horde-HashTable.noarch : Horde Hash Table Interface
+php-horde-Horde-Serialize.noarch : Data Encapulation API
+php-horde-Horde-Text-Diff.noarch : Engine for performing and rendering text
+                                 : diffs
+php-horde-Horde-Xml-Wbxml.noarch : Provides an API for encoding and decoding
+                                 : WBXML documents
+php-mtdowling-transducers.noarch : Composable algorithmic transformations
+php-nette-component-model.noarch : Nette Component Model
+php-pear-File-Bittorrent2.noarch : Decode and Encode data in Bittorrent format
+php-pear-HTML-Template-IT.noarch : Integrated Templates
+php-phpunit-Text-Template.noarch : Simple template engine
+php-zendframework-zend-db.noarch : Zend Framework Db component
+php-zendframework-zend-di.noarch : Zend Framework Di component
+php-zendframework-zendxml.noarch : Zend Framework ZendXml component
+php-znerol-php-stringprep.noarch : Implementation of RFC 3454 Preparation of
+                                 : Internationalized Strings
+php-composer-spdx-licenses.noarch : SPDX licenses list and validation library
+php-mtdowling-jmespath-php.noarch : Declaratively specify how to extract
+                                  : elements from a JSON document
+php-ocramius-proxy-manager.noarch : OOP proxy wrappers utilities
+php-symfony-monolog-bridge.noarch : Symfony Monolog Bridge
+php-ZendFramework-Services.noarch : Web service APIs for a number of providers
+php-apigen-theme-bootstrap.noarch : Twitter Bootstrap Theme for Apigen
+php-horde-Horde-Autoloader.noarch : Horde Autoloader
+php-horde-Horde-Constraint.noarch : Horde Constraint library
+php-horde-Horde-Controller.noarch : Horde Controller libraries
+php-horde-Horde-Css-Parser.noarch : Horde CSS Parser
+php-horde-Horde-LoginTasks.noarch : Horde Login Tasks System
+php-horde-Horde-Stringprep.noarch : Preparation of Internationalized Strings
+                                  : ("stringprep")
+php-ircmaxell-security-lib.noarch : A Base Security Library
+php-lukasreschke-id3parser.noarch : ID3 parser library
+php-pear-Date-Holidays-USA.noarch : Driver based class to calculate holidays in
+                                  : USA
+php-pear-MDB2-Driver-pgsql.noarch : PostgreSQL MDB2 driver
+php-phpseclib-crypt-random.noarch : Random Number Generator
+php-sabredav-Sabre_VObject.noarch : An intuitive reader for iCalendar and vCard
+                                  : objects
+php-sebastian-global-state.noarch : Snapshotting of global state
+php-zendframework-zend-dom.noarch : Zend Framework Dom component
+php-zendframework-zend-log.noarch : Zend Framework Log component
+php-zendframework-zend-mvc.noarch : Zend Framework Mvc component
+php-zendframework-zend-tag.noarch : Zend Framework Tag component
+php-zendframework-zend-uri.noarch : Zend Framework Uri component
+php-bartlett-PHP-CompatInfo.noarch : Find out version and the extensions
+                                   : required for a piece of code to run
+php-horde-Horde-Imap-Client.noarch : Horde IMAP abstraction interface
+php-horde-Horde-Translation.noarch : Horde translation library
+php-jeremeamia-superclosure.noarch : Serialize Closure objects, including their
+                                   : context and binding
+php-symfony-doctrine-bridge.noarch : Symfony Doctrine Bridge
+php-symfony-http-foundation.noarch : Symfony HttpFoundation Component
+php-symfony-property-access.noarch : Symfony PropertyAccess Component
+php-symfony-security-bundle.noarch : Symfony Security Bundle
+php-tcpdf-dejavu-sans-fonts.noarch : DejaVu sans-serif fonts for tcpdf
+php-zendframework-zend-file.noarch : Zend Framework File component
+php-zendframework-zend-form.noarch : Zend Framework Form component
+php-zendframework-zend-http.noarch : Zend Framework Http component
+php-zendframework-zend-ldap.noarch : Zend Framework Ldap component
+php-zendframework-zend-mail.noarch : Zend Framework Mail component
+php-zendframework-zend-math.noarch : Zend Framework Math component
+php-zendframework-zend-mime.noarch : Zend Framework Mime component
+php-channel-digitalsandwich.noarch : Adds digitalsandwich channel to PEAR
+php-egulias-email-validator.noarch : A library for validating emails
+php-horde-Horde-Date-Parser.noarch : Horde Date Parser
+php-horde-Horde-ListHeaders.noarch : Horde List Headers Parsing Library
+php-horde-Horde-Mime-Viewer.noarch : Horde MIME Viewer Library
+php-horde-Horde-OpenXchange.noarch : Open-Xchange Connector
+php-horde-Horde-Text-Filter.noarch : Horde Text Filter API
+php-horde-Horde-Text-Flowed.noarch : Horde API for flowed text as per RFC 3676
+php-horde-Horde-Xml-Element.noarch : Horde Xml Element object
+php-pear-MDB2-Driver-mysqli.noarch : MySQL Improved MDB2 driver
+php-zendframework-zend-code.noarch : Zend Framework Code component
+php-zendframework-zend-feed.noarch : Zend Framework Feed component
+php-zendframework-zend-i18n.noarch : Zend Framework I18n component
+php-zendframework-zend-json.noarch : Zend Framework Json component
+php-zendframework-zend-soap.noarch : Zend Framework Soap component
+php-zendframework-zend-test.noarch : Zend Framework Test component
+php-zendframework-zend-text.noarch : Zend Framework Text component
+php-zendframework-zend-view.noarch : Zend Framework View component
+php-doctrine-doctrine-bundle.noarch : Symfony Bundle for Doctrine
+php-symfony-event-dispatcher.noarch : Symfony EventDispatcher Component
+php-symfony-framework-bundle.noarch : Symfony Framework Bundle
+php-symfony-options-resolver.noarch : Symfony OptionsResolver Component
+php-tcpdf-dejavu-serif-fonts.noarch : DejaVu serif fonts for tcpdf
+php-zendframework-zend-cache.noarch : Zend Framework Cache component
+php-horde-Horde-Kolab-Format.noarch : A package for reading/writing Kolab data
+                                    : formats
+php-horde-Horde-Kolab-Server.noarch : A package for manipulating the Kolab user
+                                    : database
+php-horde-Horde-Notification.noarch : Horde Notification System
+php-horde-Horde-SpellChecker.noarch : Spellcheck API
+php-interfasys-lognormalizer.noarch : Parses variables and converts them to
+                                    : string
+php-pear-Console-CommandLine.noarch : A full featured command line options and
+                                    : arguments parser
+php-theseer-directoryscanner.noarch : A recursive directory scanner and filter
+php-zendframework-zend-crypt.noarch : Zend Framework Crypt component
+php-zendframework-zend-debug.noarch : Zend Framework Debug component
+php-zetacomponents-unit-test.noarch : Zeta UnitTest Component
+php-akamai-open-edgegrid-auth.noarch : Implements the Akamai {OPEN} EdgeGrid
+                                     : Authentication
+php-horde-Horde-Kolab-Storage.noarch : A package for handling Kolab data stored
+                                     : on an IMAP server
+php-justinrainbow-json-schema.noarch : A library to validate a json schema
+php-tcpdf-gnu-free-mono-fonts.noarch : GNU FreeFonts mono-spaced for tcpdf
+php-tcpdf-gnu-free-sans-fonts.noarch : GNU FreeFonts sans-serif for tcpdf
+php-google-apiclient-examples.noarch : Client library for Google APIs: Examples
+php-horde-Horde-Compress-Fast.noarch : Fast Compression Library
+php-horde-Horde-ElasticSearch.noarch : Horde ElasticSearch client
+php-horde-Horde-Kolab-Session.noarch : A package managing an active Kolab
+                                     : session
+php-horde-Horde-Socket-Client.noarch : Horde Socket Client
+php-horde-Horde-Stream-Filter.noarch : Horde Stream filters
+php-htmlpurifier-htmlpurifier.noarch : Standards-compliant HTML filter library
+php-zendframework-zend-config.noarch : Zend Framework Config component
+php-zendframework-zend-filter.noarch : Zend Framework Filter component
+php-zendframework-zend-loader.noarch : Zend Framework Loader component
+php-zendframework-zend-memory.noarch : Zend Framework Memory component
+php-zendframework-zend-router.noarch : Zend Framework Router component
+php-zendframework-zend-server.noarch : Zend Framework Server component
+php-zendframework-zend-stdlib.noarch : Zend Framework Stdlib component
+php-zendframework-zend-xmlrpc.noarch : Zend Framework XmlRpc component
+php-horde-Horde-SessionHandler.noarch : Horde Session Handler API
+php-justinrainbow-json-schema4.noarch : A library to validate a json schema
+php-symfony-swiftmailer-bridge.noarch : Symfony Swiftmailer Bridge
+php-tcpdf-gnu-free-serif-fonts.noarch : GNU FreeFonts serif for tcpdf
+php-victorjonsson-markdowndocs.noarch : Command line tool for generating
+                                      : markdown-formatted class documentation
+php-zendframework-zend-captcha.noarch : Zend Framework Captcha component
+php-horde-Horde-Crypt-Blowfish.noarch : Blowfish Encryption Library
+php-horde-Horde-Stream-Wrapper.noarch : Horde Stream wrappers
+php-zendframework-zend-barcode.noarch : Zend Framework Barcode component
+php-zendframework-zend-console.noarch : Zend Framework Console component
+php-zendframework-zend-escaper.noarch : Zend Framework Escaper component
+php-zendframework-zend-session.noarch : Zend Framework Session component
+php-zendframework-zend-version.noarch : Zend Framework Version component
+php-akamai-open-edgegrid-client.noarch : Implements the Akamai {OPEN} EdgeGrid
+                                       : Authentication
+php-horde-Horde-Service-Weather.noarch : Horde Weather Provider
+php-ocramius-generated-hydrator.noarch : An object hydrator
+php-sebastian-object-enumerator.noarch : Traverses array and object to enumerate
+                                       : all referenced objects
+php-symfony-expression-language.noarch : Symfony ExpressionLanguage Component
+php-symfony-web-profiler-bundle.noarch : Symfony WebProfiler Bundle
+php-tcpdf-dejavu-lgc-sans-fonts.noarch : DejaVu LGC sans-serif fonts for tcpdf
+php-behat-mink-driver-testsuite.noarch : Mink driver testsuite
+php-horde-Horde-Mail-Autoconfig.noarch : Horde Mail Autoconfiguration
+php-pear-PEAR-Command-Packaging.noarch : Create RPM spec files from PEAR modules
+php-zendframework-zend-hydrator.noarch : Zend Framework Hydrator component
+php-http-interop-http-middleware.noarch : Common interface for HTTP middleware
+php-symfony-dependency-injection.noarch : Symfony DependencyInjection Component
+php-symfony-proxy-manager-bridge.noarch : Symfony ProxyManager Bridge
+php-tcpdf-dejavu-lgc-serif-fonts.noarch : DejaVu LGC serif fonts for tcpdf
+php-tcpdf-dejavu-sans-mono-fonts.noarch : DejaVu mono-spaced fonts for tcpdf
+php-zendframework-zend-diactoros.noarch : PSR HTTP Message implementations
+php-zendframework-zend-validator.noarch : Zend Framework Validator component
+php-ZendFramework-Db-Adapter-Pdo.noarch : Zend Framework database adapter for
+                                        : PDO
+php-behat-mink-browserkit-driver.noarch : Symfony BrowserKit driver for Mink
+                                        : framework
+php-horde-Horde-JavascriptMinify.noarch : Javascript Minification
+php-horde-Horde-Service-Gravatar.noarch : API accessor for gravatar.com
+php-zendframework-zend-paginator.noarch : Zend Framework Paginator component
+php-zetacomponents-console-tools.noarch : Zeta ConsoleTools Component
+php-zendframework-zend-expressive.noarch : PSR-7 Middleware Microframework based
+                                         : on Stratigility
+php-aws-php-sns-message-validator.noarch : Amazon SNS message validation
+php-htmlpurifier-htmlpurifier-doc.noarch : Documentation for HTML Purifier
+php-pear-Spreadsheet-Excel-Writer.noarch : Package for generating Excel
+                                         : spreadsheets
+php-zendframework-zend-navigation.noarch : Zend Framework Navigation component
+php-zendframework-zend-psr7bridge.noarch : Zend Framework Psr7Bridge component
+php-zendframework-zend-serializer.noarch : Zend Framework Serializer component
+php-doctrine-doctrine-cache-bundle.noarch : Symfony2 Bundle for Doctrine Cache
+php-zendframework-zend-inputfilter.noarch : Zend Framework InputFilter component
+php-zendframework-zend-progressbar.noarch : Zend Framework ProgressBar component
+php-consolidation-annotated-command.noarch : Initialize Symfony Console commands
+     ...: from annotated command class methods
+php-consolidation-output-formatters.noarch : Format text by applying
+     ...: transformations provided by plug-in formatters
+php-ZendFramework-Auth-Adapter-Ldap.noarch : Zend Framework LDAP Authentication
+                                           : Adapter
+php-ZendFramework-Cache-Backend-Apc.noarch : Zend Framework APC cache backend
+php-ZendFramework-Db-Adapter-Mysqli.noarch : Zend Framework database adapter for
+                                           : mysqli
+php-horde-Horde-Text-Filter-Csstidy.noarch : Horde Text Filter API
+php-jakub-onderka-php-console-color.noarch : Simple library for creating colored
+                                           : console ouput
+php-symfony-psr-http-message-bridge.noarch : Symfony PSR HTTP message bridge
+php-zendframework-zend-eventmanager.noarch : Zend Framework EventManager
+                                           : component
+php-tcpdf-dejavu-lgc-sans-mono-fonts.noarch : DejaVu LGC mono-spaced fonts for
+                                            : tcpdf
+php-zendframework-zend-modulemanager.noarch : Zend Framework ModuleManager
+                                            : component
+php-zendframework-zend-servicemanager.noarch : Zend Framework ServiceManager
+                                             : component
+php-ZendFramework-Db-Adapter-Firebird.noarch : Zend Framework database adapter
+                                             : for InterBase
+php-phpdocumentor-reflection-docblock.noarch : DocBlock parser
+php-phpunit-PHPUnit-SkeletonGenerator.noarch : Tool that can generate skeleton
+                                             : test classes
+php-zendframework-zend-authentication.noarch : Zend Framework Authentication
+                                             : component
+php-zendframework-zend-i18n-resources.noarch : Zend Framework Translator
+                                             : component
+php-ZendFramework-Db-Adapter-Pdo-Mssql.noarch : Zend Framework database adapter
+                                              : for MS SQL PDO
+php-ZendFramework-Db-Adapter-Pdo-Mysql.noarch : Zend Framework database adapter
+                                              : for MySQL PDO
+php-ZendFramework-Db-Adapter-Pdo-Pgsql.noarch : Zend Framework database adapter
+                                              : for PgSQL PDO
+php-sebastian-code-unit-reverse-lookup.noarch : Looks up which function or
+                                              : method a line of code belongs to
+php-zendframework-zend-permissions-acl.noarch : Zend Framework Permissions-Acl
+                                              : component
+php-zendframework-zendservice-recaptcha.noarch : Zend Framework ReCaptcha
+                                               : component
+php-zendframework-zend-permissions-rbac.noarch : Zend Framework Permissions/Rbac
+                                               : component
+php-zendframework-zend-expressive-router.noarch : Router subcomponent for
+                                                : Expressive
+php-zendframework-zend-expressive-helpers.noarch : Helper/Utility classes for
+                                                 : Expressive
+php-ZendFramework-Cache-Backend-Memcached.noarch : Zend Framework memcache cache
+                                                 : backend
+php-zendframework-zend-expressive-template.noarch : Template subcomponent for
+                                                  : Expressive
+php-zendframework-zend-expressive-fastroute.noarch : FastRoute integration for
+                                                   : Expressive
+php-ZendFramework-Cache-Backend-Libmemcached.noarch : Zend Framework libmemcache
+                                                    : cache backend
+php-zendframework-zend-expressive-aurarouter.noarch : Aura.Router integration
+                                                    : for Expressive
+php-zendframework-zend-expressive-zendrouter.noarch : zend-mvc router support
+                                                    : for Expressive
+php-zendframework-zend-expressive-twigrenderer.noarch : Twig integration for
+                                                      : Expressive
+php-zendframework-zend-expressive-platesrenderer.noarch : Plates integration for
+                                                        : Expressive
+atoum.noarch : PHP Unit Testing framework
+composer.noarch : Dependency Manager for PHP
+syck.i686 : YAML for C, Python, and PHP
+syck.x86_64 : YAML for C, Python, and PHP
+apigen.noarch : PHP source code API generator
+squirrelmail.noarch : webmail client written in php
+eclipse-pdt.noarch : PHP Development Tools (PDT) Eclipse plug-in
+bouml.x86_64 : UML2 tool box for C++, Java, IDL, PHP and Python
+gdcm-examples.x86_64 : CSharp, C++, Java, PHP and Python example programs for
+                     : GDCM
+limph.noarch : A PHP5-compatible network host/service poller with web interface
+psysh.noarch : A runtime developer console, interactive debugger and REPL for
+             : PHP
+tiquit.noarch : A PHP5-compatible help desk incident tracking/knowledgebase
+              : system
+lighttpd-fastcgi.x86_64 : FastCGI module and spawning helper for lighttpd and
+                        : PHP configuration
+toothchart.noarch : A PHP script which graphically shows how a baby's primary
+                  : teeth have erupted

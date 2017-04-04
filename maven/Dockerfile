@@ -6,21 +6,15 @@ RUN dnf -y update && dnf clean all
 RUN dnf -y install tar  wget gzip unzip java java-devel && dnf clean all
 
 
-ENV JDKFILE=jdk-8u121-linux-x64.tar.gz
-ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121
-ENV MAVEN_VERSION 3.2.5
-ENV M2_REPO=
-ENV PATH=${PATH}:$JAVA_HOME/bin
-
-
-
-
 
 
 #------
 # Download and
 # Installing java jdk
 #------
+ENV JDKFILE=jdk-8u121-linux-x64.tar.gz
+ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121
+
 RUN mkdir -p /opt/jdk
 
 RUN wget --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE"
@@ -42,10 +36,21 @@ RUN alternatives --install /usr/bin/jar    jar      $JAVA_HOME/bin/jar 2000000
 # Download and
 # Installing maven
 #------
+
+ENV M2_HOME=/usr/share/maven
+ENV MAVEN_VERSION 3.2.5
 RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
 && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
 && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
 
+ENV PATH=${PATH}:$M2_HOME/bin
+ADD settings.xml /usr/share/maven/settings.xml
+RUN cat /usr/share/maven/settings.xml
+
+# when issue docker exec -it fzl_maven mvn archetype:generate
+# the project will be created in /opt/container_mvn_projects
+# to create the project out of container, please provide volume -v to override this place
+RUN mkdir /opt/container_mvn_projects
 
 
 
@@ -89,7 +94,11 @@ WORKDIR ${NEXUS_HOME}
 #ENV mavenRepositoryUrl http://localhost:8081/nexus/content/groups/public/
 #ADD settings.xml /usr/share/maven/conf/settings.xml
 
-ENV M2_HOME /usr/share/maven
+
+ADD scripts /scripts
+RUN chmod +x /scripts/*.sh
+
+ENV PATH=${PATH}:$JAVA_HOME/bin
 
 CMD ["/usr/bin/nexus","run"]
 

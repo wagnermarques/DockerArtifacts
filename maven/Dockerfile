@@ -68,7 +68,7 @@ ENV NexusDownloadLink=http://download.sonatype.com/nexus/3/$NexusTarFileName
 
 
 RUN curl -sSL  $NexusDownloadLink | tar xzf - -C /opt
-RUN ls /opt
+
 RUN ln -s /opt/$NexusUncopressedDirName/bin/nexus /usr/bin/nexus
 
 

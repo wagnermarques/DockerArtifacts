@@ -2,6 +2,11 @@ FROM fedora:25
 
 MAINTAINER wagnerdocri@gmail.com
 
+#dnf needs proxy config in this way, but wget...
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+
 
 ENV JDKFILE=jdk-8u121-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker exec -it fzl_maven tail -f /opt/sonatype-work/nexus3/log/nexus.log
+docker exec -it fzl_maven tail -f /nexus-data/log/nexus.log
 

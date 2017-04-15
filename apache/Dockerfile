@@ -4,7 +4,7 @@ MAINTAINER http://fedoraproject.org/wiki/Cloud
 
 #from:https://hub.docker.com/r/fedora/apache/~/dockerfile/           
 # The following label is used to run the image with the Atomic tool. It is not required and will be skipped by a `docker run`.
-LABEL RUN='docker run -d -p 80:80 $IMAGE'
+#LABEL RUN='docker run -d -p 80:80 $IMAGE'
 
 
 # Updating dependencies, installing Apache and cleaning dnf caches to reduce container size

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_NAME=fzl_apache;
+CONTAINER_NAME=fzl_maven;
 VOLUME_PATH=$1;
 
 docker stop  $CONTAINER_NAME 

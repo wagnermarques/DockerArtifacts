@@ -1,3 +1,3 @@
 #!/bin/bash
-docker exec -it fzl_maven tail -f /opt/sonatype-work/nexus3/log/karaf.log
+docker exec -it fzl_maven tail -f  /nexus-data/log/karaf.log
 

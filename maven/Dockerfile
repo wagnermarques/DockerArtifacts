@@ -13,7 +13,7 @@ FROM fedora:25
 
 RUN dnf clean all && dnf -y update &&  dnf -y upgrade                                                                              
 #RUN dnf -y install tar  wget gzip unzip java java-devel && dnf clean all
-RUN dnf -y install tar wget curl
+RUN dnf -y install tar wget curl findutils
 
 
 #------

@@ -17,11 +17,16 @@
 			<username>admin</username>
 			<password>admin123</password>
 		</server>
+                <server>
+                      <id>nexus</id>
+                      <username>deployment</username>
+                      <password>deployment123</password>
+                </server>
 
 		<server>
 			<id>TomcatServer</id>
 			<username>admin</username>
-			<password>nicolas1</password>
+			<password>admin123</password>
 		</server>
 
 	</servers>

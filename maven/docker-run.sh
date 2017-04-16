@@ -10,9 +10,10 @@ docker rm $CONTAINER_NAME
 
 docker run  \
        --name fzl_maven -d \
+       --net fzl_network_bridge --ip 172.18.0.100 \
        -h fzl_maven \
        -p 8081:8081 -v $MVN_PROJECTS_DIR:/container_mvn_projects \
-       wagnermarques/fzl_maven:0.0.1.1
+       wagnermarques/fzl_maven:0.0.1
 #      mvn -version
 #      /usr/bin/java -version
        

@@ -12,7 +12,7 @@ MAINTAINER wagnerdocri@gmail.com
 ENV JDKFILE=jdk-8u121-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121
 
-ENV TOMCATFILE=apache-tomcat-8.5.13-fulldocs.tar.gz
+ENV TOMCATFILE=apache-tomcat-8.5.13.tar.gz
 ENV CATALINA_HOME=/opt/apache-tomcat-8.5.13
                       
 
@@ -33,7 +33,7 @@ RUN mkdir -p /opt/jdk
 #------
 
 RUN wget --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE"
-RUN wget --output-document /opt/$TOMCATFILE "http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.13/bin/"
+RUN wget --output-document /opt/$TOMCATFILE "http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.13/bin/$TOMCATFILE"
 
 
 
@@ -52,13 +52,15 @@ RUN alternatives --install /usr/bin/jar    jar      $JAVA_HOME/bin/jar 2000000
 
 
 #------
-#Installing tomcat8
+#Installing and configuring tomcat8
 #------
-RUN cd /opt && unzip $TOMCATFILE
+RUN cd /opt && tar -zxvf  $TOMCATFILE
 
 #create catalina.out because at the very beginning of the start server state
 #this file still does not existe but we issue tail -f against it to see the logs
 RUN touch $CATALINA_HOME/logs/catalina.out
 
+ADD conf $CATALINA_HOME/conf
+
 # Define default command.
-CMD $CATALINA_HOME/tomcat-8.0.32/bin/startup.sh && tail -f $CATALINA_HOME/tomcat-8.0.32/logs/catalina.out
+CMD $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out

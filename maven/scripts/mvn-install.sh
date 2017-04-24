@@ -6,4 +6,6 @@ PROJECT_DIR=$1
 
 cd "$MVN_PROJECTS_DIR_IN_CONTAINER/$PROJECT_DIR"
 
-mvn install
+ls -la
+
+#mvn install

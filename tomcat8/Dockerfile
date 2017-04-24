@@ -12,8 +12,8 @@ MAINTAINER wagnerdocri@gmail.com
 ENV JDKFILE=jdk-8u121-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121
 
-ENV TOMCATFILE=apache-tomcat-8.5.13.tar.gz
-ENV CATALINA_HOME=/opt/apache-tomcat-8.5.13
+ENV TOMCATFILE=apache-tomcat-8.5.14.tar.gz
+ENV CATALINA_HOME=/opt/apache-tomcat-8.5.14
                       
 
 ENV PATH=${PATH}:$JAVA_HOME/bin 
@@ -33,7 +33,7 @@ RUN mkdir -p /opt/jdk
 #------
 
 RUN wget --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE"
-RUN wget --output-document /opt/$TOMCATFILE "http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.13/bin/$TOMCATFILE"
+RUN wget --output-document /opt/$TOMCATFILE "http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.14/bin/$TOMCATFILE"
 
 
 
@@ -61,6 +61,8 @@ RUN cd /opt && tar -zxvf  $TOMCATFILE
 RUN touch $CATALINA_HOME/logs/catalina.out
 
 ADD conf $CATALINA_HOME/conf
+
+ADD /webapps/manager/META-INF/ $CATALINA_HOME/webapps/manager/META-INF/
 
 # Define default command.
 CMD $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out

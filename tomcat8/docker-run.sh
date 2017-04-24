@@ -6,8 +6,12 @@ docker rm $CONTAINER_NAME
 
 docker run \
        --name $CONTAINER_NAME -d \
-       --net fzl_network_bridge --ip 172.18.0.91 \
-       -p 8080:8091 \
-        wagnermarques/tomcat8:0.0.1
+       --net fzl_network_bridge --ip 172.18.0.191 \
+       -h fzl_tomcat8 -p 8091:8080  wagnermarques/tomcat8:0.0.1
 
-docker logs $CONTAINER_NAME
+        docker logs $CONTAINER_NAME
+
+        #       --net fzl_network_bridge
+
+        #       --ip 172.17.0.91 \
+

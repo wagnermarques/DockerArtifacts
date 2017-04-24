@@ -24,7 +24,7 @@ docker rm $CONTAINER_NAME
 docker run \
        --name $CONTAINER_NAME -d \
        -h fzl_apache \
-       -p 8080:8090 \
+       -p 80:8080 \
        -v "$VOLUME_PATH1":/var/www/html \
        -v "$VOLUME_PATH2":/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/sources/dojo-fzl-demos/ \
        wagnermarques/fzl_apache 

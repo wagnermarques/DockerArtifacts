@@ -1,9 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                                https://maven.apache.org/xsd/settings-1.0.0.xsd">
 
-<settings>
-   <mirrors>
-    <mirror>
-      <!--This sends everything else to /public -->
+
+  <localRepository>${user.home}/.m2/repository</localRepository>
+  <interactiveMode>true</interactiveMode>
+  <usePluginRegistry>false</usePluginRegistry>
+  <offline>false</offline>
+
+  <mirrors>
+    <mirror>        
+      <!--This sends     everything else to /public -->
       <id>nexus</id>
       <mirrorOf>*</mirrorOf>
       <url>http://localhost:8081/repository/maven-public/</url>
@@ -11,17 +20,24 @@
   </mirrors>
 
 <servers>
-
+<!--
+id: This is the ID of the server (not of the user to login as) that matches the id element of the repository/mirror that Maven tries to connect to.
+-->
+ <server>
+      <id>maven-snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+ </server>
+ <server>
+      <id>maven-releases</id>
+      <username>admin</username>
+      <password>admin123</password>
+ </server>
 		<server>
 			<id>nexux</id>
 			<username>admin</username>
 			<password>admin123</password>
 		</server>
-                <server>
-                      <id>nexus</id>
-                      <username>deployment</username>
-                      <password>deployment123</password>
-                </server>
 
 		<server>
 			<id>TomcatServer</id>
@@ -58,4 +74,6 @@
     <!--make the profile active all the time -->
     <activeProfile>nexus</activeProfile>
   </activeProfiles>
+
+
 </settings>

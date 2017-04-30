@@ -16,6 +16,30 @@ then
         exit 1;
     }
 fi
-        
+
+
+if [ "$PROJECT_NAME_DIR" == "list" ];
+then    
+    {
+        echo "Listing /container_maven_projects dir (mounted volume)";
+        docker exec -it fzl_maven  ls -ilha /container_mvn_projects
+
+        echo "fzlbpms-artifacts maven artifacts...";
+        echo "/container_mvn_projects/fzlbpms-artifacts/maven-artifacts";
+        docker exec -it fzl_maven  ls -ilha /container_mvn_projects/fzlbpms-artifacts/maven-artifacts
+
+        exit 0;
+    }
+fi
+
+if [ "$PROJECT_NAME_DIR" == "fzl_web_primefaces" ];
+then    
+    {
+        docker exec -it fzl_maven  /scripts/mvn-install.sh fzlbpms-artifacts/maven-artifacts/fzlparent
+        docker exec -it fzl_maven  /scripts/mvn-package.sh fzlbpms-artifacts/maven-artifacts/fzl_web_primefaces
+        exit 0;
+    }
+fi
+
 
 docker exec -it fzl_maven  /scripts/mvn-package.sh $PROJECT_NAME_DIR

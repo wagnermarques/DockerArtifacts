@@ -1,7 +1,11 @@
 
 #Put '"' in this path makes curl unhappy
 #Be carefull with spaces, so
-WAR_FILE=/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri\@gmail.com2/envs/env-dev/mvnprojects/fzlbpms-artifacts/maven-artifacts/fzl_web_primefaces/target/fzl_web_primefaces-1.0-SNAPSHOT.war
+#WAR_FILE=/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri\@gmail.com2/envs/env-dev/mvnprojects/fzlbpms-artifacts/maven-artifacts/fzl_web_primefaces/target/fzl_web_primefaces-1.0-SNAPSHOT.war
+
+WAR_FILE=/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev-samples/primefaces/showcase-6.0.war
+
+
 
 WEB_APP_CONTEXT="fzl_web_primefaces";
 

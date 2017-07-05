@@ -6,8 +6,10 @@ MAINTAINER wagnerdocri@gmail.com
 
 
 ##ENV JDK_RPM_FILE_NAME=
-ENV JDKFILE=jdk-8u121-linux-x64.tar.gz
-ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121
+ENV JDKFILE=jdk-8u131-linux-x64.tar.gz
+ENV JAVA_HOME=/opt/jdk/jdk1.8.0_131
+
+
 
 #ENV JDK_FILENAME=jdk-8u121-linux-x64.tar.gz
 
@@ -18,7 +20,10 @@ ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121
 RUN dnf -y install tar wget  && dnf clean all
 
 RUN mkdir -p /opt/jdk
-RUN wget --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE" 
+RUN wget --output-document /opt/jdk/$JDKFILE \
+         --no-cookies --no-check-certificate \
+         --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/$JDKFILE"
+                                                                                        
 RUN cd /opt/jdk && tar xvf $JDKFILE 
 
 #FROM: https://gist.github.com/voor/b2dd473db296d9eae004

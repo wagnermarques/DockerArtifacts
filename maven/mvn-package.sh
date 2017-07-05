@@ -35,6 +35,7 @@ fi
 if [ "$PROJECT_NAME_DIR" == "fzl_web_primefaces" ];
 then    
     {
+        docker exec -it fzl_maven  /scripts/mvn-clean.sh fzlbpms-artifacts/maven-artifacts/fzlparent
         docker exec -it fzl_maven  /scripts/mvn-install.sh fzlbpms-artifacts/maven-artifacts/fzlparent
         docker exec -it fzl_maven  /scripts/mvn-package.sh fzlbpms-artifacts/maven-artifacts/fzl_web_primefaces
         exit 0;

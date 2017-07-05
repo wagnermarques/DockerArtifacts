@@ -6,14 +6,26 @@ FROM fedora:25
 
 #dnf needs proxy config in this way, but wget, seams to me, do not use proxy in this way
 #I have been uncommented it when I'm behind a proxy
-#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
+#------------
+#Proxy Configuration
+#------------
+RUN export http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+RUN export ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+RUN export all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+
+RUN echo $http_proxy
+RUN echo $ftp_proxy
+RUN echo $all_proxy
 
 RUN dnf clean all && dnf -y update &&  dnf -y upgrade                                                                              
 #RUN dnf -y install tar  wget gzip unzip java java-devel && dnf clean all
 RUN dnf -y install tar wget curl findutils
+
 
 
 #------
@@ -26,9 +38,9 @@ ENV JAVA_HOME=/opt/jdk/jdk1.8.0_121
 
 RUN mkdir -p /opt/jdk
 
-#RUN wget use_proxy=yes -e http_proxy="http://wagner:nicolas1*@192.168.0.2:3128/" --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE"
-#RUN wget  --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE"
-#RUN wget --no-check-certificate -c --header "Cookie:
+RUN wget use_proxy=yes -e http_proxy="http://wagner:nicolas1*@192.168.0.2:3128/" --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE"
+RUN wget  --output-document /opt/jdk/$JDKFILE --no-cookies --no-check-certificate --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u121-b13/e9e7ea248e2c4826b92b3f075a80e441/$JDKFILE"
+RUN wget --no-check-certificate -c --header "Cookie:
 #oraclelicense=accept-secureb    ackup-cookie"
 #"http://download.oracle.com/otn-pub/java/jdk/7u55-b13/jdk-7u55-linux-x64.tar.gz"
 

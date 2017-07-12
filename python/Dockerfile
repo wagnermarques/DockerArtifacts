@@ -1,13 +1,13 @@
-FROM fedora
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+FROM fedora:25
+
+MAINTAINER wagnerdocri@gmail.com
 
 RUN dnf -y update && dnf clean all
-RUN dnf -y install python-pip && dnf clean all
+RUN dnf -y install python3-pip && dnf clean all
 
-ADD . /src
+RUN mkdir /scripts
+ADD ./scripts /scripts
 
-RUN cd /src; pip install -r requirements.txt
+RUN cd /scripts; pip3 install -r requirements.txt
 
-EXPOSE 8080
-
-CMD ["python", "/src/index.py"]
+CMD ["python3   ", "--version"]

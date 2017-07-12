@@ -15,7 +15,7 @@ docker rm $CONTAINER_NAME
 
 docker run  \
        --name fzl_maven -d  \
-       --net fzl_network_bridge --ip 172.18.0.100  \
+       --net fzl_network_bridge --ip 192.168.33.150  \
        --link fzl_tomcat8:fzl_tomcat8 \
        -h fzl_maven  \
        -p 8081:8081  \

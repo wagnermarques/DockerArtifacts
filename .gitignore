@@ -2,6 +2,8 @@ tomcat7.0.56/downloads/
 *.log
 \#*
 *#
+.#*
+**/#
 *~
 *.tar
 nodejs/DojoCliAppTest1

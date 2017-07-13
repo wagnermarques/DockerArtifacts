@@ -1,0 +1,78 @@
+
+Its just a django container
+
+
+* Usage
+** Starting container and creating at the same time a django project
+   Maybe you have not created django project yet and just by running container passing a container name is enough to create the django projet and run django server at that for you.
+   To do that, see below...
+  #+Begin_src sh
+  git clone https://github.com/wagnermarques/Fedora-Dockerfiles.git
+  cd Fedora-Dockerfiles/Django
+
+  #To run the container use this pattern
+  #The intent is that the container name should be the same name of the django project
+  ./docker-run.sh container_run_command container_name 
+
+  #So, to start a new django project and runserver at this...
+  ./docker-run.sh django-admin-start-project mydjangoprojectname 
+
+  #+End_Src
+** Staring container for a alredy created project
+   Maybe you alredy have been create a jdango project and the folder of the project reside in a specific path
+   So, you will want the container just run that project.
+   Lets say you have a django project called "mysite"
+   The project folder resides in the path:
+
+   /home/yourusername/pythonprojects/mysite
+
+   1) You need pass pythonprojects dir as volume for container folder /django_project
+      To do that just change the docker-run.sh script line below
+      #+Begin_src
+      VOLUME_PATH_for_django_project_dir="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/pythonprojects/"
+      #+End_src
+      to 
+      #+Begin_src
+      VOLUME_PATH_for_django_project_dir="/home/yourusername/pythonprojects/"
+      #+End_src
+   2) Start the container for your project
+      Use the name of you project folder as the name of the container, like below
+      #+Begin_src
+      ./docker-run.sh mysite
+      #+End_src
+      
+** checout docer file
+   #+SRC_BEGIN sh
+   git clone https://github.com/wagnermarques/Fedora-Dockerfiles.git
+   cd Fedora-Dockerfiles/Django
+   #+SRC_END
+
+   Tenha certeza de que seu docker está rodando...
+   #+SRC_BEGIN sh
+      
+   #+SRC_END
+
+
+
+   #+SRC_BEGIN sh
+   
+   #+SRC_END
+
+   #+SRC_BEGIN sh
+   
+   #+SRC_END
+
+   #+SRC_BEGIN sh
+   
+   #+SRC_END
+
+   #+SRC_BEGIN sh
+   
+   #+SRC_END
+
+
+** start docker machine
+   systemctl start docker
+   
+   
+  

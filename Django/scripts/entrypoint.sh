@@ -19,13 +19,13 @@ printf "Parametro2:%s\n" $PARAM2
 
 if [ "$PARAM1" = "django-admin-start-project" ]
 then
-     #if I started container to create a project this is the path
+    #if I started container to create a project this is the path
     echo "running: django-admin startproject $PARAM2"
-    cd /django_project/
-    ls -ilha
     django-admin startproject $PARAM2
+    cd /django_project/
+    cd "$PARAM2"
     chmod 777 -R . 
-    cd "$PARAM2" 
+    ls -ilha
     python3 manage.py runserver 0.0.0.0:8000   
 else
     echo "$PARAM2"

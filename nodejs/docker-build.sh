@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build --rm=true -t wagnermarques/fzl_nodejs:0.0.1.1 .
+docker build --rm=true -t wagnermarques/fzl_nodejs:0.0.0.1 .
 

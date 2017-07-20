@@ -24,6 +24,5 @@ VOLUME /django_project
 
 EXPOSE 8000
 
-#CMD python3 /django_project/aga/manage.py runserver 0.0.0.0:8000
 ENTRYPOINT ["/scripts/entrypoint.sh"]
 

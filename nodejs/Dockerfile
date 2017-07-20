@@ -4,11 +4,23 @@ FROM fedora:25
 MAINTAINER wagnerdocri@gmail.com
 
 # Install nodejs and npm
-RUN dnf -y update && dnf -y install npm && dnf clean all
+RUN dnf -y update && dnf -y install nodejs npm && dnf clean all
 
 # Show nodejs and npm versions installed
 RUN node -v
 RUN npm -v
+
+    
+RUN npm install -g grunt-cli
+RUN npm install -g yo generator-generator
+RUN npm install -g webpack
+
+RUN npm install -g typescript
+RUN npm install -g ts-loader  #links webpack to complie typescript
+RUN npm install -g jquery  #to use jquery in your project
+
+RUN npm install -g http-server #to have a local server run
+
 
 #
 # Configurations for dojo2 apps
@@ -20,7 +32,7 @@ RUN npm -v
 #    eject - Disconnects a project from @dojo/cli allowing advanced users to customise configuration
 #    version - Reports the version of @dojo/cli and any commands that are installed
 
-npm install -g @dojo/cli
+RUN npm install -g @dojo/cli
 
 
 
@@ -32,7 +44,7 @@ EXPOSE 8080
 ENV NODE_ENV=production
 
 # Make directory for our nodejs project
-RUN mkdir /container_projects_dir
+RUN mkdir /node_projects
 
 
 ADD scripts /scripts
@@ -41,3 +53,4 @@ ADD scripts /scripts
 # pre configured isolated (by container) global node module
 # Run it!
 #CMD ["node", "/src/index.js"]
+ENTRYPOINT ["/scripts/entrypoint.sh"]

@@ -4,7 +4,7 @@ param1=$1;
 param2=$2;
 
 IMAGE_NAME="wagnermarques/fzl_django:0.0.1"
-VOLUME_PATH_for_django_project_dir="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/pythonprojects/"
+VOLUME_PATH_for_django_project_dir="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/pythonprojects/ipggsolicitacao/"
 VOLUME_PATH_for_scripts="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/sources/Fedora-Dockerfiles/Django/scripts"
 
 

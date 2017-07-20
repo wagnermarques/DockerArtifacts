@@ -1,0 +1,99 @@
+
+dockerfiles-fedora-nodejs
+=========================
+
+Fedora dockerfile for nodejs
+
+
+* To build:
+#+NAME:howtobuild
+#+BEGIN_SRC sh
+git clone https://github.com/wagnermarques/Fedora-Dockerfiles.git
+cd Fedora-Dockerfiles\nodejs
+./build-build.sh
+#+END_SRC
+
+* Usage 
+** Configure your volume changing some docker-run.sh script lines below
+   (fix-me: underlines is parsed as latex, not needed here)
+   #+INCLUDE: "/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/sources/Fedora-Dockerfiles/nodejs/docker-run.sh" :lines "0-8"
+** Create a Docker network 
+   The ./docker-run.sh uses --net parameter to run the container
+   starting a "fzl_network_bridge"
+   So, before run the container, please create the network first
+   running
+   ../docker-network-create-bridge.sh
+** To run container with run parameters
+1. Without any parameter the container will
+   #+BEGIN_SRC sh
+   cd Fedora-Dockerfiles\nodejs
+   sudo ./build-build.sh
+   #+END_SRC
+   
+   The result is just a ls -l in /node_projects
+   I thought it could be util for check if the volume was mounted right
+   #+BEGIN_SRC 
+[root@localhost nodejs]# ./docker-run.sh 
+==> You runned ./docker-run.sh withou parameters!
+==> So, The default behavior in this case is just... 
+==> .. and show the /node_projects volume mounted contents...
+==> function start_container_with_single_COMMAND(){...
+==> command:bash:ls -l /node_projects
+==> container name is fzl_node_running_bash_ls_-l__node_projects
+b014e0a38b1d037c4a1e15c877d68b298eed1e8a4258d952c07d143629262065
+==>[entrypoint.sh] entry_point_params is bash:ls -l /node_projects
+total 4
+drwxrwxr-x. 2 1000 1000 4096 Jul 20 16:51 teste
+   #+END_SRC
+
+To achieve similar result you can pass  'bash:ls -ilha /node_projects'
+as a parameter to ./docker-run.sh script. Please be aware about single
+quote to make ./docker-run.sh script think that thereis just on
+parameter.
+
+#+BEGIN_SRC 
+[root@localhost nodejs]# ./docker-run.sh 'bash:ls -ilha /node_projects'
+#+END_SRC
+
+And below is showed the results... You can realize that there is a
+nodechat project in /node_projects directory.
+#+BEGIN_SRC 
+==> function start_container_with_single_COMMAND(){...
+==> command:bash:ls -ilha /node_projects
+==> container name is fzl_node_running_bash_ls_-ilha__node_projects
+d6d472e94a97c31604c3ec5bb1d47224615a3300c8675168d601c83378a68d3e
+==>[entrypoint.sh] entry_point_params is bash:ls -ilha /node_projects
+total 16K
+49679730 drwxrwxr-x.  4 1000 1000 4.0K Jul 20 17:31 .
+     131 drwxr-xr-x. 20 root root 4.0K Jul 20 17:32 ..
+54269902 drwxrwxr-x.  8 1000 1000 4.0K Jul 20 17:31 nodechat
+54141173 drwxrwxr-x.  2 1000 1000 4.0K Jul 20 16:51 teste
+[root@localhost nodejs]# 
+#+END_SRC
+
+   Maybe you want to start container to serve a node project
+   So, lets to serve nodechat project in the port specified by
+   index.js node-express module.  
+   #+BEGIN_SRC 
+   [root@localhost nodejs]# ./docker-run.sh 'bash:node /node_projects/nodechat/index.js' 
+   #+END_SRC
+
+   #+BEGIN_SRC    
+==> function start_container_with_single_COMMAND(){...
+==> command:bash:node /node_projects/nodechat/index.js
+==> container name is fzl_node_running_bash_node__node_projects_nodechat_index_js
+b4da4f1990e8cf37c4ea1a7a8e88615316a8911167d5e46ca89a0c6b07d86638
+==>[entrypoint.sh] entry_point_params is bash:node /node_projects/nodechat/index.js
+[root@localhost nodejs]# docker stop fzl_node_running_bash_node__node_projects_nodechat_index_js
+fzl_node_running_bash_node__node_projects_nodechat_index_js
+   #+END_SRC
+   
+   The project can be accessed in browser at
+   http://CONTAINER_IP/3000. Please, be aware that this nodechat
+   project is a project of mine. Mabe you have another project with
+   another port. Just change url accondingly.
+
+   I prefer start in this way because I heve not to plan what port the
+   container will serve. Its about project. But the price is access it
+   by the container ip. If you will no use my ./docker-run.sh script
+   you can you docker command and pass -p parameter too. It's up to you.

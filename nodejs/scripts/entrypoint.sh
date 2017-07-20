@@ -8,8 +8,14 @@ PARAM2=$(echo $entry_point_params | cut -d':' -f2) # output is 2
 
 if [ "$PARAM1" = "bash" ];
 then
-    bash_command="$PARAM2"
-    $bash_command
+
+    echo $PARAM2 | tr '&&' '\n' | while read cmd; do
+    $cmd
+    done
+
+    #bash_command="$PARAM2"
+    #$bash_command
 fi
+
 
 

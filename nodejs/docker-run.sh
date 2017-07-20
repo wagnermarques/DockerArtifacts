@@ -1,7 +1,7 @@
 #!/bin/bash
 
 IMAGE_NAME=wagnermarques/fzl_nodejs:0.0.0.1;
-ContainerIPG=192.168.33.83
+ContainerIPG="192.168.33.83"
 VOLUME_PATH_for_node_projects_dir="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/nodeprojects"
 #VOLUME_PATH_for_node_projects_dir="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/somewritings/typescript-introduction/examples/"
 

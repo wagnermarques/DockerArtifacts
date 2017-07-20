@@ -97,3 +97,33 @@ fzl_node_running_bash_node__node_projects_nodechat_index_js
    container will serve. Its about project. But the price is access it
    by the container ip. If you will no use my ./docker-run.sh script
    you can you docker command and pass -p parameter too. It's up to you.
+* Another Usage examples
+** generic example with && 
+  Its ok to use '&&' to sereral commands
+  #+BEGIN_SRC 
+  [root@localhost nodejs]# ./docker-run.sh "bash:cd /node_projects && pwd && ls -l"  
+  #+END_SRC
+
+  In my case the result is...
+  #+BEGIN_SRC 
+  => function start_container_with_single_COMMAND(){...
+==> command:bash:cd /node_projects && pwd && ls -l
+==> container name is fzl_node_running_bash_cd__node_projects___pwd___ls_-l
+
+
+09ea44b0a683387450ee13b8edc3d651ec363e84e123db2d062a1c618a6f7a1a
+
+
+==>[entrypoint.sh] entry_point_params is bash:cd /node_projects && pwd && ls -l
+/node_projects
+total 16
+drwxrwxr-x. 5 1000 1000 4096 Jul 20 18:10 generator-typescript-dojo-node-module
+drwxrwxr-x. 4 1000 1000 4096 Mar  2 08:26 generator-typescript-node-module-bk
+drwxrwxr-x. 8 1000 1000 4096 Jul 20 17:31 nodechat
+drwxrwxr-x. 2 1000 1000 4096 Jul 20 16:51 teste
+
+  #+END_SRC
+
+
+   
+   

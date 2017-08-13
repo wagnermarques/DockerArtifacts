@@ -77,6 +77,7 @@ id: This is the ID of the server (not of the user to login as) that matches the 
 
 
   <proxies>
+    <!--
     <proxy>
       <id>optional</id>
       <active>true</active>
@@ -86,8 +87,9 @@ id: This is the ID of the server (not of the user to login as) that matches the 
       <host>192.168.0.2</host>
       <port>3128</port>
       <nonProxyHosts>localhost|127.0.0.1</nonProxyHosts>
-    </proxy>    
+      </proxy>
+      -->
   </proxies>
-
+  
 
 </settings>

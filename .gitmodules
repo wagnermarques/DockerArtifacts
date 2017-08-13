@@ -1,3 +1,6 @@
 [submodule "cont-postgresql"]
 	path = postgresql/cont-postgresql
 	url = https://github.com/devexp-db/cont-postgresql.git
+[submodule "hadleyverse"]
+	path = hadleyverse
+	url = https://github.com/rocker-org/hadleyverse.git

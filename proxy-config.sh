@@ -40,14 +40,15 @@
 #The service file to be changed is:/usr/lib/systemd/system/docker.service
 #in the session "[service]"
 cat <<EOF | sudo tee -a /usr/lib/systemd/system/docker.service
-export HTTP_PROXY="wagner:nicolas1*@192.168.02:3128"
-export HTTPS_PROXY="wagner:nicolas1*@192.168.02:3128"
-export no_proxy=<REGISTRY_IP>
+Environment="HTTP_PROXY=wagner:nicolas1*@192.168.02:3128"
+Environment="HTTPS_PROXY=wagner:nicolas1*@192.168.02:3128"
+Environment="no_proxy=<REGISTRY_IP>"
 EOF
+
 
 #is need to stop docker service
 systemctl stop docker
 #reload daemons
-systemctl daemon-reload docker
+systemctl daemon-reload
 #start docker againd
 systemctl start docker

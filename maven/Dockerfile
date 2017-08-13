@@ -1,11 +1,8 @@
-
 FROM wagnermarques/java-oracle8:0.0.1
+
 #
 #based on: https://hub.docker.com/r/sonatype/docker-nexus3/~/dockerfile/
 #
-
-#dnf needs proxy config in this way, but wget, seams to me, do not use proxy in this way
-#I have been uncommented it when I'm behind a proxy
 
 RUN dnf clean all && dnf -y update &&  dnf -y upgrade                                                                              
 RUN dnf -y install tar wget curl findutils

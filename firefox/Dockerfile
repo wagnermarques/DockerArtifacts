@@ -13,7 +13,7 @@ RUN chmod -v +x /root/.vnc/xstartup
 RUN echo nicolas1 | vncpasswd -f > /root/.vnc/passwd
 RUN chmod -v 600 /root/.vnc/passwd
 
-RUN sed -i '/\/etc\/X11\/xinit\/xinitrc-common/a [ -x /usr/bin/firefox ] && /usr/bin/firefox &' /etc/X11/xinit/xinitrc
+oRUN sed -i '/\/etc\/X11\/xinit\/xinitrc-common/a [ -x /usr/bin/firefox ] && /usr/bin/firefox &' /etc/X11/xinit/xinitrc
 
 EXPOSE 5901
 

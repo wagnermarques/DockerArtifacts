@@ -4,8 +4,10 @@ param1=$1;
 param2=$2;
 
 IMAGE_NAME="wagnermarques/fzl_django:0.0.1"
-VOLUME_PATH_for_django_project_dir="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/pythonprojects/ipggsolicitacao/"
-VOLUME_PATH_for_scripts="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/sources/Fedora-Dockerfiles/Django/scripts"
+#VOLUME_PATH_for_django_project_dir="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/pythonprojects/ipggsolicitacao/"
+VOLUME_PATH_for_django_project_dir="/root/aplicacoes/ipggsolicitacao"
+#VOLUME_PATH_for_scripts="/run/media/wagner/96fea5f1-d297-4f63-a035-abf6511467be/wagnerdocri@gmail.com2/envs/env-dev/sources/Fedora-Dockerfiles/Django/scripts"
+VOLUME_PATH_for_scripts="/root/Fedora-Dockerfiles/Django/scripts"
 
 
 function usage(){
@@ -26,7 +28,7 @@ function start_container_with_command_and_project_name(){
 
     docker run \
            --name $container_name -d \
-           --net=fzl_network_bridge --ip=192.168.33.83 \
+	   --net=fzl_network_bridge --ip=192.168.33.83
            -h $container_name \
            -v $VOLUME_PATH_for_django_project_dir:/django_project \
            -v $VOLUME_PATH_for_scripts:/scripts \
@@ -71,7 +73,7 @@ then
 fi;
 
 #if there is just one parameter, this parameters is for django project
-#otherwise, if thereis two parameter, the first one is command to start container and the second if for project name
+#otherwise, if there is two parameter, the first one is command to start container and the second if for project name
 if [ "$#" -eq 1 ]   
 then
     project_name=$param1;

@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 CONTAINER_NAME=fzl_python;
 echo "Running $CONTAINER_NAME container based on $CONTAINER_NAME:0.0.1 image";

@@ -10,12 +10,20 @@
 #with django_project_name project name
 entry_point_params=$1
 
+echo "/script/entrypoint.sh -> " && echo $(pwd)
+echo "/script/entrypoint.sh -> " && ls -l
+
 
 PARAM1=$(echo $entry_point_params | cut -d':' -f1) # output is 1
 PARAM2=$(echo $entry_point_params | cut -d':' -f2) # output is 2
 
 printf "Parametro1:%s\n" $PARAM1
 printf "Parametro2:%s\n" $PARAM2
+
+
+echo "/script/entrypoint.sh -> " && echo "PARAM1 = $PARAM1"
+echo "/script/entrypoint.sh -> " && echo "PARAM2 = $PARAM2"
+
 
 if [ "$PARAM1" = "django-admin-start-project" ]
 then

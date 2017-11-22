@@ -1,5 +1,6 @@
-FROM fedora
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+FROM fedora:26
+
+MAINTAINER wagnerdocri@gmail.com
 
 RUN dnf -y update && dnf clean all
 RUN dnf -y install community-mysql-server community-mysql pwgen supervisor bash-completion psmisc net-tools && dnf clean all

@@ -3,15 +3,16 @@
 set -e
 
 __mysql_config() {
-  echo "Running the mysql_config function."
+  echo "2-Running the mysql_config function."
   mysql_install_db
   chown -R mysql:mysql /var/lib/mysql
-  /usr/bin/mysqld_safe &
+  #/usr/bin/mysqld_safe &
+  /usr/bin/scripts/mysql_install_db --defaults-file=/etc/my.cnf &
   sleep 10
 }
 
 __start_mysql() {
-  printf "Running the start_mysql function.\n"
+  printf "3-Running the start_mysql function.\n"
   ROOT_PASS="$(pwgen -s -1 12)"
   USER="${USER-dbuser}"
   PASS="${PASS-$(pwgen -s -1 12)}"
@@ -40,7 +41,7 @@ DB_FILES=$(echo /var/lib/mysql/*)
 DB_FILES="${DB_FILES#/var/lib/mysql/\*}"
 DB_FILES="${DB_FILES#/var/lib/mysql/lost+found}"
 if [ -z "$DB_FILES" ]; then
-  printf "Initializing empty /var/lib/mysql...\n"
+  printf "1-Initializing empty /var/lib/mysql...\n"
   __mysql_config
   __start_mysql
 fi

@@ -9,16 +9,17 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 
-ENV TOMCATFILE=apache-tomcat-8.5.23.tar.gz
-ENV CATALINA_HOME=/opt/apache-tomcat-8.5.23
+ENV TOMCATFILE=apache-tomee-7.0.2-webprofile.tar.gz
+ENV CATALINA_HOME=/opt/apache-tomee-7.0.2-webprofile
                       
 
 RUN dnf -y update
 RUN dnf -y install tar wget unzip  && dnf clean all
 
 
-RUN wget --output-document /opt/$TOMCATFILE "http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.23/bin/$TOMCATFILE"
-                                   
+RUN wget --output-document /opt/$TOMCATFILE "http://repo.maven.apache.org/maven2/org/apache/tomee/apache-tomee/7.0.2/$TOMCATFILE"
+
+
 #------
 #Installing and configuring tomcat8
 #------

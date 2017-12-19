@@ -1,6 +1,7 @@
-FROM wagnermarques/fzl_cinelerra:0.0.1
+FROM wagnermarques/fzl_xfce4:0.0.1
 MAINTAINER wagnerdocri@gmail.com
 
+#TODO: use this xfce (when its fixed and working) for base to cinelerra
 
 #installing rpmfusion
 RUN dnf -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-27.noarch.rpm

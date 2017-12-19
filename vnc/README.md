@@ -1,7 +1,7 @@
 dockerfiles-fedora-firefox
 ==========================
 
-Fedora dockerfile based for VNC accessed X applicationa
+Fedora dockerfile for Firefox over VNC
 
 Get the version of Docker
 
@@ -37,7 +37,6 @@ From the host that is running the container -
 
 ```
 # vncviewer localhost:1
- admin123 is the password
 ```
 
 That's it.

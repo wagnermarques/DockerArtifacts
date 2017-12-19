@@ -1,4 +1,4 @@
-FROM wagnermarques/fzl_xfce4:0.0.1
+FROM wagnermarques/fzl_vnc:0.0.1
 MAINTAINER wagnerdocri@gmail.com
 
 #TODO: use this xfce (when its fixed and working) for base to cinelerra

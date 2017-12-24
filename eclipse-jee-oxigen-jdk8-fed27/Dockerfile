@@ -1,4 +1,4 @@
-FROM wagnermarques/java-oracle8-f27:0.0.1
+FROM wagnermarques/java-oracle8-f27-vnc:0.0.1
 
 MAINTAINER wagnerdocri@gmail.com
 
@@ -6,25 +6,16 @@ MAINTAINER wagnerdocri@gmail.com
 
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
-
-RUN dnf -y update && dnf -y install firefox xorg-x11-twm tigervnc-server xterm xulrunner dejavu-sans-fonts dejavu-serif-fonts xdotool
-RUN dnf clean
 
 ENV EclipseUrlForDownload http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/oxygen/1a/eclipse-jee-oxygen-1a-linux-gtk.tar.gz
                          
 RUN wget ${EclipseUrlForDownload} -O /tmp/eclipse.tar.gz -q
-RUN echo 'Installing eclipse' 
 RUN tar xvf /tmp/eclipse.tar.gz -C /opt
 RUN rm /tmp/eclipse.tar.gz
-RUN ls /opt
-
-RUN ls /opt/eclipse -l
-
-
 
 RUN chmod +x /opt/eclipse
 #    mkdir -p /home/developer && \
@@ -37,10 +28,11 @@ RUN chmod +x /opt/eclipse
 
 
 
-
 #INSTALLING SOME PLUGINS WITH P2
 #https://help.eclipse.org/oxygen/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Fguide%2Fp2_director.html
-#RUN cd /opt/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.director -repository http://download.eclipse.org/releases/indigo/,http://dadacoalition.org/yedit -installIU org.dadacoalition.yedit.feature.group
+#RUN cd /opt/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.director \
+#                            -repository http://download.eclipse.org/releases/indigo/,http://dadacoalition.org/yedit
+#                            -installIU org.dadacoalition.yedit.feature.group
 
 #OpenInTerminal - Add option in context menu
 #RUN cd /opt/eclipse/eclipse -nosplash -application org.eclipse.equinox.p2.director -repository http://download.eclipse.org/releases/indigo/,http://eclipse-openinterminal.googlecode.com/svn/trunk/site/ -installIU OpenInTerminal.feature.group
@@ -61,13 +53,8 @@ RUN chmod +x /opt/eclipse
 
 
 
+RUN sed -i '/\/etc\/X11\/xinit\/xinitrc-common/a [ -x /opt/eclipse ] && /opt/eclipse  &' /etc/X11/xinit/xinitrc
 
-# Define default command.
-#CMD ["/opt/eclipse" "-clean -data /default_workspace"]
-#CMD ["bash", "pwd"]
-
-ENTRYPOINT ["/bin/ls", "/opt/eclipse"]
+EXPOSE 5901
 
 
-#REFS
-#https://github.com/fgrehm/docker-eclipse/blob/master/Dockerfile

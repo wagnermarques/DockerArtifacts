@@ -1,17 +1,16 @@
 #!/bin/bash
 
 CONTAINER_NAME=fzl_eclipse_jee_oxygen_java8_fed27;
-IMG_NAME=wagnermarques/eclipse-jee-oxigen-jdk8-fed27;
+IMG_NAME=wagnermarques/eclipse-jee-oxigen-jdk8-fed27:0.0.1;
 
 #Change this to provide directory to cotainer create your projects
-HOST_DIR_FOR_WORKSPACE="/run/media/wagner/51d54d26-34c8-4671-8da1-c12adc7a5a2c/wagnerdocri@gmail.com2/envs/env-dev/mvnprojects"
+HOST_DIR_FOR_WORKSPACE="/home/wagner/wagnerdocri@gmail.com2/fzlbpms/fzlStudio/workspaces/eclipse_jee_oxygen/"
 
-docker rm $CONTAINER_NAME
+#docker rm $CONTAINER_NAME
 
 docker run \
-       --name $CONTAINER_NAME -d \
-       -h fzl_eclipse \
-       -v $HOST_DIR_FOR_WORKSPACE:/default_workspace \
-        wagnermarques/eclipse-jee-oxigen-jdk8-fed27
-       
-docker logs $CONTAINER_NAME
+       --name $CONTAINER_NAME -d -p 5903:5901 \
+       -h fzl_jee_eclipse_oxigen -v $HOST_DIR_FOR_WORKSPACE:/default_workspace \
+       --net fzl_network_bridge --ip 192.168.33.158  $IMG_NAME
+
+vncviewer 192.168.33.158:1

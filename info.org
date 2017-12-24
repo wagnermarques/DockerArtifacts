@@ -1,0 +1,16 @@
+#+Title: Infos
+
+* Networking
+  For now, my intent is to run ./docker-network-create.sh first to
+  create docker network bridge. Each container directory has its own
+  ./docker-run.sh script witch runs the container, give it a ip, bind
+  ports, volumes etc..
+
+  This notes is for manage containers ips and port to avoid conflicts
+
+| container --name and -h | imgname                         |           --ip | --net              |     ports | obs |
+| fzl_vnc                 | wagnermarques/fzl_vnc:0.0.1     | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
+| fzl_firefox             | wagnermarques/fzl_firefox:0.0.1 | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
+
+
+  

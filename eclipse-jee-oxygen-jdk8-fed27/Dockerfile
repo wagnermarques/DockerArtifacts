@@ -11,20 +11,32 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 
-ENV EclipseUrlForDownload http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/oxygen/1a/eclipse-jee-oxygen-1a-linux-gtk.tar.gz
-                         
-RUN wget ${EclipseUrlForDownload} -O /tmp/eclipse.tar.gz -q
+RUN dnf update -y  && \
+    dnf install gtk3 -y
+
+ENV eclipseUrlForDownload http://eclipse.c3sl.ufpr.br/technology/epp/downloads/release/oxygen/2/eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz
+
+RUN wget -c $eclipseUrlForDownload -O /tmp/eclipse.tar.gz
 RUN tar xvf /tmp/eclipse.tar.gz -C /opt
 RUN rm /tmp/eclipse.tar.gz
 
-RUN chmod +x /opt/eclipse
-#    mkdir -p /home/developer && \
-#    echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
-#    echo "developer:x:1000:" >> /etc/group && \
-#    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
-#    chmod 0440 /etc/sudoers.d/developer && \
-##    chown developer:developer -R /home/developer && \
-#chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
+RUN chmod +x /opt/eclipse/eclipse
+
+
+RUN mkdir -p /etc/sudoers.d/ && \
+    mkdir -p /home/developer/.vnc && \
+    > /root/.Xauthority
+
+RUN ls -ilha /root/.Xauthority 
+
+RUN mkdir -p /home/developer && \
+    echo "developer:x:1000:1000:Developer,,,:/home/developer:/bin/bash" >> /etc/passwd && \
+    echo "developer:x:1000:" >> /etc/group && \
+    echo "developer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/developer && \
+    chmod 0440 /etc/sudoers.d/developer && \
+    chown developer:developer -R /home/developer
+    #echo developer123 | vncpasswd -f > /home/developer/.vnc/passwd
+    #chown root:root /usr/bin/sudo && chmod 4755 /usr/bin/sudo
 
 
 
@@ -53,8 +65,8 @@ RUN chmod +x /opt/eclipse
 
 
 
-RUN sed -i '/\/etc\/X11\/xinit\/xinitrc-common/a [ -x /opt/eclipse ] && /opt/eclipse  &' /etc/X11/xinit/xinitrc
+RUN sed -i '/\/etc\/X11\/xinit\/xinitrc-common/a [ -x /opt/eclipse/eclipse ] && /opt/eclipse/eclipse  &' /etc/X11/xinit/xinitrc
 
 EXPOSE 5901
 
-
+CMD    ["vncserver", "-fg" ]

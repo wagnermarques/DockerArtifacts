@@ -35,5 +35,5 @@ RUN alternatives --install /usr/bin/javac  javac    $JAVA_HOME/bin/javac 2000000
 RUN alternatives --install /usr/bin/jar    jar      $JAVA_HOME/bin/jar 2000000
 
 
-# No default command because this container is just to serve as base container for X applications thats depends of java like eclipse
+# No default command because this container is just to serve as a base container for X applications thats depends of java like eclipse
 # CMD ["bash"]

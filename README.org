@@ -1,11 +1,13 @@
 #+Title: Fedora Dockerfiles
 
-
 * Fedora-Dockerfiles
 
 This is a fork of the upstream source for the
 [fedora-dockerfiles](http://koji.fedoraproject.org/koji/packageinfo?packageID=18023)
 package.
+
+
+We welcome contributions.
 
 ** usage
 # git clone https://github.com/wagnermarques/Fedora-Dockerfiles.git
@@ -19,6 +21,7 @@ Some [guidelines](https://github.com/projectatomic/container-best-practices) for
 
 We welcome contributions.
 
+
 ** containers info
    | container --name                   | imgname                                           |           --ip | --net              |     ports | obs |
    | fzl_vnc                            | wagnermarques/fzl_vnc:0.0.1                       | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
@@ -27,4 +30,4 @@ We welcome contributions.
 
 
 
-  
+

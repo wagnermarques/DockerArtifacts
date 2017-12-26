@@ -9,6 +9,8 @@ MAINTAINER wagnerdocri@gmail.com
 ENV JDKFILE=jdk-8u131-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jdk/jdk1.8.0_131
 
+ENV http_proxy="http://wagner:nicolas1*@192.168.0.2:3128"
+ENV http_proxy="http://wagner:nicolas1*@192.168.0.2:3128"
 
 
 #ENV JDK_FILENAME=jdk-8u121-linux-x64.tar.gz
@@ -16,7 +18,7 @@ ENV JAVA_HOME=/opt/jdk/jdk1.8.0_131
 
 #PATH=${PATH}:/opt/jdk/bin 
 
-#RUN dnf -y update
+# RUN dnf -y update
 RUN dnf -y install tar wget  && dnf clean all
 
 RUN mkdir -p /opt/jdk

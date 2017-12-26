@@ -1,6 +1,17 @@
 FROM fedora:27
 MAINTAINER wagnerdocri@gmail.com
 
+
+#if you are not behind a proxy, comments this out
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/
+
+RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf
+RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf
+RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf
+
+
 # Install the appropriate software
 RUN dnf -y update
 RUN dnf -y install xorg-x11-twm tigervnc-server xterm dejavu-sans-fonts dejavu-serif-fonts xdotool

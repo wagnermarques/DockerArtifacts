@@ -9,7 +9,7 @@ ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/
 
 RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf
 RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf
-RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf
+RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf\
 
 
 # Install the appropriate software

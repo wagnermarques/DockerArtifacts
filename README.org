@@ -1,15 +1,19 @@
 #+Title: Fedora Dockerfiles
 
 * Fedora-Dockerfiles
+  This project is Docker for Docker containers files using Fedora
 
-This is a fork of the upstream source for the
-[fedora-dockerfiles](http://koji.fedoraproject.org/koji/packageinfo?packageID=18023)
-package.
-
+* TODOS
+** TODO [#C] create container with fvwm with remote accces for xrdp, vnc and ssh
+   https://github.com/fvwmorg
+   
+** TODO [#C] create container with xfce4 remote accces for xrdp, vnc and ssh
+** TODO [#C] makes fvwm runs up remote acces for xrdp, vnc and ssh
 
 We welcome contributions.
 
-** usage
+
+* usage
 # git clone https://github.com/wagnermarques/Fedora-Dockerfiles.git
 cd Fedora-Dockerfiles
 ./docker-network-create.sh
@@ -17,17 +21,20 @@ cd firefox
 ./docker-run.sh
 
 
-Some [guidelines](https://github.com/projectatomic/container-best-practices) for contributing to this repo.
+* containers info
+  
+  | container --name                   | imgname                                           |           --ip | --net              |     ports | obs |
+  | fzl_vnc                            | wagnermarques/fzl_vnc:0.0.1                       | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
+  | fzl_firefox                        | wagnermarques/fzl_firefox:0.0.1                   | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
+  | fzl_eclipse_jee_oxygen_java8_fed27 | wagnermarques/eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
+  |                                    |                                                   |                |                    |           |     |
 
-We welcome contributions.
+* programming
+  XContainers branch is for XContainers Dockerfiles
+  Some of the are still no working
 
-
-** containers info
-   | container --name                   | imgname                                           |           --ip | --net              |     ports | obs |
-   | fzl_vnc                            | wagnermarques/fzl_vnc:0.0.1                       | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
-   | fzl_firefox                        | wagnermarques/fzl_firefox:0.0.1                   | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
-   | fzl_eclipse_jee_oxygen_java8_fed27 | wagnermarques/eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
-
+* links  
+  Some [guidelines](https://github.com/projectatomic/container-best-practices) for contributing to this repo.
 
 
 

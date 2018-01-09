@@ -1,4 +1,4 @@
-FROM wagnermarques/java-oracle8:0.0.1
+FROM wagnermarques/java-oracle8-f27:0.0.1
 
 MAINTAINER wagnerdocri@gmail.com
 
@@ -9,15 +9,16 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 
-ENV TOMCATFILE=apache-tomcat-8.5.23.tar.gz
-ENV CATALINA_HOME=/opt/apache-tomcat-8.5.23
-                      
+
+ENV TOMCATFILE=apache-tomcat-8.5.24.tar.gz
+ENV tomcat8DwnLing=http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
+ENV CATALINA_HOME=/opt/apache-tomcat-8.5.24
 
 RUN dnf -y update
 RUN dnf -y install tar wget unzip  && dnf clean all
 
 
-RUN wget --output-document /opt/$TOMCATFILE "http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.23/bin/$TOMCATFILE"
+RUN wget --output-document /opt/$TOMCATFILE $tomcat8DwnLing
                                    
 #------
 #Installing and configuring tomcat8
@@ -26,7 +27,7 @@ RUN cd /opt && tar -zxvf  $TOMCATFILE
 
 #create catalina.out because at the very beginning of the start server state
 #this file still does not existe but we issue tail -f against it to see the logs
-RUN touch $CATALINA_HOME/logs/catalina.out
+RUN > $CATALINA_HOME/logs/catalina.out
 
 ADD conf $CATALINA_HOME/conf
 

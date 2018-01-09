@@ -1,4 +1,4 @@
-FROM fedora:25
+FROM fedora:27
 #based on: https://github.com/docker-library/mariadb/blob/1037a0b7ab09343e011826078fbdffb0bf465fc3/10.3/Dockerfile
 
 MAINTAINER wagnerdocri@gmail.com
@@ -9,6 +9,9 @@ MAINTAINER wagnerdocri@gmail.com
 ##ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 #ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
+
+ENV DATA_DIR=/home/wagner/wagnerdocri@gmail.com2/fzlbpms/fzlServer/data/mariadb/
+ENV LOG_DIR=/home/wagner/wagnerdocri@gmail.com2/fzlbpms/fzlServer/log/mariadb/
 
 # add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
 RUN groupadd -r mysql && useradd -r -g mysql mysql
@@ -26,9 +29,8 @@ RUN chmod 755 /scripts/*
 ADD etc/my.cnf /etc
 
 #I prefer configure volume with -v parameter of docker run
-#VOLUME ["/var/lib/mysql", "/var/log/mysql"]
-#       -v $DATA_DIR:/var/lib/mysql \
-#       -v LOG_DIR:/var/log/mysql \
+VOLUME ["$DATA_DIR", "/var/lib/mysql"]
+VOLUME ["$LOG_DIR", "/var/log/mysql"]
 
 EXPOSE 3306
 

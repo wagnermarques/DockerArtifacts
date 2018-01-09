@@ -3,6 +3,7 @@
 * Fedora-Dockerfiles
   This project is Docker for Docker containers files using Fedora
 
+
 * TODOS
 ** TODO [#C] create container with fvwm with remote accces for xrdp, vnc and ssh
    https://github.com/fvwmorg
@@ -27,11 +28,14 @@ cd firefox
   | fzl_vnc                            | wagnermarques/fzl_vnc:0.0.1                       | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
   | fzl_firefox                        | wagnermarques/fzl_firefox:0.0.1                   | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
   | fzl_eclipse_jee_oxygen_java8_fed27 | wagnermarques/eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
+  | fzl_tomcat8                        | wagnermarques/fzl_tomcat8:0.0.1                   |  192.168.33.91 | fzl_network_bridge | 8080:8090 |     |
   |                                    |                                                   |                |                    |           |     |
+
 
 * programming
   XContainers branch is for XContainers Dockerfiles
   Some of the are still no working
+
 
 * links  
   Some [guidelines](https://github.com/projectatomic/container-best-practices) for contributing to this repo.

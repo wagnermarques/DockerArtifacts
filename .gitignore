@@ -1,4 +1,9 @@
-tomcat7.0.56/downloads/
+**/Download/*
+**/download/*
+**/Downloads/*
+**/downloads/*
+tomcat7.0.56/downloads/*
+android-java-oracle-8-fed27/downloads/*
 **/*.html
 *.log
 \#*

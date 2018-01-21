@@ -13,7 +13,7 @@
 
 We welcome contributions.
 
-
+** TODO [#B] manager host and container container
 * usage
 # git clone https://github.com/wagnermarques/Fedora-Dockerfiles.git
 cd Fedora-Dockerfiles
@@ -24,12 +24,13 @@ cd firefox
 
 * containers info
   
-  | container --name                   | imgname                                           |           --ip | --net              |     ports | obs |
-  | fzl_vnc                            | wagnermarques/fzl_vnc:0.0.1                       | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
-  | fzl_firefox                        | wagnermarques/fzl_firefox:0.0.1                   | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
-  | fzl_eclipse_jee_oxygen_java8_fed27 | wagnermarques/eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
-  | fzl_tomcat8                        | wagnermarques/fzl_tomcat8:0.0.1                   |  192.168.33.91 | fzl_network_bridge | 8080:8090 |     |
-  |                                    |                                                   |                |                    |           |     |
+  | container --name | imgname                                               |           --ip | --net              |     ports | obs |
+  | fzl_vnc          | wagnermarques/fzl_vnc:0.0.1                           | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
+  | fzl_firefox      | wagnermarques/fzl_firefox:0.0.1                       | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
+  | fzl_eclipse      | wagnermarques/fzl_eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
+  | fzl_tomcat8      | wagnermarques/fzl_tomcat8:0.0.1                       |  192.168.33.91 | fzl_network_bridge | 8080:8090 |     |
+  | fzl_android      | wagnermarques/fzl_android-java-oracle-8-fed27-vnc     | 192.168.33.159 | fzl_network_bridge | 5904:5901 |     |
+  |                  |                                                       |                |                    |           |     |
 
 
 * programming

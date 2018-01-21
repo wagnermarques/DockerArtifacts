@@ -68,5 +68,3 @@ RUN mkdir -p /home/developer && \
 RUN sed -i '/\/etc\/X11\/xinit\/xinitrc-common/a [ -x /opt/eclipse/eclipse ] && /opt/eclipse/eclipse  &' /etc/X11/xinit/xinitrc
 
 EXPOSE 5901
-
-CMD    ["vncserver", "-fg" ]

@@ -1,16 +1,23 @@
 #!/bin/bash
 
-CONTAINER_NAME=fzl_vnc;
-CONTAINER_IP=192.168.33.155
 IMG_NAME=wagnermarques/fzl_vnc:0.0.1
 
+CONTAINER_NAME=fzl_vnc;
+CONTAINER_IP=192.168.33.155
+CONTAINER_SHARED_FOLDER=container_shared_folder
+MOUNT_SOURCE_CONTAINER_SHARED_DIR="$(pwd)"/$CONTAINER_SHARED_FOLDER
 
-docker rm $CONTAINER_NAME
 
 docker run  --name $CONTAINER_NAME -d -p 5901:5901 \
+       --mount type=bind,source=$MOUNT_SOURCE_CONTAINER_SHARED_DIR,target=/$CONTAINER_SHARED_FOLDER \
        -h $CONTAINER_NAME  \
-       --net fzl_network_bridge --ip $CONTAINER_IP  $IMG_NAME 
+       --net fzl_network_bridge --ip $CONTAINER_IP  $IMG_NAME
 
-       docker logs $CONTAINER_NAME       
+chmod 777 -R $MOUNT_SOURCE_CONTAINER_SHARED_DIR #fix this
+echo Container name: $CONTAINER_NAME
+echo Container ip: $CONTAINER_IP
+echo Container ports:  5901:5901
+echo Use it: vncviewer $CONTAINER_IP:1
+echo MOUNT_SOURCE_CONTAINER_SHARED-DIR: $MOUNT_SOURCE_CONTAINER_SHARED_DIR
+echo vnc password admin123
 
-vncviewer 192.168.33.155:1

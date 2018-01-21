@@ -1,0 +1,42 @@
+#+Title:android-java-oracle-8-fed27
+
+
+https://developer.android.com/studio/command-line/sdkmanager.html
+https://developer.android.com/studio/releases/platform-tools.html#revisions
+https://developer.android.com/studio/command-line/sdkmanager.html
+https://developer.android.com/studio/command-line/adb.html
+
+* Comparacao entre Java e Kotlin
+  https://kotlinlang.org/docs/reference/comparison-to-java.html
+* adb commands
+  https://androidforums.com/threads/how-to-basic-adb-commands.163138/
+   adb push c:\example.apk /sdcard/example.apk
+   adb pull /system/app/example.apk c:\example.apk
+   adb install c:\example.apk
+   adb shell (Begins shell connection with phone)
+   adb reboot (reboots phone)
+   adb reboot recovery (reboots phone into recovery)
+   adb reboot bootloader (reboots the phone into bootloader/the white screen)
+   adb remount (remounts the system)
+
+  cd (changes directories) -- cd /system/app
+  ls (lists all files in the directory) -- cd /system/app
+  rm (removes files) -- rm /system/app/example.apk
+  cp (copies files) similar to cat -- cp /system/app/example.apk
+  /sdcard/example.apk
+  cat (copies files) -- cat /system/app/example.apk > /sdcard/example.apk
+  exit (exits shell) -- exit
+
+
+* Sobre Android Gradle Plugin
+  https://developer.android.com/studio/releases/gradle-plugin.html
+  
+* Compilar Apps pela linha de comando
+  https://developer.android.com/studio/releases/gradle-plugin.html
+
+* CREATING CORDOVA APP
+  cd /apps/ 
+  cordova create myApp org.apache.cordova.myGreatApp myGreatApp
+  cd /apps/myGreatApp
+  cordova platform add android 
+  cordova requirements

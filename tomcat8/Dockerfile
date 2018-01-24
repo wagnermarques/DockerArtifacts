@@ -1,5 +1,5 @@
-FROM wagnermarques/java-oracle8-f27:0.0.1
-
+FROM wagnermarques/fzl_java-oracle8-f27:0.0.1
+                   
 MAINTAINER wagnerdocri@gmail.com
 
 #dnf needs proxy config in this way, but wget...
@@ -7,8 +7,6 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 #ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 #ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-
-
 
 ENV TOMCATFILE=apache-tomcat-8.5.24.tar.gz
 ENV tomcat8DwnLing=http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz

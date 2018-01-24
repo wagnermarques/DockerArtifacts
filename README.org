@@ -1,3 +1,4 @@
+
 #+Title: Fedora Dockerfiles
 
 * Fedora-Dockerfiles
@@ -30,7 +31,7 @@ cd firefox
   | fzl_eclipse      | wagnermarques/fzl_eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
   | fzl_tomcat8      | wagnermarques/fzl_tomcat8:0.0.1                       |  192.168.33.91 | fzl_network_bridge | 8080:8090 |     |
   | fzl_android      | wagnermarques/fzl_android-java-oracle-8-fed27-vnc     | 192.168.33.159 | fzl_network_bridge | 5904:5901 |     |
-  |                  |                                                       |                |                    |           |     |
+  | fzl_liferay      | wagnermarques/fzl_liferay:0.0.1                       | 192.168.33.160 | fzl_network_bridge | 8060:8080 |     |
 
 
 * programming

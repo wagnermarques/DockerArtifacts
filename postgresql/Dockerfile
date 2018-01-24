@@ -1,29 +1,32 @@
-FROM index.docker.io/fedora:23
-MAINTAINER Pavel Raiskup <praiskup@redhat.com>
+FROM fedora:27
 
-ENV container="docker"
+MAINTAINER wagnerdocri@gmail.com
 
-LABEL INSTALL="docker run -t -i --rm --privileged -u 0:0 -v /:/host --net=host --ipc=host --pid=host -e HOST=/host -e LOGDIR=/var/log/\"\${NAME}\" -e DATADIR=/var/lib/\"\${NAME}\" -e CONFDIR=/etc/\"\${NAME}\" -e IMAGE=\"\${IMAGE}\" -e NAME=\"\${NAME}\" -e OPT1 -e OPT2 -e OPT3 \${OPT2} \${IMAGE} /usr/share/cont-postgresql/atomic/install.sh" \
-    UNINSTALL="docker run -t -i --rm --privileged -u 0:0 -v /:/host --net=host --ipc=host --pid=host -e HOST=/host -e LOGDIR=/var/log/\"\${NAME}\" -e DATADIR=/var/lib/\"\${NAME}\" -e CONFDIR=/etc/\"\${NAME}\" -e IMAGE=\"\${IMAGE}\" -e NAME=\"\${NAME}\" -e OPT1 -e OPT2 -e OPT3 \${OPT2} \${IMAGE} /usr/share/cont-postgresql/atomic/uninstall.sh"
+#https://www.postgresql.org/docs/10/static/install-requirements.html
+#https://github.com/docker-library/postgres/blob/82e8101ff612b492507f4efc2120963b29f4188d/9.6/Dockerfile
 
-RUN dnf -y --setopt=tsflags=nodocs install postgresql-server \
-    && dnf -y --setopt=tsflags=nodocs update glibc-common \
-    && dnf -y --setopt=tsflags=nodocs reinstall glibc-common \
-    && dnf -y --setopt=tsflags=nodocs clean all --enablerepo='*'
+#dnf needs proxy config in this way, but wget...
+#uncomment accodingly your proxy configuration
+#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
-ADD "root" \
-    "/"
+RUN dnf -y update
+RUN dnf -y install postgresql-server postgresql-contrib  postgresql-jdbc
+RUN dnf -y update glibc-common  && dnf -y reinstall glibc-common
+RUN dnf -y clean all
 
-RUN systemctl disable getty.service console-getty.service \
-    && systemctl enable postgresql-container.service \
-    && touch /var/lib/pgsql/data/.container_internal && chown 26:26 /var/lib/pgsql/data \
-    && container-build && rm /usr/bin/container-build
+ADD ./scripts /scripts
+ADD ./container_shared_folder /container_shared_folder
+ADD ./container_config_files /container_config_files
 
-VOLUME \
-    "/var/lib/pgsql/data"
+RUN chmod -v +x /scripts/*.sh
+RUN chown postgres:postgres /container_shared_folder
+RUN chown postgres:postgres /container_config_files
 
 EXPOSE 5432
 
-USER postgres
-ENTRYPOINT ["/usr/bin/container-entrypoint"]
-CMD ["container-start"]
+USER postgres 
+
+ENTRYPOINT ["/scripts/entrypoint.sh"]
+

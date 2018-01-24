@@ -1,4 +1,4 @@
-FROM wagnermarques/java-oracle8-f27:0.0.1
+FROM wagnermarques/fzl_java-oracle8-f27:0.0.1
 
 MAINTAINER wagnerdocri@gmail.com
 
@@ -10,6 +10,7 @@ MAINTAINER wagnerdocri@gmail.com
 
 
 RUN dnf -y update
-RUN dnf -y install unzip R texlive* && dnf clean all
+RUN dnf -y install tar R texlive-scheme-full && dnf clean all
 
+wget 
 

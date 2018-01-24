@@ -24,6 +24,8 @@ RUN chmod -v +x /scripts/*.sh
 RUN chown postgres:postgres /container_shared_folder
 RUN chown postgres:postgres /container_config_files
 
+RUN echo 'LANG="pt_BR.UTF-8"' >  /etc/locale.conf
+
 EXPOSE 5432
 
 USER postgres 

@@ -1,12 +1,17 @@
 #!/bin/bash
 
 echo "running postgresql server..."
+locale
 
 #not using PGDATA name because we are setting data dir in postgresql.conf
 PGDATA_DIRECTORY=/container_shared_folder/var/lib/pgsql/data/
 
-chown -R "$(id -u)" /container_shared_folder/  || chmod 700 /container_shared_folder/
-chown -R "$(id -u)" "$PGDATA_DIRECTORY"  || chmod 700 "$PGDATA_DIRECTORY"
+
+
+#chown -R "$(id -u)" /container_shared_folder/  || chmod 700 /container_shared_folder/
+#chown -R "$(id -u)" "$PGDATA_DIRECTORY"  || chmod 700 "$PGDATA_DIRECTORY"
+
+
 
 #https://www.postgresql.org/docs/9.6/static/app-initdb.html
 #https://social.technet.microsoft.com/wiki/pt-br/contents/articles/12733.postgresql-criar-banco-de-dados-com-a-codificacao-win1252-no-postgresql-usando-o-linux.aspx
@@ -17,22 +22,23 @@ initdb --pgdata=$PGDATA_DIRECTORY --encoding=utf8 \
        --auth="trust" \
        --auth-host="trust" \
        --auth-local="trust" \
-       --pgdata="$PGDATA_DIRECTORY" \
-       --locale="pt_BR.utf8" \
-       --lc_messages='pt_BR.UTF-8' \
-       --lc_monetary='pt_BR.UTF-8' \
-       --lc_numeric='pt_BR.UTF-8'  \
-       --lc_time='pt_BR.UTF-8'   \
-       --lc-monetary='pt_BR.UTF-8' \
-       --lc-numeric='pt_BR.UTF-8'  \
-       --lc-time='pt_BR.UTF-8'     \
        --username='postgres'       \
+       --pgdata="$PGDATA_DIRECTORY" \
        --pwfile="$PGDATA_DIRECTORY/pwfile" \
-       --xlogdir="$PGDATA_DIRECTORY/transaction_log" \
+       --xlogdir="$PGDATA_DIRECTORY/transaction_log"
 
-       #pg_ctl -D  $PGDATA_DIRECTORY/ 
-#psql --version
+#       --locale="LATIN2" \
+#       --lc-monetary='pt_BR.UTF-8' \
+#       --lc-time='pt_BR.UTF-8'     \
 
+
+
+
+       pg_ctl -D  $PGDATA_DIRECTORY/ 
+       psql --version
+
+
+       #       --locale="pt_BR.utf8" -> initdb: invalid locale name "pt_BR.utf8"
 
 
 

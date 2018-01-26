@@ -15,6 +15,7 @@
 We welcome contributions.
 
 ** TODO [#B] manager host and container container
+
 * usage
 # git clone https://github.com/wagnermarques/Fedora-Dockerfiles.git
 cd Fedora-Dockerfiles
@@ -25,13 +26,15 @@ cd firefox
 
 * containers info
   
-  | container --name | imgname                                               |           --ip | --net              |     ports | obs |
-  | fzl_vnc          | wagnermarques/fzl_vnc:0.0.1                           | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
-  | fzl_firefox      | wagnermarques/fzl_firefox:0.0.1                       | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
-  | fzl_eclipse      | wagnermarques/fzl_eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
-  | fzl_tomcat8      | wagnermarques/fzl_tomcat8:0.0.1                       |  192.168.33.91 | fzl_network_bridge | 8080:8090 |     |
-  | fzl_android      | wagnermarques/fzl_android-java-oracle-8-fed27-vnc     | 192.168.33.159 | fzl_network_bridge | 5904:5901 |     |
-  | fzl_liferay      | wagnermarques/fzl_liferay:0.0.1                       | 192.168.33.160 | fzl_network_bridge | 8060:8080 |     |
+  | container --name    | imgname                                               |           --ip | --net              |     ports | obs |
+  | fzl_vnc             | wagnermarques/fzl_vnc:0.0.1                           | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
+  | fzl_firefox         | wagnermarques/fzl_firefox:0.0.1                       | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
+  | fzl_eclipse         | wagnermarques/fzl_eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
+  | fzl_tomcat8         | wagnermarques/fzl_tomcat8:0.0.1                       |  192.168.33.91 | fzl_network_bridge | 8080:8090 |     |
+  | fzl_android         | wagnermarques/fzl_android-java-oracle-8-fed27-vnc     | 192.168.33.159 | fzl_network_bridge | 5904:5901 |     |
+  | fzl_liferay         | wagnermarques/fzl_liferay:0.0.1                       | 192.168.33.160 | fzl_network_bridge | 8060:8080 |     |
+  | fzl_mariadb_liferay | mariadb:10.3                                          | 192.168.33.165 | fzl_network_bridge | 4306:3307 |     |
+  | mariadb             | mariadb:10.3                                          | 192.168.33.151 | ide                | 3306:3306 |     |
 
 
 * programming

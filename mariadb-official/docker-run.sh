@@ -14,12 +14,14 @@ if [ "x$CONTAINER_NAME" = "x" ]; then
 fi
 
 echo "Running... docker-run.sh <$CONTAINER_NAME> at host port <$HOST_PORT> and ip <$CONTAINER_IP>."
-mkdir -p $(pwd)/container_shared_folder/$CONTAINER_NAME #data dir is for each respective container name
+
+mkdir -p $(pwd)/../data-dir-for-mariadb/$CONTAINER_NAME #data dir is for each respective container name
+DATADIR=$(pwd)/../data-dir-for-mariadb/$CONTAINER_NAME
 
 docker run \
        --name  $CONTAINER_NAME -h $CONTAINER_NAME  \
        --net fzl_network_bridge --ip $CONTAINER_IP  \
-       -v $(pwd)/container_shared_folder/$CONTAINER_NAME:/var/lib/mysql \
+       -v $DATADIR:/var/lib/mysql \
        -v $(pwd)/sqlscripts:/sqlscripts \
        -p $HOST_PORT:3306 \
        -e MYSQL_ROOT_PASSWORD=admin123 \

@@ -1,3 +1,5 @@
+liferay7-containers-shared-dir/*
+data-dir-for-mariadb/*
 **/Download/*
 **/download/*
 **/Downloads/*

@@ -7,9 +7,9 @@ CONTAINER_IP=$3
 
 if [ "x$CONTAINER_NAME" = "x" ]; then
     {
-        $CONTAINER_NAME=mariadb
-        $HOST_PORT=3306
-        $CONTAINER_IP=192.168.33.151
+        CONTAINER_NAME=mariadb
+        HOST_PORT=3306
+        CONTAINER_IP=192.168.33.151
     }
 fi
 

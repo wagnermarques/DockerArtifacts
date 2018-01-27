@@ -36,7 +36,15 @@ cd firefox
   | fzl_mariadb_liferay | mariadb:10.3                                          | 192.168.33.165 | fzl_network_bridge | 4306:3307 |     |
   | mariadb             | mariadb:10.3                                          | 192.168.33.151 | ide                | 3306:3306 |     |
 
-
+** fzl_liferay7
+   To start a new liferay7 container instance and its mariadb database
+   container instance:
+   Enter in liferay7/./start-new-instance folder and run
+   ./start-new-instance.sh
+   This will create liferay7 and mariadb contaners
+   The database folder is in Fedora-Dockerfiles/data-dir-for-mariadb
+   To create another instances just adjust
+   liferay7/start-instance-script/new-instance-properties.sh file
 * programming
   XContainers branch is for XContainers Dockerfiles
   Some of the are still no working

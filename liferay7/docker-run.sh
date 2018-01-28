@@ -9,9 +9,9 @@ SHARED_FOLDER=$(pwd)/../liferay7-containers-shared-dir/$CONTAINER_NAME
 
 if [ "x$CONTAINER_NAME" = "x" ]; then
     {
-        $CONTAINER_NAME=fzl_liferay7
-        $HOST_PORT=8060
-        $CONTAINER_IP=192.168.33.160
+        CONTAINER_NAME=fzl_liferay7
+        HOST_PORT=8060
+        CONTAINER_IP=192.168.33.160
     }
 fi
 

@@ -44,7 +44,7 @@ cd firefox
    This will create liferay7 and mariadb contaners
    The database folder is in Fedora-Dockerfiles/data-dir-for-mariadb
    To create another instances just adjust
-   liferay7/start-instance-script/new-instance-properties.sh file
+   liferay7/start-instance-script/new-instance-properties.sh file?
 * programming
   XContainers branch is for XContainers Dockerfiles
   Some of the are still no working

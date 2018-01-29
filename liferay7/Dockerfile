@@ -23,7 +23,7 @@ RUN wget --output-document /opt/$LIFERAYFILE "https://downloads.sourceforge.net/
 RUN cd /opt && unzip $LIFERAYFILE
 RUN touch $LIFERAY_HOME/tomcat-8.0.32/logs/catalina.out
 RUN rm /opt/$LIFERAYFILE
-RUN cp /container_config_folder/portal-ext.properties /opt/liferay-ce-portal-7.0-ga3/
+RUN cp /container_config_folder/portal-setup-wizard.properties /opt/liferay-ce-portal-7.0-ga3/
 #RUN wget -o        https://downloads.mariadb.com/Connectors/java/connector-java-2.2.1/mariadb-java-client-2.2.1.jar
 #RUN ls -ilha /opt/liferay-ce-portal-7.0-ga3/
 
@@ -31,8 +31,8 @@ RUN cp /container_config_folder/portal-ext.properties /opt/liferay-ce-portal-7.0
 #Deploying orbeon forms porlet
 #I've been downloaded orbeon manually
 #------
-RUN unzip -d /opt/ /container_config_folder/downloads/orbeon-2017.2.201712300816-CE.zip
-RUN ls -l /opt/orbeon-2017.2.201712300816-CE
+#RUN unzip -d /opt/ /container_config_folder/downloads/orbeon-2017.2.201712300816-CE.zip
+#RUN ls -l /opt/orbeon-2017.2.201712300816-CE
 
 # Define default command.
 #CMD $LIFERAY_HOME/tomcat-8.0.32/bin/startup.sh && tail -f $LIFERAY_HOME/tomcat-8.0.32/logs/catalina.out

@@ -24,7 +24,7 @@ docker run \
        -v $(pwd)/sqlscripts:/sqlscripts \
        -p $HOST_PORT:5432 \
        -e PGPASSWORD='admin123' \
-       -e POSTGRES_USER=admin \
+       -e POSTGRES_USER=postgres \
        -e POSTGRES_PASSWORD=admin123 \
        -d postgres:10.1 
 

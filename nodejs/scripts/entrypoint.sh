@@ -8,13 +8,17 @@ PARAM2=$(echo $entry_point_params | cut -d':' -f2) # output is 2
 
 if [ "$PARAM1" = "bash" ];
 then
-
+    printf "==>[entrypoint.sh] %s\n" "about to running $PARAM2 command"
+    printf "==>[entrypoint.sh] %s\n" "ls /"
+    ls -la /
+    printf "==>[entrypoint.sh] %s\n" "ls /node_project"
+    ls -la /node_project
+    
+    cd /node_project    
     echo $PARAM2 | tr '&&' '\n' | while read cmd; do
     $cmd
     done
 
-    #bash_command="$PARAM2"
-    #$bash_command
 fi
 
 

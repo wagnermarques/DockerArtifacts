@@ -34,7 +34,8 @@ cd firefox
   | fzl_android         | wagnermarques/fzl_android-java-oracle-8-fed27-vnc     | 192.168.33.159 | fzl_network_bridge | 5904:5901 |     |
   | fzl_liferay         | wagnermarques/fzl_liferay:0.0.1                       | 192.168.33.160 | fzl_network_bridge | 8060:8080 |     |
   | fzl_mariadb_liferay | mariadb:10.3                                          | 192.168.33.165 | fzl_network_bridge | 4306:3307 |     |
-  | mariadb             | mariadb:10.3                                          | 192.168.33.151 | ide                | 3306:3306 |     |
+  | mariadb             | mariadb:10.3                                          | 192.168.33.151 | fzl_network_bridge | 3306:3306 |     |
+  | fzl_nodejs          | wagnermarques/fzl_nodejs:0.0.1                        |  192.168.33.30 | fzl_network_bridge | 3000:3000 |     |
 
 ** fzl_liferay7
    To start a new liferay7 container instance and its mariadb database
@@ -45,6 +46,7 @@ cd firefox
    The database folder is in Fedora-Dockerfiles/data-dir-for-mariadb
    To create another instances just adjust
    liferay7/start-instance-script/new-instance-properties.sh file?
+
 * programming
   XContainers branch is for XContainers Dockerfiles
   Some of the are still no working

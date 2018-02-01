@@ -1,5 +1,4 @@
-
-FROM fedora:25
+FROM fedora:27
 
 MAINTAINER wagnerdocri@gmail.com
 
@@ -10,7 +9,6 @@ RUN dnf -y update && dnf -y install nodejs npm && dnf clean all
 RUN node -v
 RUN npm -v
 
-    
 RUN npm install -g grunt-cli
 RUN npm install -g yo generator-generator
 RUN npm install -g webpack
@@ -18,8 +16,9 @@ RUN npm install -g webpack
 RUN npm install -g typescript
 RUN npm install -g ts-loader  #links webpack to complie typescript
 RUN npm install -g jquery  #to use jquery in your project
+RUN npm install -g express
 
-RUN npm install -g http-server #to have a local server run
+#RUN npm install -g http-server #to have a local server run
 
 
 #
@@ -37,15 +36,11 @@ RUN npm install -g @dojo/cli
 
 
 # Set port for nodejs to listen on and expose it
-ENV PORT 8080
-EXPOSE 8080
+ENV PORT 3000
+EXPOSE 3000
 
 # Set production environment for nodejs application
 ENV NODE_ENV=production
-
-# Make directory for our nodejs project
-RUN mkdir /node_projects
-
 
 ADD scripts /scripts
 

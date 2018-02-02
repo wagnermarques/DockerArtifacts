@@ -4,13 +4,13 @@ MAINTAINER wagnerdocri@gmail.com
 
 
 #if you are not behind a proxy, comments this out                                                                                                                               
-#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                        
-#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                         
-#ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/                                                                                                                         
-                                                                                                                                                                                
-#RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf                                                                                                                  
-#RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf                                                                                                                           
-#RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf                                                                                                                        
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/              
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/                                                                                                                        
+                                                                                                                                                              
+RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf
+RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf                                                                             
+RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf                                                                                                                        
                                                                
 # Java Version and other
 
@@ -18,11 +18,7 @@ MAINTAINER wagnerdocri@gmail.com
 ENV JDKFILE=jdk-8u131-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jdk/jdk1.8.0_131
 
-
-
 #ENV JDK_FILENAME=jdk-8u121-linux-x64.tar.gz
-
-
 #PATH=${PATH}:/opt/jdk/bin 
 
 RUN dnf -y update

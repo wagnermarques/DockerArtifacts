@@ -9,7 +9,7 @@ MOUNT_SOURCE_CONTAINER_SHARED_DIR="$(pwd)"/$CONTAINER_SHARED_FOLDER
 
 
 docker run  --name $CONTAINER_NAME -d -p 5901:5901 \
-       --mount type=bind,source=$MOUNT_SOURCE_CONTAINER_SHARED_DIR,target=/$CONTAINER_SHARED_FOLDER \
+       -v $MOUNT_SOURCE_CONTAINER_SHARED_DIR:/$CONTAINER_SHARED_FOLDER \
        -h $CONTAINER_NAME  \
        --net fzl_network_bridge --ip $CONTAINER_IP  $IMG_NAME
 

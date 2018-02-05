@@ -24,7 +24,7 @@ ADD ./scripts /scripts
 ADD ./container_config_folder /container_config_folder
 
 #needed just if you are behind a proxy
-#RUN cp /container_config_folder/.wgetrc  ~/
+RUN cp /container_config_folder/.wgetrc  ~/
 
 
 

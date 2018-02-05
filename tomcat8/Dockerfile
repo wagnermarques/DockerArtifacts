@@ -4,19 +4,19 @@ MAINTAINER wagnerdocri@gmail.com
 
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
-ENV TOMCATFILE=apache-tomcat-8.5.24.tar.gz
-ENV tomcat8DwnLing=http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
-ENV CATALINA_HOME=/opt/apache-tomcat-8.5.24
+ENV TOMCATFILE=apache-tomcat-8.5.27.tar.gz
+ENV  tomcat8DwnLink=http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
+ENV CATALINA_HOME=/opt/apache-tomcat-8.5.27
 
 RUN dnf -y update
 RUN dnf -y install tar wget unzip  && dnf clean all
 
 
-RUN wget --output-document /opt/$TOMCATFILE $tomcat8DwnLing
+RUN wget --output-document /opt/$TOMCATFILE  -e use_proxy=on  -e http_proxy=$http_proxy -e https_proxy=$http_proxy   $tomcat8DwnLink
                                    
 #------
 #Installing and configuring tomcat8

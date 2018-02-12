@@ -18,6 +18,7 @@ echo "Running... docker-run.sh <$CONTAINER_NAME> at host port <$HOST_PORT> and i
 mkdir -p $(pwd)/../data-dir-for-mariadb/$CONTAINER_NAME #data dir is for each respective container name
 DATADIR=$(pwd)/../data-dir-for-mariadb/$CONTAINER_NAME
 
+
 docker run \
        --name  $CONTAINER_NAME -h $CONTAINER_NAME  \
        --net fzl_network_bridge --ip $CONTAINER_IP  \

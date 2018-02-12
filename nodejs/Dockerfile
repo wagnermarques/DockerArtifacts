@@ -2,8 +2,16 @@ FROM fedora:27
 
 MAINTAINER wagnerdocri@gmail.com
 
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+
+
 # Install nodejs and npm
 RUN dnf -y update && dnf -y install nodejs npm && dnf clean all
+
+RUN npm config set proxy http://wagner:nicolas1*@192.168.0.2:3128/
+
 
 # Show nodejs and npm versions installed
 RUN node -v

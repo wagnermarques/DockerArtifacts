@@ -4,13 +4,13 @@ MAINTAINER wagnerdocri@gmail.com
 
 
 #if you are not behind a proxy, comments this out                                                                                                                               
-#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                        
-#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                         
-#ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/                                                                                                                         
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                        
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                         
+ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/                                                                                                                         
                                                                                                                                                                                 
-#RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf                                                                                                                  
-#RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf                                                                                                                           
-#RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf                                                                                                                        
+RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf                                                                                                                 
+RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf                                                                                                                           
+RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf                                                                                                                        
                                                                
 
 
@@ -32,9 +32,10 @@ ENV JAVA_HOME=/opt/jdk/jdk1.8.0_131
 RUN dnf -y install tar wget  && dnf clean all
 
 RUN mkdir -p /opt/jdk
-RUN wget --output-document /opt/jdk/$JDKFILE \
+RUN wget --output-document /opt/jdk/$JDKFILE  -e use_proxy=on -e http_proxy=$http_proxy -e https_proxy=$http_proxy  \
          --no-cookies --no-check-certificate \
-         --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/$JDKFILE"
+         --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/$JDKFILE" 
+	
                                                                                         
 RUN cd /opt/jdk && tar xvf $JDKFILE 
 

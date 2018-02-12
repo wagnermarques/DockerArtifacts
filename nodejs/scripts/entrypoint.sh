@@ -12,7 +12,6 @@ then
     printf "==>[entrypoint.sh] %s\n" "ls /"
     ls -la /
     printf "==>[entrypoint.sh] %s\n" "ls /node_project"
-    ls -la /node_project
     cd /node_project    
     echo $PARAM2 | tr '&&' '\n' | while read cmd; do
     $cmd

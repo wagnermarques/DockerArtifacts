@@ -1,0 +1,30 @@
+dockerfiles-fedora : java-oracle-8-f27-vnc
+==========================
+
+Fedora dockerfile based for java applications tha must be accessed by VNC X applicationa
+
+Get the version of Docker
+
+```
+# docker version
+```
+
+To build:
+
+Copy the sources down -
+
+
+```
+as root user
+
+./docker-network-create.sh
+cd java-oracle-8-f27-vnc
+./docker-build.sh
+./docker-run.sh
+
+```
+# vncviewer localhost:1
+ admin123 is the password
+```
+
+That's it.

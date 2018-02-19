@@ -9,14 +9,14 @@ ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 ENV TOMCATFILE=apache-tomcat-8.5.27.tar.gz
-ENV  tomcat8DwnLink=http://ftp.unicamp.br/pub/apache/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
+ENV tomcat8DwnLing=http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
 ENV CATALINA_HOME=/opt/apache-tomcat-8.5.27
 
 RUN dnf -y update
 RUN dnf -y install tar wget unzip  && dnf clean all
 
 
-RUN wget --output-document /opt/$TOMCATFILE  -e use_proxy=on  -e http_proxy=$http_proxy -e https_proxy=$http_proxy   $tomcat8DwnLink
+RUN wget --output-document /opt/$TOMCATFILE  -e use_proxy=on -e http_proxy=$http_proxy -e https_proxy=$http_proxy $tomcat8DwnLing
                                    
 #------
 #Installing and configuring tomcat8

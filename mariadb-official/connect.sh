@@ -1,2 +1,2 @@
 #!/bin/bash
-docker exec -it mysql mysql -uroot -padmin123
+docker exec -it mariadb mysql -uroot -padmin123

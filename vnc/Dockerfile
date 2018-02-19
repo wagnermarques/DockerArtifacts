@@ -6,10 +6,10 @@ MAINTAINER wagnerdocri@gmail.com
 #if behind a proxy just uncomment this lines
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV use_proxy=yes
+#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV use_proxy=yes
 
 
 

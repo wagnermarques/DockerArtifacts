@@ -1,4 +1,4 @@
-FROM fedora:25
+FROM fedora:27
 
 MAINTAINER wagnerdocri@gmail.com
 
@@ -6,11 +6,11 @@ MAINTAINER wagnerdocri@gmail.com
 
 
 ##ENV JDK_RPM_FILE_NAME=
-ENV JDKFILE=jdk-8u131-linux-x64.tar.gz
-ENV JAVA_HOME=/opt/jdk/jdk1.8.0_131
+ENV JDKFILE=jdk-8u171-linux-x64.tar.gz    
+ENV JAVA_HOME=/opt/jdk/jdk1.8.0_171
 
-ENV http_proxy="http://wagner:nicolas1*@192.168.0.2:3128"
-ENV http_proxy="http://wagner:nicolas1*@192.168.0.2:3128"
+#ENV http_proxy="http://wagner:nicolas1*@192.168.0.2:3128"
+#ENV http_proxy="http://wagner:nicolas1*@192.168.0.2:3128"
 
 
 #ENV JDK_FILENAME=jdk-8u121-linux-x64.tar.gz
@@ -24,8 +24,8 @@ RUN dnf -y install tar wget  && dnf clean all
 RUN mkdir -p /opt/jdk
 RUN wget --output-document /opt/jdk/$JDKFILE \
          --no-cookies --no-check-certificate \
-         --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/$JDKFILE"
-                                                                                        
+         --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/$JDKFILE"
+
 RUN cd /opt/jdk && tar xvf $JDKFILE 
 
 #FROM: https://gist.github.com/voor/b2dd473db296d9eae004

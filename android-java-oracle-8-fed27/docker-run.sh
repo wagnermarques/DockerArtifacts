@@ -1,21 +1,23 @@
 #!/bin/bash
 
-CONTAINER_NAME=fzl_android;
+CONTAINER_NAME=fzl_android
+HOST_PORT_MAPPING=5901:5901
+CONTAINER_IP=192.168.33.155
 IMG_NAME=wagnermarques/fzl_android-java-oracle-8-fed27-vnc:0.0.1;
+echo "Running... docker-run.sh <$CONTAINER_NAME> at host port <$HOST_PORT> and ip <$CONTAINER_IP>."
 
-#Change this to provide directory to cotainer create your projects
-HOST_DIR_FOR_WORKSPACE="$(pwd)/../android-java-oracle-8-fed27-shared-dir"
 
-docker rm $CONTAINER_NAME
+mkdir -p $(pwd)/../android-java-oracle-8-fed27-shared-dir/$CONTAINER_NAME #data dir is for each respective container name
+DATADIR=$(pwd)/../android-java-oracle-8-fed27-shared-dir/$CONTAINER_NAME
 
 docker run \
-       --name $CONTAINER_NAME -d -p 5901:5901 \
-       -h fzl_android -v $HOST_DIR_FOR_WORKSPACE:/default_workspace \
-       --net fzl_network_bridge --ip 192.168.33.159  $IMG_NAME
+       --name  $CONTAINER_NAME -h $CONTAINER_NAME  -d -p $HOST_PORT_MAPPING \
+       --net fzl_network_bridge --ip $CONTAINER_IP  \
+       -v $DATADIR:/default_workspace \
+       -v $(pwd)/scripts:/scripts \
+       $IMG_NAME
 
 docker logs $CONTAINER_NAME
 
-echo "to open container with vnc..."
-echo "vncviewer 192.168.33.159:1"
 
 

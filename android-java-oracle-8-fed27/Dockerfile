@@ -79,6 +79,7 @@ ENV ANDROID_HOME=$ANDROID_SDK_r38_HOME
 
 ENV PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
+ADD ./scripts /scripts
 ADD ./container_build_outputs /container_build_outputs
 #https://stackoverflow.com/questions/42638589/android-studio-sdk-manager
 RUN cd  $ANDROID_SDK_r38_HOME && rm -rf tools

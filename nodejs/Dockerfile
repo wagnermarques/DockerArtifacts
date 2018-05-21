@@ -2,15 +2,17 @@ FROM fedora:27
 
 MAINTAINER wagnerdocri@gmail.com
 
-ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 
 # Install nodejs and npm
-RUN dnf -y update && dnf -y install nodejs npm && dnf clean all
+RUN dnf -y update
+RUN dnf -y install nodejs npm
+RUN dnf clean all
 
-RUN npm config set proxy http://wagner:nicolas1*@192.168.0.2:3128/
+#RUN npm config set proxy http://wagner:nicolas1*@192.168.0.2:3128/
 
 
 # Show nodejs and npm versions installed
@@ -26,7 +28,7 @@ RUN npm install -g ts-loader  #links webpack to complie typescript
 RUN npm install -g jquery  #to use jquery in your project
 RUN npm install -g express
 
-#RUN npm install -g http-server #to have a local server run
+RUN npm install -g http-server #to have a local server run
 
 
 #

@@ -4,15 +4,19 @@ MAINTAINER wagnerdocri@gmail.com
 
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV https_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
-ENV TOMCATFILE=apache-tomcat-8.5.27.tar.gz
-ENV tomcat8DwnLing=http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.27/bin/apache-tomcat-8.5.27.tar.gz
-ENV CATALINA_HOME=/opt/apache-tomcat-8.5.27
+ENV TOMCATFILE=apache-tomcat-8.5.31.tar.gz
+ENV tomcat8DwnLing=http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz
 
+ENV CATALINA_HOME=/opt/apache-tomcat-8.5.31
+
+RUN dnf clean packages
 RUN dnf -y update
+RUN dnf clean all
 RUN dnf -y install tar wget unzip  && dnf clean all
 
 
@@ -27,7 +31,9 @@ RUN cd /opt && tar -zxvf  $TOMCATFILE
 #this file still does not existe but we issue tail -f against it to see the logs
 RUN > $CATALINA_HOME/logs/catalina.out
 
+ADD conf/dnf.conf /etc/dnf/ 
 ADD conf $CATALINA_HOME/conf
+
 
 ADD /webapps/manager/META-INF/ $CATALINA_HOME/webapps/manager/META-INF/
 

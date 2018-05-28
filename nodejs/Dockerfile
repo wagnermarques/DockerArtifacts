@@ -53,7 +53,7 @@ EXPOSE 3000
 ENV NODE_ENV=production
 
 ADD scripts /scripts
-
+RUN mkdir /node_project
 # I am not intent to run a single app withing de container but several, or just to build them with
 # pre configured isolated (by container) global node module
 # Run it!

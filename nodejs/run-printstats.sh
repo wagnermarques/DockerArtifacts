@@ -14,6 +14,7 @@ else
     mkdir -p $CONTAINER_DATA_DIR/node_projects
 fi
 
+
 #printer-stats is a 
 NODE_PROJECTS_DIR=$CONTAINER_DATA_DIR/node_projects
 
@@ -31,7 +32,7 @@ CONTAINER_HOST_NAME=$PROJECT_NAME
 CONTAINER_IP=192.168.33.31
 SHARED_FOLDER=$CONTAINER_DATA_DIR
 #CONTAINER_RUN_CMD="cd /node_project && npm install && npm start"
-CONTAINER_RUN_CMD="cd /node_project/node_projects/printers-stats && npm start"
+CONTAINER_RUN_CMD="cd /node_project/node_projects/printers-stats &&  npm install && npm start"
 
 CONTAINER_PORT=3002
 

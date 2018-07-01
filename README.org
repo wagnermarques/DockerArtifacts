@@ -5,6 +5,26 @@
   This project is Docker for Docker containers files using Fedora
 
 
+* The Containers
+** mariadb
+   Use it to get mariadb server    
+   If its startd with docker-run.sh script, the container runs under ip 192.168.33.151 and port 3306
+** fzl_maven
+   This container provide nexux and maven
+   access http://localhost:8081/ for Nexus Repository Manger home page
+   I've been used
+   $FEDORADOCKERFILE_CLONED/data-dir-for-maven/mvnprojects for maven
+   projects. This directory is mapped as a volume for fzl_maven
+   container so that mvn command run in context of the container so
+   that  
+   
+** tomcat8
+   This container provide a tomca8 web container
+   access http://localhost/ to access tomcat home page
+   acess http://localhost/manager/html for tomcat application manager
+   the password
+   
+
 * TODOS
 ** TODO [#C] create container with fvwm with remote accces for xrdp, vnc and ssh
    https://github.com/fvwmorg

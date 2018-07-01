@@ -1,5 +1,5 @@
-FROM fedora:rawhide
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+FROM fedora:27
+MAINTAINER wagnerdocri@gmail.com
 
 ENV container docker
 

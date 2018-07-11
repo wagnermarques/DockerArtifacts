@@ -5,15 +5,15 @@ MAINTAINER wagnerdocri@gmail.com
 #if behind a proxy just uncomment this lines
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 #ENV use_proxy=yes
 
 
 
 RUN dnf -y update
-RUN dnf -y install findutils \
+RUN dnf -y install findutils git\
     libreoffice-core libreoffice-core  libreoffice-pyuno libreoffice-rhino libreoffice-pdfimport \
     python-openoffice python3-openoffice unoconv openoffice.org-diafilter \
     tar wget unzip  && dnf clean all
@@ -24,28 +24,42 @@ ADD ./scripts /scripts
 ADD ./container_config_folder /container_config_folder
 
 #needed just if you are behind a proxy
-RUN cp /container_config_folder/.wgetrc  ~/
+#RUN cp /container_config_folder/.wgetrc  ~/
 
 
 
-ENV LIFERAY_DOWNLOAD_LINK=https://downloads.sourceforge.net/project/lportal/Liferay%20Portal/7.0.2%20GA3/liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip?r=https%3A%2F%2Fwww.liferay.com%2Fdownloads&ts=1485642085&use_mirror=ufpr
-ENV LIFERAYFILE=liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip
-ENV LIFERAY_HOME=/opt/liferay-ce-portal-7.0-ga3
-ENV ORBEONFORMS_DOWNLOAD_URL=https://github-production-release-asset-2e65be.s3.amazonaws.com/255478/1d20cf68-ee17-11e7-9bf6-44d68ed79293?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20180127%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20180127T124941Z&X-Amz-Expires=300&X-Amz-Signature=6f6cb41ff92338d308140082222774851bc615acd4fd2c74337b9f166b959295&X-Amz-SignedHeaders=host&actor_id=77413&response-content-disposition=attachment%3B%20filename%3Dorbeon-2017.2.201712300816-CE.zip&response-content-type=application%2Foctet-stream
-ENV ORBEONFORMS_DOWNLOADED_FILE=orbeonforms.zip
+#LIFERAY: Building from source
+#https://community.liferay.com/blogs/-/blogs/how-can-i-build-liferay-7-0-from-source-
+ENV LIFERAY7_DOWNLOAD_LINK=https://ufpr.dl.sourceforge.net/project/lportal/Liferay%20Portal/7.1.0%20GA1/liferay-ce-portal-wildfly-7.1.0-ga1-20180703012531655.zip
+ENV LIFERAY7_DOWNLOADED_FILE_NAME=liferay-ce-portal-wildfly-7.1.0-ga1-20180703012531655.zip
+RUN wget $LIFERAY7_DOWNLOAD_LINK
+RUN unzip liferay-ce-portal-wildfly-7.1.0-ga1-20180703012531655.zip
+RUN rm $LIFERAY7_DOWNLOADED_FILE_NAME
 
 
-#------
-#Installing liferay
-#------
-#behind a proxy? use the first one command, otherwhise use second one
-#RUN wget --output-document /opt/$LIFERAYFILE -e use_proxy=$use_proxy -e http_proxy=$http_proxy -e https_proxy=$http_proxy $LIFERAY_DOWNLOAD_LINK
-RUN wget --output-document /opt/$LIFERAYFILE $LIFERAY_DOWNLOAD_LINK
 
-RUN cd /opt && unzip $LIFERAYFILE
-RUN touch $LIFERAY_HOME/tomcat-8.0.32/logs/catalina.out
-RUN rm /opt/$LIFERAYFILE
-RUN cp /container_config_folder/portal-ext.properties /opt/liferay-ce-portal-7.0-ga3/
+
+#INSTALLING ANT
+#ENV ANT_DOWNLOAD_LINK=http://mirror.nbtelecom.com.br/apache//ant/binaries/apache-ant-1.10.4-bin.zip
+#ENV ANT_HOME=/opt/apache-ant
+#ENV ANT_DOWNLOADED_FILE=apache-ant-1.10.4-bin.zip
+#ENV ANT_UNZIPED_FOLDER_NAME=apache-ant-1.10.4
+#RUN wget --output-document  $ANT_DOWNLOADED_FILE $ANT_DOWNLOAD_LINK
+#RUN unzip $ANT_DOWNLOADED_FILE
+#RUN mv $ANT_UNZIPED_FOLDER_NAME $ANT_HOME
+#ENV PATH=$PATH:$ANT_HOME/bin
+
+
+
+#BUILDING LIFERAY 7
+#TO BUILD FROM SOURCE USE THIS...
+#ENV APP_SERVER_PARENT_DIR=$WILDFLY_HOME
+#RUN cd $APP_SERVER_PARENT_DIR &&  git clone -b 7.1.x https://github.com/liferay/liferay-portal.git --depth 1
+#RUN cd $APP_SERVER_PARENT_DIR/liferay-portal && echo "app.server.parent.dir=$APP_SERVER_PARENT_DIR" > "app.server.$(whoami).properties"
+#RUN cd $APP_SERVER_PARENT_DIR/liferay-portal && echo "app.server.type=wildfly" >> "app.server.$(whoami).properties"
+#ENV ANT_OPTS="-Xmx2560m"
+#RUN cd $APP_SERVER_PARENT_DIR/liferay-portal && ant -f build-dist.xml  unzip-wildfly
+#RUN cd $APP_SERVER_PARENT_DIR/liferay-portal && ant clean all
 
 
 
@@ -59,4 +73,7 @@ RUN cp /container_config_folder/portal-ext.properties /opt/liferay-ce-portal-7.0
 
 # Define default command.
 #CMD $LIFERAY_HOME/tomcat-8.0.32/bin/startup.sh && tail -f $LIFERAY_HOME/tomcat-8.0.32/logs/catalina.out
-ENTRYPOINT ["/scripts/entrypoint.sh"]
+
+EXPOSE 8080
+
+CMD ["/liferay-ce-portal-7.1.0-ga1/wildfly-11.0.0/bin/standalone.sh", "-b", "0.0.0.0", "-bmanagement", "0.0.0.0"]

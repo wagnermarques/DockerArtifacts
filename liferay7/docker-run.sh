@@ -24,9 +24,9 @@ docker run \
        --net fzl_network_bridge --ip "$CONTAINER_IP" \
        -v "$SHARED_FOLDER":/liferay7-containers-shared-dir/$CONTAINER_NAME \
        -p "$HOST_PORT":8080 \
-       -d "$IMG_NAME"
+       -p 9990:9990 \
+       -d "$IMG_NAME" 
        
-
 echo Container name: $CONTAINER_NAME
 echo Container ip: $CONTAINER_IP
 echo Container host ports:  $HOST_PORT

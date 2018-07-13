@@ -5,10 +5,10 @@ MAINTAINER wagnerdocri@gmail.com
 #if behind a proxy just uncomment this lines
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-#ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
-#ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
-#ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
-#ENV use_proxy=yes
+ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV use_proxy=yes
 
 
 
@@ -24,7 +24,7 @@ ADD ./scripts /scripts
 ADD ./container_config_folder /container_config_folder
 
 #needed just if you are behind a proxy
-#RUN cp /container_config_folder/.wgetrc  ~/
+RUN cp /container_config_folder/.wgetrc  ~/
 
 
 
@@ -66,7 +66,7 @@ RUN gradle --version
 ENV LIFERAY7_DOWNLOAD_LINK=https://ufpr.dl.sourceforge.net/project/lportal/Liferay%20Portal/7.1.0%20GA1/liferay-ce-portal-tomcat-7.1.0-ga1-20180703012531655.zip
 ENV LIFERAY7_DOWNLOADED_FILE_NAME=liferay-ce-portal-tomcat-7.1.0-ga1-20180703012531655.zip
 
-RUN wget $LIFERAY7_DOWNLOAD_LINK
+RUN wget --no-check-certificate $LIFERAY7_DOWNLOAD_LINK
 RUN unzip $LIFERAY7_DOWNLOADED_FILE_NAME
 RUN rm $LIFERAY7_DOWNLOADED_FILE_NAME
 RUN mv /liferay-ce-portal-7.1.0-ga1 /opt/liferay
@@ -88,7 +88,8 @@ RUN cp $ORBEONFORMS_HOME/orbeon.war /opt/liferay/tomcat-9.0.6/webapps
 EXPOSE 8080
 
 ENV CATALINA_HOME=/opt/liferay/tomcat-9.0.6
-RUN cp /container_config_folder/portal-setup-wizard.properties /opt/liferay/
+RUN cp /container_config_folder/portal-ext.properties /opt/liferay/
+RUN ls -la /opt/liferay
 CMD $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out
 
  

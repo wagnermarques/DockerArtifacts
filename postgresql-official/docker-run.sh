@@ -18,7 +18,7 @@ mkdir -p $(pwd)/../data-dir-for-postgresql/$CONTAINER_NAME #data dir is for each
 DATADIR=$(pwd)/../data-dir-for-postgresql/$CONTAINER_NAME
 
 docker run \
-       --name  $CONTAINER_NAME -h $CONTAINER_NAME  \
+       --name  $CONTAINER_NAME -h $CONTAINER_NAME  -t $CONTAINER_NAME \
        --net fzl_network_bridge --ip $CONTAINER_IP  \
        -v $DATADIR:/var/lib/postgresql/data \
        -v $(pwd)/sqlscripts:/sqlscripts \

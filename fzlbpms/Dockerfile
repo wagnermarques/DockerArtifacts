@@ -24,7 +24,7 @@ ADD ./scripts /scripts
 ADD ./container_config_folder /container_config_folder
 
 #needed just if you are behind a proxy
-#RUN cp /container_config_folder/.wgetrc  ~/
+RUN cp /container_config_folder/.wgetrc  ~/
 
 
 
@@ -66,7 +66,7 @@ RUN gradle --version
 ENV LIFERAY7_DOWNLOAD_LINK=https://ufpr.dl.sourceforge.net/project/lportal/Liferay%20Portal/7.1.0%20GA1/liferay-ce-portal-tomcat-7.1.0-ga1-20180703012531655.zip
 ENV LIFERAY7_DOWNLOADED_FILE_NAME=liferay-ce-portal-tomcat-7.1.0-ga1-20180703012531655.zip
 
-RUN wget $LIFERAY7_DOWNLOAD_LINK
+RUN wget --no-check-certificate $LIFERAY7_DOWNLOAD_LINK
 RUN unzip $LIFERAY7_DOWNLOADED_FILE_NAME
 RUN rm $LIFERAY7_DOWNLOADED_FILE_NAME
 RUN mv /liferay-ce-portal-7.1.0-ga1 /opt/liferay

@@ -88,7 +88,7 @@ RUN cp $ORBEONFORMS_HOME/orbeon.war /opt/liferay/tomcat-9.0.6/webapps
 EXPOSE 8080
 
 ENV CATALINA_HOME=/opt/liferay/tomcat-9.0.6
-RUN cp /container_config_folder/portal-setup-wizard.properties /opt/liferay/
+RUN cp /container_config_folder/portal-ext.properties /opt/liferay/
 CMD $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out
 
  

@@ -17,7 +17,7 @@ RUN dnf -y install git wget unzip  && dnf clean all
 ADD /container_config_folder /container_config_folder 
 
 #needed just if you are behind a proxy
-RUN cp /container_config_folder/.wgetrc  ~/
+#RUN cp /container_config_folder/.wgetrc  ~/
 
 ENV TOMCATFILE=apache-tomcat-8.5.32.tar.gz
 ENV tomcat8DwnLink=http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.32/bin/apache-tomcat-8.5.32.tar.gz
@@ -37,8 +37,6 @@ RUN > $CATALINA_HOME/logs/catalina.out
 
 ADD /webapps/manager/META-INF/ $CATALINA_HOME/webapps/manager/META-INF/
 
-#needed just if you are behind a proxy
-RUN cp /container_config_folder/.wgetrc  ~/
 
 RUN cd /opt
 RUN wget https://github.com/orbeon/orbeon-forms/releases/download/tag-release-2017.2-ce/orbeon-2017.2.201712300816-CE.zip
@@ -52,6 +50,8 @@ RUN unzip mysql-connector-java-8.0.11.zip
 RUN mv mysql-connector-java-8.0.11/mysql-connector-java-8.0.11.jar /container_config_folder
 RUN rm -rf mysql-connector-java-8.0.11
 RUN rm mysql-connector-java-8.0.11.zip
+
+RUN wget https://jdbc.postgresql.org/download/postgresql-42.2.4.jar
 
 RUN cd $CATALINA_HOME/webapps && unzip -d orbeon $CATALINA_HOME/webapps/orbeon.war
 

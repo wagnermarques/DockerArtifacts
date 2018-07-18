@@ -1,2 +1,2 @@
 #!/bin/bash
-docker pull postgres
+docker pull postgres:10.4

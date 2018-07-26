@@ -1,9 +1,14 @@
 nodejs-containers-shared-dir/*
 liferay7-containers-shared-dir/*
-liferay7/downloads/*
 liferay7/container_config_folder/downloads/*
 data-dir-for-mariadb/*
+**/target
+**/*.pdf
+**/*.jar
+**/*.war
 **/Download/*
+**/pdf/*
+**/pdfs/*
 **/download/*
 **/Downloads/*
 **/downloads/*

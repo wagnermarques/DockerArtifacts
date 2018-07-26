@@ -42,7 +42,8 @@ RUN npm install -g http-server #to have a local server run
 #    version - Reports the version of @dojo/cli and any commands that are installed
 
 RUN npm install -g @dojo/cli
-
+#In order to create your first Dojo 2 application, you need to globally install the @dojo/cli-create-app command which creates a template project to get started:
+RUN npm install -g @dojo/cli-create-app
 
 
 # Set port for nodejs to listen on and expose it

@@ -1,0 +1,20 @@
+<!--
+        https://doc.orbeon.com/configuration/advanced/configuring-a-form-runner-exist-database
+        With Orbeon Forms 3.9 and 4.x Form Runner uses the
+        Lucene-based full-text index.
+        Here too you need to store a collection.xconf file, but it
+        contains a different configuration:
+        NOTE: Without this configuration, free-text search in the Form Runner summary page won't work.
+-->
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+    <index>
+        <!-- Disable the standard full text index -->
+        <fulltext default="none" attributes="no"/>
+        <!-- Lucene index is configured below -->
+        <lucene>
+            <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+            <!-- We want to index the content of all form elements -->
+            <text match="//*"/>
+        </lucene>
+    </index>
+</collection>

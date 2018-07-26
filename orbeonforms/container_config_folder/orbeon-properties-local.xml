@@ -1,0 +1,104 @@
+<!--
+    This file is an empty template for your own properties-local.xml file. Please follow the instructions here:
+
+    https://doc.orbeon.com/configuration/properties/
+
+    some properties extratec from:
+    https://github.com/orbeon/orbeon-forms/blob/master/src/test/resources/config/properties-local.xml
+-->
+
+<properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            xmlns:oxf="http://www.orbeon.com/oxf/processors">
+
+  <!--
+      https://doc.orbeon.com/configuration/properties/form-runner      
+  -->
+
+  <!--
+      With this property, you can set the default logo URI. This logo appears on the summary and Detail Pages for a given form. You can omit (or comment out) this property or set its value to "" (empty string) if you don't want a default logo at all.
+  -->
+<property
+      as="xs:anyURI"
+      name="oxf.fr.default-logo.uri.*.*"
+      value="/apps/fr/style/orbeon-logo-trimmed-transparent-42.png"/>
+    
+<!--
+       <property
+           as="xs:string"
+           name="oxf.fr.available-languages.orbeon.builder"
+           value="pt-BR"/>
+       -->
+  <!--  
+            <property
+              as="xs:string"
+              name="br.com.fzlbpms.orbeonforms.company.name"
+                  value="IPGG"/>
+-->
+            
+
+
+
+  <!--
+      EXIST XML DATABASE CONF
+  -->
+  <!--
+      https://doc.orbeon.com/configuration/advanced/configuring-a-form-runner-exist-database
+  -->
+  <!--
+  <property
+      as="xs:anyURI"
+      name="oxf.fr.persistence.exist.exist-uri"
+      value="http://orbeon:orbeon@localhost:8080/exist/rest/db/orbeon/fr"/>
+  -->
+
+  <!--
+                RELATIONAL DATABASE CONFIGURATION
+                https://doc.orbeon.com/form-runner/persistence/using-a-relational-database
+            -->
+  
+             <!--
+             <property as="xs:string"
+                       name="oxf.fr.persistence.mysql.datasource"
+                       value="mysql_tomcat"/>
+             
+             <property as="xs:string"
+                       name="oxf.fr.persistence.sqlserver.datasource"
+                       value="sqlserver_tomcat"/>
+
+             <property as="xs:string"
+                       name="oxf.fr.persistence.postgresql.datasource"
+                       value="postgres"/>
+             
+             -->
+
+
+             
+             <!--
+                 L O G S
+                 https://doc.orbeon.com/form-runner/components/xforms-inspector
+             -->
+               <property as="xs:boolean" name="oxf.epilogue.xforms.inspector" value="true"/>
+             <property as="xs:NMTOKENS" name="oxf.xforms.logging.debug">
+               document
+               model
+               submission
+               control
+               event
+               action
+               analysis
+               server
+               server-body
+               html
+               process
+               submission-details
+               submission-body
+             </property>
+
+
+             <!--
+                 Bookmark
+                 https://blog.orbeon.com/2014/03/storing-configurations-outside-of.html
+                 https://doc.orbeon.com/form-runner/persistence/using-a-relational-database
+                 https://doc.orbeon.com/configuration/properties/form-runner/detail-page
+             -->
+</properties>

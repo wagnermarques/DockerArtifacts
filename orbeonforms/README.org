@@ -1,0 +1,12 @@
+#+Title: orbeonforms notes
+
++ tomcat-manager-context.xml 
+  permit tomcat manager be acessed from another machines
+  see valve regex pattern
+  this file are overwrited webapps/manager/META-INF/ original context.xml
+  https://stackoverflow.com/questions/36703856/access-tomcat-manager-app-from-different-host
+  
++ configuring persisistence with existdb
+  https://doc.orbeon.com/configuration/advanced/configuring-a-form-runner-exist-database
+
+

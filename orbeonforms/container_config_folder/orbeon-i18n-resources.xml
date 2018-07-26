@@ -1,0 +1,1132 @@
+<resources>
+        <resource xml:lang="pt-BR">
+        <!-- Form metadata -->
+        <!-- NOTE: Summary page expects to find application-name and form-name for the summary page here -->
+        <application-name>
+            <label>Nome da Aplicacao</label>
+            <hint>Identifies a group of forms, for instance by functionality or department (e.g. "sales"). If you have one group of forms, you can use your organization name (e.g. "acme"). This name shows in the URL of the deployed form, so we recommend you use only lowercases characters.</hint>
+            <alert>Use ASCII letters, digits, "-" or "_"</alert>
+        </application-name>
+        <form-name>
+            <label>Nome do Formulario</label>
+            <hint>Identifies this specific form (e.g. "health-record" or "claim"). This name shows in the URL, so we recommend you use only lowercases characters.</hint>
+            <alert>Use ASCII letters, digits, "-" or "_"</alert>
+        </form-name>
+        <title>
+            <label>Titulo do formulario</label>
+            <hint>Form title in the current language</hint>
+        </title>
+        <description>
+            <label>Descricao do formulario</label>
+            <hint>Form description in the current language</hint>
+        </description>
+        <logo>
+            <label>Logo</label>
+            <hint>The logo appears at the top of your form</hint>
+        </logo>
+        <general-settings>
+            <label>General Settings</label>
+        </general-settings>
+        <custom-settings>
+            <label>Custom Settings</label>
+        </custom-settings>
+        <!-- Toolbox -->
+        <cut>
+            <label>Cortar</label>
+        </cut>
+        <copy>
+            <label>Copiar</label>
+        </copy>
+        <paste>
+            <label>Colar</label>
+        </paste>
+        <undo-redo>
+            <undo>Desfazer {0}</undo>
+            <redo>Refazer {0}</redo>
+            <insert>inserir</insert>
+            <rename>renomear</rename>
+            <delete-control>delete control</delete-control>
+            <delete-container>delete container</delete-container>
+            <merge-section-template>merge section template</merge-section-template>
+            <move-control>move control</move-control>
+            <move-container>move container</move-container>
+            <update-settings>update settings</update-settings>
+            <insert-control>insert control</insert-control>
+            <insert-section>insert section</insert-section>
+            <insert-grid>insert grid</insert-grid>
+            <delete-row>delete row</delete-row>
+            <insert-row>insert row</insert-row>
+            <control-settings>control settings</control-settings>
+            <move-wall>move wall</move-wall>
+            <split-cell>split cell</split-cell>
+            <merge-cell>merge cell</merge-cell>
+        </undo-redo>
+        <merge-section>
+            <label>Merge Section Template</label>
+        </merge-section>
+        <form-structure>
+            <label>Form Structure</label>
+        </form-structure>
+        <controls>
+            <label>Controles</label>
+        </controls>
+        <i18n>
+            <label>Internationalization</label>
+        </i18n>
+        <language>
+            <label>Linguagem Atual</label>
+        </language>
+        <advanced>
+            <label>Avancado</label>
+        </advanced>
+        <attachments>
+            <label>Attachments</label>
+        </attachments>
+        <services-actions>
+            <label>Services &amp; Actions</label>
+        </services-actions>
+        <http-services>
+            <label>HTTP Services</label>
+        </http-services>
+        <database-services>
+            <label>Database Services</label>
+        </database-services>
+        <actions>
+            <label>Actions</label>
+        </actions>
+        <new-section>
+            <label>New Section</label>
+        </new-section>
+        <new-grid>
+            <label>New Grid</label>
+        </new-grid>
+        <new-repeated-grid>
+            <label>New Repeated Grid</label>
+        </new-repeated-grid>
+        <change-schema>
+            <label>Change Schema</label>
+        </change-schema>
+        <upload-schema>
+            <label>XML Schema</label>
+        </upload-schema>
+        <pdf-templates>
+            <label>PDF Templates</label>
+        </pdf-templates>
+        <change-css>
+            <label>Change CSS</label>
+        </change-css>
+        <upload-css>
+            <label>Attach CSS</label>
+        </upload-css>
+        <show-source>
+            <label>Show Source</label>
+        </show-source>
+        <edit-source>
+            <label>Edit Source</label>
+        </edit-source>
+        <permissions>
+            <label>Permissions</label>
+        </permissions>
+        <reload-components>
+            <label>Reload Toolbox</label>
+        </reload-components>
+        <enter-section-title>
+            <label>Click to enter a section title</label>
+        </enter-section-title>
+        <type-section-title>
+            <label>Type your section title</label>
+        </type-section-title>
+        <enter-label>
+            <label>Click to enter a label</label>
+        </enter-label>
+        <type-label>
+            <label>Type your label here</label>
+        </type-label>
+        <enter-hint>
+            <label>Click to add a hint</label>
+        </enter-hint>
+        <type-hint>
+            <label>Type your hint here</label>
+        </type-hint>
+        <enter-text>
+            <label>Click to enter text</label>
+        </enter-text>
+        <type-text>
+            <label>Type your text here</label>
+        </type-text>
+        <click-cell>
+            <label>Click to select this cell</label>
+        </click-cell>
+        <insert-control>
+            <label>Use the toolbar to insert a control</label>
+        </insert-control>
+        <edit-items>
+            <label>Edit Choices</label>
+        </edit-items>
+        <merge-right-icon>
+            <label>Merge with the cell to the right</label>
+        </merge-right-icon>
+        <split-horizontally-icon>
+            <label>Split horizontally</label>
+        </split-horizontally-icon>
+        <merge-below-icon>
+            <label>Merge with the cell below</label>
+        </merge-below-icon>
+        <split-vertically-icon>
+            <label>Split vertically</label>
+        </split-vertically-icon>
+        <delete-control-icon>
+            <label>Delete Control</label>
+        </delete-control-icon>
+        <move-icon>
+            <label>Drag &amp; drop to move or copy</label>
+        </move-icon>
+        <delete-grid-icon>
+            <label>Delete Grid</label>
+        </delete-grid-icon>
+        <delete-section-icon>
+            <label>Delete Section</label>
+        </delete-section-icon>
+        <delete-row-icon>
+            <label>Delete Row</label>
+        </delete-row-icon>
+        <delete-column-icon>
+            <label>Delete Column</label>
+        </delete-column-icon>
+        <insert-column-left-icon>
+            <label>Insert Column to the Left</label>
+        </insert-column-left-icon>
+        <insert-column-right-icon>
+            <label>Insert Column to the Right</label>
+        </insert-column-right-icon>
+        <insert-row-above-icon>
+            <label>Insert Row Above</label>
+        </insert-row-above-icon>
+        <insert-row-below-icon>
+            <label>Insert Row Below</label>
+        </insert-row-below-icon>
+        <section-details-icon>
+            <label>Section Settings</label>
+        </section-details-icon>
+        <grid-details-icon>
+            <label>Grid Settings</label>
+        </grid-details-icon>
+        <move-up-icon>
+            <label>Move Up</label>
+        </move-up-icon>
+        <move-down-icon>
+            <label>Move Down</label>
+        </move-down-icon>
+        <move-right-icon>
+            <label>Move Right</label>
+        </move-right-icon>
+        <move-left-icon>
+            <label>Move Left</label>
+        </move-left-icon>
+        <control-details-icon>
+            <label>Control Settings</label>
+        </control-details-icon>
+        <switch-appearance-icon>
+            <label>Switch Appearance</label>
+        </switch-appearance-icon>
+        <help-icon>
+            <label>Edit Help</label>
+        </help-icon>
+        <!-- Common -->
+        <add>
+            <label>Adicionar</label>
+        </add>
+        <remove>
+            <label>Remover</label>
+        </remove>
+        <edit>
+            <label>Editar</label>
+        </edit>
+        <classes>
+            <label>CSS e classes personalizadas</label>
+        </classes>
+        <default-always-never>
+            <item id="0">Use Default</item>
+            <item id="1">Always</item>
+            <item id="2">Never</item>
+        </default-always-never>
+        <!-- Dialogs -->
+        <continue>
+            <label>Continuar</label>
+        </continue>
+        <apply>
+            <label>Aplicar</label>
+        </apply>
+        <cancel>
+            <label>Cancelar</label>
+        </cancel>
+        <close>
+            <label>Fechar</label>
+        </close>
+        <delete>
+            <label>Excluir</label>
+        </delete>
+        <or>
+            <label>ou</label>
+        </or>
+        <components>
+            <parameters-editor>
+                <name>
+                    <label>Name</label>
+                    <alert>Missing or incorrect value</alert>
+                </name>
+                <xpath>
+                    <label>XPath Expression</label>
+                    <alert>Incorrect XPath expression</alert>
+                </xpath>
+                <control>
+                    <label>Control</label>
+                    <alert>Missing value</alert>
+                </control>
+                <type>
+                    <item id="0">Control Value</item>
+                    <item id="1">XPath Expression</item>
+                    <item id="2">All Control Values</item>
+                </type>
+            </parameters-editor>
+        </components>
+        <dialog-form-settings>
+            <label>Form Settings</label>
+            <save-as>Save as…</save-as>
+            <open><label>Form settings</label></open>
+            <options>Form Options</options>
+            <wizard-options>Wizard Options</wizard-options>
+            <stats>Form Statistics</stats>
+            <sections>Sections</sections>
+            <repeats>Repeats</repeats>
+            <grids>Grids</grids>
+            <section-templates>Section templates</section-templates>
+            <controls>Controls</controls>
+            <all>All</all>
+            <singleton>
+                <label>Singleton Form</label>
+                <hint>Only allow one accessible instance of form data for this form definition</hint>
+            </singleton>
+            <wizard>
+                <label>Wizard View</label>
+                <hint>Whether to show top-level sections as separate wizard pages</hint>
+            </wizard>
+            <wizard-mode>
+                <label>Wizard Navigation Validation Mode</label>
+                <hint>How wizard navigation behaves when data is not valid</hint>
+                <item id="0">Use Default</item>
+                <item id="1">Free</item>
+                <item id="2">Lax</item>
+                <item id="3">Strict</item>
+            </wizard-mode>
+            <wizard-subsections-nav>
+                <label>Wizard Subsections Navigation</label>
+                <hint>Whether the wizard enables navigation for sections and grids within top-level sections</hint>
+            </wizard-subsections-nav>
+            <wizard-subsections-toc>
+                <label>Wizard Subsections Table of Contents</label>
+                <hint>How the wizard table of contents shows subsections</hint>
+                <item id="0">Use Default</item>
+                <item id="1">Show Subsections for the Active Section Only</item>
+                <item id="2">Show Subsections for All Sections</item>
+                <item id="3">Don't Show Subsections</item>
+            </wizard-subsections-toc>
+            <attachment-max-size>
+                <label>Maximum Attachment Size per Control</label>
+                <hint>Can also be set on a per-control basis in Control Settings</hint>
+            </attachment-max-size>
+            <attachment-max-size-aggregate>
+                <label>Maximum Aggregate Attachment Size</label>
+                <hint>Applies to all attachment controls in this form</hint>
+            </attachment-max-size-aggregate>
+            <attachment-mediatypes>
+                <label>Allowed File Types</label>
+                <hint>For example "image/* application/pdf"</hint>
+            </attachment-mediatypes>
+            <labels>
+                <label>Appearance of Control Labels</label>
+            </labels>
+            <hints>
+                <label>Appearance of Control Hints</label>
+            </hints>
+            <appearances>
+                <item id="0">Use Default</item>
+                <item id="1">Inline</item>
+                <item id="2">Tooltip</item>
+            </appearances>
+            <placeholders>
+                <label>Use Placeholder for Text Fields and Text Areas</label>
+            </placeholders>
+            <analysis-calculate>
+                <label>Automatic calculation dependencies</label>
+                <hint>Automatically determine evaluation order for "Calculated Value" and "Initial Value" formulas</hint>
+            </analysis-calculate>
+        </dialog-form-settings>
+        <dialog-control-details>
+            <label>Control Settings</label>
+            <tab-base><label>Basic Settings</label></tab-base>
+            <tab-validations><label>Validations and Alerts</label></tab-validations>
+            <tab-formulas><label>Formulas</label></tab-formulas>
+            <control-name>
+                <label>Control Name</label>
+                <alert>Name is already in use or incorrect</alert>
+                <hint>E.g.: "first-name"</hint>
+            </control-name>
+            <options>
+                <label>Opcoes</label>
+                <item>
+                    <label>Mostrar registros</label>
+                    <value>fr-summary</value>
+                </item>
+                <item>
+                    <label>Mostrar na Search</label>
+                    <value>fr-search</value>
+                </item>
+                <item>
+                    <label>Email</label>
+                    <value>fr-email-recipient</value>
+                </item>
+                <item>
+                    <label>Email Carbon Copy Recipient</label>
+                    <value>fr-email-cc</value>
+                </item>
+                <item>
+                    <label>Email Bind Carbon Copy Recipient</label>
+                    <value>fr-email-bcc</value>
+                </item>
+                <item>
+                    <label>Email Sender</label>
+                    <value>fr-email-sender</value>
+                </item>
+                <item>
+                    <label>Include as Email Attachment</label>
+                    <value>fr-email-attachment</value>
+                </item>
+                <item>
+                    <label>Exclude from Email Body</label>
+                    <value>fr-exclude-from-email-body</value>
+                </item>
+                <item>
+                    <label>Show in Email Subject (Deprecated)</label>
+                    <value>fr-email-subject</value>
+                </item>
+            </options>
+            <control-appearance>
+                <label>Control Appearance</label>
+            </control-appearance>
+            <whitespace>
+                <item>
+                    <label>Trim leading and trailing spaces</label>
+                    <value>trim</value>
+                </item>
+            </whitespace>
+            <types>
+                <label>Data Type</label>
+            </types>
+            <builtin-type>
+                <label>Built-in Type</label>
+                <hint>Built-in data type</hint>
+
+                <use-schema-type>Use schema type</use-schema-type>
+
+                <choices>
+                    <choices>
+                        <label>Common Types</label>
+                        <type label="String">string</type>
+                        <type label="Boolean">boolean</type>
+                        <type label="Email address">email</type>
+                    </choices>
+                    <choices>
+                        <label>Number Types</label>
+                        <type label="Decimal">decimal</type>
+
+                        <type label="Integer">integer</type>
+                        <type label="Positive integer">positiveInteger</type>
+                        <type label="Non-positive integer">nonPositiveInteger</type>
+                        <type label="Negative integer">negativeInteger</type>
+                        <type label="Non-negative integer">nonNegativeInteger</type>
+
+                        <type label="Simple-precision floating-point">float</type>
+                        <type label="Double-precision floating-point">double</type>
+
+                        <type label="">long</type>
+                        <type label="">int</type>
+                        <type label="">short</type>
+                        <type label="">byte</type>
+                        <type label="">unsignedLong</type>
+                        <type label="">unsignedInt</type>
+                        <type label="">unsignedShort</type>
+                        <type label="">unsignedByte</type>
+                    </choices>
+                    <choices>
+                        <label>Date and Time Types</label>
+                        <type label="Date">date</type>
+                        <type label="Time">time</type>
+                        <type label="Date and time">dateTime</type>
+                        <type label="Duration">duration</type>
+                        <type label="Year and month">gYearMonth</type>
+                        <type label="Month and day">gMonthDay</type>
+                        <type label="Year">gYear</type>
+                        <type label="Month">gMonth</type>
+                        <type label="Day">gDay</type>
+                    </choices>
+                    <choices>
+                        <label>XML Types</label>
+                        <type label="">normalizedString</type>
+                        <type label="">token</type>
+                        <type label="">language</type>
+                        <type label="">Name</type>
+                        <type label="">NCName</type>
+                        <type label="">ID</type>
+                        <type label="">IDREF</type>
+                        <type label="">IDREFS</type>
+                        <type label="">ENTITY</type>
+                        <type label="">ENTITIES</type>
+                        <type label="">NMTOKEN</type>
+                        <type label="">NMTOKENS</type>
+                        <type label="XML qualified name">QName</type>
+                        <type label="">NOTATION</type>
+                    </choices>
+                    <choices>
+                        <label>Other Types</label>
+                        <!-- Not 100% sure if these two types allow empty content -->
+                        <type label="Base64-encoded binary">base64Binary</type>
+                        <type label="Hexadecimal-encoded binary">hexBinary</type>
+                        <type label="URI">anyURI</type>
+                    </choices>
+                </choices>
+            </builtin-type>
+            <schema-type>
+                <label>Schema Type</label>
+                <hint>Type from an imported schema</hint>
+            </schema-type>
+            <required>
+                <label>Required</label>
+                <hint>Whether the data is required</hint>
+                <item id="0">Yes</item>
+                <item id="1">No</item>
+                <item id="2">Formula</item>
+            </required>
+            <constraint>
+                <item id="formula">Formula</item>
+                <item id="max-length">Maximum Length</item>
+                <item id="min-length">Minimum Length</item>
+                <item id="positive">Positive</item>
+                <item id="non-negative">Positive or Zero</item>
+                <item id="non-positive">Negative or Zero</item>
+                <item id="negative">Negative</item>
+                <item id="fraction-digits">Maximum Fractional Digits</item>
+                <item id="upload-max-size">Maximum Attachment Size</item>
+                <item id="upload-mediatypes">Supported File Types</item>
+            </constraint>
+            <formula>
+                <label>Formula</label>
+                <alert>Incorrect XPath expression</alert>
+                <hint>Boolean XPath expression</hint>
+            </formula>
+            <integer-argument>
+                <label>Integer Value</label>
+                <alert>Incorrect Value</alert>
+            </integer-argument>
+            <visibility>
+                <label>Visibility</label>
+                <alert>Incorrect XPath expression</alert>
+                <hint>Boolean XPath expression</hint>
+            </visibility>
+            <readonly>
+                <label>Read-Only</label>
+                <alert>Incorrect XPath expression</alert>
+                <hint>Boolean XPath expression</hint>
+            </readonly>
+            <default>
+                <label>Initial Value</label>
+                <alert>Incorrect XPath expression</alert>
+                <hint>XPath expression</hint>
+            </default>
+            <calculate>
+                <label>Calculated Value</label>
+                <alert>Incorrect XPath expression</alert>
+                <hint>XPath expression</hint>
+            </calculate>
+            <control-label>
+                <label>Label</label>
+            </control-label>
+            <control-hint>
+                <label>Hint</label>
+            </control-hint>
+            <control-help>
+                <label>Help Message</label>
+                <hint>Displayed when help is activated</hint>
+            </control-help>
+            <alert>
+                <label>Alert Message</label>
+                <hint>Displayed when the alert is active</hint>
+            </alert>
+            <default-alert>
+                <label>Default alert message</label>
+                <hint>Active when there is not a more specific alert message</hint>
+            </default-alert>
+            <use-global-alert>
+                <label>Use global default alert message</label>
+            </use-global-alert>
+            <use-default-alert>
+                <label>Use default alert message</label>
+            </use-default-alert>
+            <validation-type><label>Validation Type</label></validation-type>
+            <validation-details><label>Validation Details</label></validation-details>
+            <level><label>Level</label></level>
+            <use-html>Use HTML</use-html>
+            <parameters>Template Parameters</parameters>
+        </dialog-control-details>
+        <dialog-container-details>
+            <label>Section/Grid Settings</label>
+            <control-name>
+                <label>Name</label>
+                <alert>Name is already in use or incorrect</alert>
+                <hint>E.g.: "address"</hint>
+            </control-name>
+            <options>
+                <label>Options</label>
+                <item>
+                    <label>Initially Open</label>
+                    <value>fr-initially-open</value>
+                </item>
+                <item>
+                    <label>Page Break Before</label>
+                    <value>fr-page-break-before</value>
+                </item>
+            </options>
+            <collapsible>
+                <label>Collapsible</label>
+            </collapsible>
+            <visibility>
+                <label>Visibility</label>
+                <alert>Incorrect XPath expression</alert>
+                <hint>Boolean XPath expression</hint>
+            </visibility>
+            <readonly>
+                <label>Read-Only</label>
+                <alert>Incorrect XPath expression</alert>
+                <hint>Boolean XPath expression</hint>
+            </readonly>
+            <repeat>
+                <label>Repeat Content</label>
+            </repeat>
+            <custom-iteration-name>
+                <label>Enable Custom Iteration Name</label>
+                <hint/>
+            </custom-iteration-name>
+            <iteration-name>
+                <label>Custom Iteration Name</label>
+                <alert>Name is already in use or incorrect</alert>
+                <hint/>
+            </iteration-name>
+            <min>
+                <label>Minimum Number of Repetitions</label>
+                <alert>Incorrect value</alert>
+                <hint>Non-negative number or XPath expression</hint>
+            </min>
+            <max>
+                <label>Maximum Number of Repetitions</label>
+                <alert>Incorrect value</alert>
+                <hint>Positive number or XPath expression</hint>
+            </max>
+            <apply-defaults>
+                <label>Apply Initial Value Formulas when Adding Iterations</label>
+            </apply-defaults>
+            <initial-iterations>
+                <label>Initial Number of Iterations Uses Template</label>
+            </initial-iterations>
+            <other>Other</other>
+            <one>One repetition</one>
+            <unlimited>Unlimited</unlimited>
+            <no-minimum>No minimum</no-minimum>
+            <tab-base><label>Basic Settings and Formulas</label></tab-base>
+            <tab-repeat><label>Repeated Content</label></tab-repeat>
+        </dialog-container-details>
+        <dialog-confirmation>
+            <label>Confirm</label>
+        </dialog-confirmation>
+        <dialog-ids>
+            <label>Control Names</label>
+            <prefix>
+                <label>Prefix</label>
+            </prefix>
+            <suffix>
+                <label>Suffix</label>
+            </suffix>
+            <original-name>
+                <label>Original Name</label>
+            </original-name>
+            <new-name>
+                <label>New Name</label>
+            </new-name>
+        </dialog-ids>
+        <dialog-publish>
+            <label>Publicar Formulario</label>
+            <publish>Publicar</publish>
+            <publish-success>The form definition was published successfully as version {1,number,integer}, with {0,choice,0#no attachments|1#1 attachment|1&lt;{0,number,integer} attachments}.</publish-success>
+            <publish-error>There was an error during form publishing.</publish-error>
+            <latest-published-version>Latest published version</latest-published-version>
+            <create-new-version-item>create a new form definition with version number {0,number,integer}</create-new-version-item>
+            <overwrite-version-item>write over the current form definition with version number {0,number,integer}</overwrite-version-item>
+            <create-new-version-help>
+                PLEASE NOTE: Publishing this form definition will create a new version of the form definition in the
+                database. Data which already exists in the database will still be viewed and edited with the previous
+                versions of this form definition which are associated with that data. The new form definition version
+                will be used to create new data.
+            </create-new-version-help>
+            <overwrite-version-help>
+                PLEASE NOTE: This will overwrite the existing form definition. If the changes you have made to the form
+                definition are small, such as changing control labels, the form definition will be compatible with
+                existing form data. But if you have made structural changes, such as adding, removing, renaming, or
+                moving controls, the form definition might be incompatible with existing data. We recommend being
+                careful when overwriting an existing form definition version.
+            </overwrite-version-help>
+            <open-summary>Open Published Form Summary Page</open-summary>
+            <open-new>Open Published Form New Page</open-new>
+            <version>Version</version>
+            <available>Make published form available</available>
+            <comment>Comment</comment>
+        </dialog-publish>
+        <dialog-add-language>
+            <label>Adicionar Languagem</label>
+            <new-language>
+                <label>Add the following language</label>
+            </new-language>
+            <common>Most common languages</common>
+            <all>Other languages</all>
+            <add-language>
+                <label>Add language</label>
+            </add-language>
+            <remove-language>
+                <label>Remove language</label>
+            </remove-language>
+        </dialog-add-language>
+        <dialog-upload-schema>
+            <label>XML Schema Upload</label>
+            <schema-type>
+                <label>Available Schema Types</label>
+                <hint>The simple types available in the uploaded schema</hint>
+            </schema-type>
+            <namespace-uri>
+                <label>Schema Namespace URI</label>
+                <hint>This is the namespace URI of the uploaded schema</hint>
+            </namespace-uri>
+            <operations>
+                <label>Operations</label>
+            </operations>
+            <delete-schema>
+                <label>Delete Existing XML Schema</label>
+            </delete-schema>
+            <change-schema>
+                <label>Change XML Schema</label>
+            </change-schema>
+            <replace-schema>
+                <label>Replace XML Schema</label>
+            </replace-schema>
+            <upload-schema>
+                <label>Attach XML Schema</label>
+            </upload-schema>
+            <messages>
+                <no-simple-types>Your schema does not seem to contain simple types. You won't be able to select types from this schema for validation.</no-simple-types>
+                <has-includes>Your schema contains imports or includes. These will be disabled.</has-includes>
+                <not-a-schema>The uploaded file is not a valid schema.</not-a-schema>
+                <new-schema-information>New Schema Information</new-schema-information>
+                <existing-schema-information>Existing Schema Information</existing-schema-information>
+            </messages>
+        </dialog-upload-schema>
+        <dialog-edit-source>
+            <label>Source</label>
+            <source>
+                <alert>Please make sure the content is well-formed XML</alert>
+            </source>
+        </dialog-edit-source>
+        <dialog-view-source>
+            <label>View Source</label>
+        </dialog-view-source>
+        <dialog-pdf>
+            <label>Attach PDF templates</label>
+            <pdf-upload>
+                <label>PDF File</label>
+            </pdf-upload>
+            <attachment-name>
+                <label>Name</label>
+            </attachment-name>
+            <attachment-language>
+                <label>Language</label>
+            </attachment-language>
+        </dialog-pdf>
+        <dialog-itemsets>
+            <label>Edit Choices</label>
+            <resources-language>
+                <label>Resources Language</label>
+            </resources-language>
+            <label-header>
+                <label>Label</label>
+            </label-header>
+            <value-header>
+                <label>Value</label>
+            </value-header>
+            <hint-header>
+                <label>Hint</label>
+            </hint-header>
+            <clear-value>
+                <label>Clear Value</label>
+            </clear-value>
+            <remove-all>
+                <label>Remove All</label>
+            </remove-all>
+        </dialog-itemsets>
+        <dialog-http-services>
+            <label>HTTP Service Editor</label>
+            <tab-definition><label>Definition</label></tab-definition>
+            <tab-advanced><label>Advanced</label></tab-advanced>
+            <tab-test><label>Test Results</label></tab-test>
+            <url-parameters><label>URL Parameters</label></url-parameters>
+            <parameter-name><label>Name</label></parameter-name>
+            <parameter-default-value><label>Default Value</label></parameter-default-value>
+            <no-headers>No headers received.</no-headers>
+            <service-name>
+                <label>Service Name</label>
+                <hint>Choose a unique name for this service</hint>
+            </service-name>
+            <resource>
+                <label>Resource URL</label>
+                <hint>HTTP URL at which the service reside</hint>
+            </resource>
+            <method>
+                <label>Method</label>
+            </method>
+            <serialization>
+                <label>Serialization</label>
+            </serialization>
+            <soap-submission>
+                <label>SOAP Service</label>
+                <hint>Whether this is a SOAP service</hint>
+            </soap-submission>
+            <soap-action>
+                <label>SOAP Action</label>
+                <hint>Optional SOAPAction header</hint>
+            </soap-action>
+            <http-authentication>
+                <label>HTTP Authentication</label>
+                <hint>HTTP Authentication</hint>
+            </http-authentication>
+            <username>
+                <label>Username</label>
+            </username>
+            <password>
+                <label>Password</label>
+            </password>
+            <request-body>
+                <label>Request Body</label>
+                <hint>XML data (can be a SOAP envelope)</hint>
+            </request-body>
+            <response>
+                <label>Response</label>
+            </response>
+            <error-type>
+                <label>Error Type</label>
+                <item>
+                    <label>Submission in progress</label>
+                    <value>submission-in-progress</value>
+                </item>
+                <item>
+                    <label>No data</label>
+                    <value>no-data</value>
+                </item>
+                <item>
+                    <label>Validation error</label>
+                    <value>validation-error</value>
+                </item>
+                <item>
+                    <label>Resource error</label>
+                    <value>resource-error</value>
+                </item>
+                <item>
+                    <label>Target error</label>
+                    <value>target-error</value>
+                </item>
+                <item>
+                    <label>Internal error</label>
+                    <value>xxforms-internal-error</value>
+                </item>
+            </error-type>
+            <resource-uri>
+                <label>Resource URL</label>
+            </resource-uri>
+            <status-code>
+                <label>Status Code</label>
+            </status-code>
+            <headers>
+                <label>Headers</label>
+            </headers>
+            <header-name>
+                <label>Header Name</label>
+            </header-name>
+            <header-value>
+                <label>Header Value(s)</label>
+            </header-value>
+            <response-body>
+                <label>Response Body</label>
+            </response-body>
+            <save>
+                <label>Save</label>
+            </save>
+            <test>
+                <label>Test</label>
+            </test>
+        </dialog-http-services>
+        <dialog-database-services>
+            <label>Database Service Editor</label>
+            <service-name>
+                <label>Service Name</label>
+                <hint>Choose a unique name for this service</hint>
+            </service-name>
+            <datasource>
+                <label>Datasource</label>
+                <hint>JNDI datasource for this service</hint>
+            </datasource>
+            <query>
+                <label>SQL Query</label>
+                <hint>SQL query which can contain placeholders for parameters</hint>
+            </query>
+            <save>
+                <label>Save</label>
+            </save>
+            <test>
+                <label>Test</label>
+            </test>
+        </dialog-database-services>
+        <dialog-actions>
+            <label>Actions Editor</label>
+            <service-name>
+                <label>Action Name</label>
+                <hint>Choose a unique name for this action</hint>
+            </service-name>
+            <observer-type>
+                <label>Run action when</label>
+                <item id="0">
+                    <label>the control</label>
+                </item>
+                <item id="1">
+                    <label>the form loads</label>
+                </item>
+            </observer-type>
+            <event-type>
+                <item id="0">
+                    <label>changes its value</label>
+                    <hint/>
+                </item>
+                <item id="1">
+                    <label>appears or changes its value</label>
+                    <hint/>
+                </item>
+                <item id="2">
+                    <label>is activated</label>
+                    <hint/>
+                </item>
+                <item id="3">
+                    <label>after the controls are ready</label>
+                    <hint/>
+                </item>
+                <item id="5">
+                    <label>after the data is ready</label>
+                    <hint/>
+                </item>
+                <item id="4">
+                    <label>before the data's initial values are calculated</label>
+                    <hint/>
+                </item>
+            </event-type>
+            <event-condition>
+                <label>Condition</label>
+                <item>
+                    <label>Run always</label>
+                    <value>true()</value>
+                </item>
+                <item>
+                    <label>Run on creation only</label>
+                    <value>$fr-mode='new'</value>
+                </item>
+            </event-condition>
+            <event-control>
+                <label>Control</label>
+            </event-control>
+            <service-to-call>
+                <label>Service to Call</label>
+                <hint>Service to call when the event happens</hint>
+            </service-to-call>
+            <request-parameters>
+                <label>Set Service Request Values</label>
+            </request-parameters>
+            <source-control>
+                <label>Source Control</label>
+            </source-control>
+            <destination-xpath>
+                <label>Destination XPath Expression</label>
+            </destination-xpath>
+            <request-database-parameter>
+                <label>Set Database Service Parameters</label>
+            </request-database-parameter>
+            <parameter-number>
+                <label>Parameter number</label>
+            </parameter-number>
+            <response-values>
+                <label>Set Response Control Values</label>
+            </response-values>
+            <destination-control>
+                <label>Destination Control</label>
+            </destination-control>
+            <source-xpath>
+                <label>Source XPath expression</label>
+            </source-xpath>
+            <response-itemset>
+                <label>Set Response Selection Control Choices</label>
+            </response-itemset>
+            <destination-selection-control>
+                <label>Destination Selection Control</label>
+            </destination-selection-control>
+            <items>
+                <label>Choices XPath expression</label>
+                <hint>Return one node for each choice</hint>
+            </items>
+            <item-label>
+                <label>Label XPath expression</label>
+                <hint>Relative to choice tem node</hint>
+            </item-label>
+            <item-value>
+                <label>Value XPath expression</label>
+                <hint>Relative to choice node</hint>
+            </item-value>
+            <save>
+                <label>Save</label>
+            </save>
+            <test>
+                <label>Test</label>
+            </test>
+
+            <general-settings>General Settings</general-settings>
+            <service-request-actions>Service Request Actions</service-request-actions>
+            <service-response-actions>Service Response Actions</service-response-actions>
+
+            <set-control-value>Set Control Value</set-control-value>
+            <set-control-itemset>Set Control Choices</set-control-itemset>
+            <save-to-dataset>Save to Dataset</save-to-dataset>
+            <dataset-name>Dataset Name</dataset-name>
+
+        </dialog-actions>
+        <dialog-test>
+            <label>Form Preview</label>
+        </dialog-test>
+        <dialog-pe>
+            <label>Orbeon Forms PE Feature</label>
+            <message>
+                <div>
+                    <p>This feature is only available in Orbeon Forms PE.</p>
+                    <p>For more information, please visit the <a href="http://www.orbeon.com/download" target="_blank">Orbeon web site</a>.</p>
+                </div>
+            </message>
+        </dialog-pe>
+        <dialog-email-settings>
+            <label>Email Settings</label>
+            <subject>Email Subject</subject>
+            <body>Email Body</body>
+            <from-properties>Template from Properties</from-properties>
+            <template>
+                <label>Template</label>
+            </template>
+        </dialog-email-settings>
+        <dialog-permissions>
+            <label>Permissions</label>
+            <enable-permissions>Enable permissions for this form</enable-permissions>
+            <role>Role</role>
+            <permissions>Permissions</permissions>
+            <operations>Operations</operations>
+            <anyone>Anyone</anyone>
+            <owner>Owner</owner>
+            <group-members>Group members</group-members>
+            <create>Create</create>
+            <read>Read</read>
+            <update>Update</update>
+            <delete>Delete</delete>
+        </dialog-permissions>
+        <!-- Messages -->
+        <messages>
+            <delete-section>Are you sure you want to delete the current section?</delete-section>
+            <delete-grid>Are you sure you want to delete the current grid?</delete-grid>
+            <delete-column>Are you sure you want to delete the current column?</delete-column>
+            <delete-row>Are you sure you want to delete the current row?</delete-row>
+            <delete-resources>Are you sure you want to delete all resources for language</delete-resources>
+            <delete-service>Are you sure you want to delete service</delete-service>
+            <delete-action>Are you sure you want to delete action</delete-action>
+            <controls-will-be-deleted>{0,choice,0#No controls|1#1 control|1&lt;{0,number,integer} controls} will be deleted.</controls-will-be-deleted>
+            <metadata-edit-title>Form Metadata</metadata-edit-title>
+            <new-metadata-output>Please provide an application and form name, which will be used to identify your form (you can also change those later):</new-metadata-output>
+            <edit-metadata-output/>
+            <save-as-metadata-output>Enter a new application name and form name to be used for the copy of this form:</save-as-metadata-output>
+            <xpath-errors>There {0,choice,1#is one XPath error|1&lt;are {0,number,integer} XPath errors} in your form.</xpath-errors>
+            <lhha-checkbox>Mark this checkbox if you'd like to type HTML tags</lhha-checkbox>
+        </messages>
+        <template>
+            <untitled-form>Untitled Form</untitled-form>
+            <untitled-section>Untitled Section</untitled-section>
+            <items>
+                <item>
+                    <label>First choice</label>
+                    <value>1</value>
+                    <hint/>
+                </item>
+                <item>
+                    <label>Second choice</label>
+                    <value>2</value>
+                    <hint/>
+                </item>
+                <item>
+                    <label>Third choice</label>
+                    <value>3</value>
+                    <hint/>
+                </item>
+            </items>
+        </template>
+    </resource>
+    <resources xml:lang="en">
+        <label>English</label>
+        <registration>
+            <title>Registration</title>
+            <first-name>First name</first-name>
+            <last-name>Last name</last-name>
+            <register>Register</register>
+            <thank-you>You have been registered. Thank you.</thank-you>
+        </registration>
+        <language>
+            <change>Change language:</change>
+        </language>
+    </resources>
+    <resources xml:lang="fr">
+        <label>Français</label>
+        <registration>
+            <title>Enregistrement</title>
+            <first-name>Prénom</first-name>
+            <last-name>Nom de famille</last-name>
+            <register>Enregistrer</register>
+            <thank-you>Vous vous être enregistré. Merci.</thank-you>
+        </registration>
+        <language>
+            <change>Choisissez votre language:</change>
+        </language>
+    </resources>
+    <resources xml:lang="zh-Hans">
+        <label>中文 (简化字)</label>
+        <registration>
+            <title>注册表格</title>
+            <first-name>名</first-name>
+            <last-name>姓</last-name>
+            <register>注册</register>
+            <thank-you>谢谢你的注册</thank-you>
+        </registration>
+        <language>
+            <change>选择语言:</change>
+        </language>
+    </resources>

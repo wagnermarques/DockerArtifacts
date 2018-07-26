@@ -1,0 +1,170 @@
+% Created 2018-07-22 dom 13:36
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usetheme{default}
+\author{wagner}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={wagner},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.3.1 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+FROM wagnermarques/fzl\(_{\text{java}}\)-oracle8-f27:0.0.1
+
+MAINTAINER wagnerdocri@gmail.com
+
+\#if behind a proxy just uncomment this lines
+\#dnf needs proxy config in this way, but wget\ldots{}
+\#uncomment accodingly your proxy configuration
+\#ENV http\(_{\text{proxy}}\)=\url{http://wagner:nicolas1*@192.168.0.2:3128/}
+\#ENV ftp\(_{\text{proxy}}\)=\url{http://wagner:nicolas1*@192.168.0.2:3128/}
+\#ENV all\(_{\text{proxy}}\)=\url{http://wagner:nicolas1*@192.168.0.2:3128/}
+\#ENV use\(_{\text{proxy}}\)=yes
+
+
+RUN dnf -y update
+RUN dnf -y install findutils git wget unzip zip  \&\& dnf clean all
+
+ADD /container\(_{\text{config}}\)\(_{\text{folder}}\) /container\(_{\text{config}}\)\(_{\text{folder}}\) 
+
+
+\#needed just if you are behind a proxy
+\#RUN cp \emph{container\(_{\text{config}}\)\(_{\text{folder}}\)}.wgetrc  \textasciitilde{}/
+
+
+
+\#---------- All downloads firts to facilitate rebuild image
+ENV tomcat8DwnLink=\url{http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.32/bin/apache-tomcat-8.5.32.tar.gz}
+ENV CATALINA\(_{\text{HOME}}\)=/opt/apache-tomcat-8.5.32
+ENV PATH=\$CATALINA\(_{\text{HOME}}\)/bin:\$PATH
+
+RUN wget --output-document /tomcat.tar.gz  -e use\(_{\text{proxy}}\)=on -e http\(_{\text{proxy}}\)=\$http\(_{\text{proxy}}\) -e https\(_{\text{proxy}}\)=\$http\(_{\text{proxy}}\) \$tomcat8DwnLink
+RUN wget --output-document /postgresql-42.2.4.jar \url{https://jdbc.postgresql.org/download/postgresql-42.2.4.jar}
+RUN wget --output-document /orbeonforms.zip \url{https://github.com/orbeon/orbeon-forms/releases/download/tag-release-2017.2-ce/orbeon-2017.2.201712300816-CE.zip}
+\#RUN wget --output-document /mysql-connector-java-8.0.11.zip \url{https://cdn.mysql.com//Downloads/Connector-J/mysql-connector-java-8.0.11.zip}
+
+
+
+
+\#---------- installing and configuring tomcat
+RUN tar -zxvf  tomcat.tar.gz
+RUN mv /apache-tomcat-8.5.32 /opt
+RUN mv /postgresql-42.2.4.jar \$CATALINA\(_{\text{HOME}}\)/lib
+RUN cp -f /container\(_{\text{config}}\)\(_{\text{folder}}\)/tomcat-manager-context.xml \$CATALINA\(_{\text{HOME}}\)/webapps/manager/META-INF/context.xml
+RUN cp -f \emph{container\(_{\text{config}}\)\(_{\text{folder}}\)/tomcat-host-manager-context.xml \$CATALINA\(_{\text{HOME}}\)/webapps/host-manager/META-INF/context.xml
+\#RUN cp -f /container\(_{\text{config}}\)\(_{\text{folder}}\)/tomcat-users.xml  \$CATALINA\(_{\text{HOME}}\)/conf} using posgreqsl users in a jdbcRealm
+RUN cp -f /container\(_{\text{config}}\)\(_{\text{folder}}\)/tomcat-server.xml  \$CATALINA\(_{\text{HOME}}\)/conf/server.xml
+
+
+
+
+
+\#----------Download and Installing orbeonforms in tomcat8
+RUN unzip  orbeonforms.zip
+RUN mkdir /orbeon 
+RUN cd /orbeon \&\&  unzip /orbeon-2017.2.201712300816-CE/orbeon.war
+
+\#explode orbeon apps for further configurations
+ENV ORBEON\(_{\text{WEBAPP}}\)\(_{\text{ROOTDIR}}\)=/orbeon/WEB-INF/resources
+RUN mv /orbeon/WEB-INF/lib/orbeon-form-runner.jar /
+RUN mv /orbeon/WEB-INF/lib/orbeon-form-builder.jar /
+
+RUN mkdir /orbeon-form-runner
+RUN cd /orbeon-form-runner \&\& unzip /orbeon-form-runner.jar
+RUN rm orbeon-form-runner.jar
+RUN cp -r \emph{orbeon-form-runner \$ORBEON\(_{\text{WEBAPP}}\)\(_{\text{ROOTDIR}}\)
+RUN zip -r /orbeon-form-runner.jar /orbeon-form-runner}
+
+RUN mkdir /orbeon-form-builder
+RUN cd /orbeon-form-builder \&\& unzip /orbeon-form-builder.jar
+RUN rm orbeon-form-builder.jar
+RUN cp -r \emph{orbeon-form-builder \$ORBEON\(_{\text{WEBAPP}}\)\(_{\text{ROOTDIR}}\)
+RUN zip -r /orbeon-form-builder.jar /orbeon-form-builder}
+
+RUN mv orbeon-form-builder.jar   \$ORBEON\(_{\text{WEBAPP}}\)\(_{\text{ROOTDIR}}\)
+RUN mv orbeon-form-runner.jar  \$ORBEON\(_{\text{WEBAPP}}\)\(_{\text{ROOTDIR}}\)
+
+
+
+\#RUN mv /orbeon \$CATALINA\(_{\text{HOME}}\)/webapps
+RUN cp -r /orbeon \$CATALINA\(_{\text{HOME}}\)/webapps
+RUN ls -l \$CATALINA\(_{\text{HOME}}\)/webapps/orbeon
+
+
+\#----------i18n orbeon-form-runner.jar for pt-BR
+\#RUN unzip /downloads/orbeon/WEB-INF/lib/orbeon-form-builder.jar
+\#RUN unzip /downloads/orbeon/WEB-INF/lib/orbeon-form-runner.jar
+\#RUN ls /downloads/orbeon/WEB-INF/lib/orbeon-form-builder/apps/fr/i18n
+\#RUN ls /downloads/orbeon/WEB-INF/lib/orbeon-form-runner/apps/fr/i18n
+
+
+
+\#----------Configure orbeon with properties-local.xml,  web.xml, log4j.xml and i18n
+\#RUN cp -f \emph{container\(_{\text{config}}\)\(_{\text{folder}}\)/web.xml /downloads/orbeon/WEB-INF}
+\#RUN cp -f \emph{container\(_{\text{config}}\)\(_{\text{folder}}\)/log4j.xml /downloads/orbeon/WEB-INF/resources/config}
+\#RUN cp -f \emph{container\(_{\text{config}}\)\(_{\text{folder}}\)/orbeon-i18n-resources.xml /downloads/orbeon-form-runner/apps/fr/i18n/resources.xml
+\#RUN zip -r /downloads/orbeon-form-runner.jar /downloads/orbeon-form-runner}
+\#RUN cp -f /downloads/orbeon-form-runner.jar /downloads/orbeon/WEB-INF/lib
+
+
+\#----------Customize orbeon home page
+\#RUN cp -f /container\(_{\text{config}}\)\(_{\text{folder}}\)/orbeon-WEB-INF/resources/apps/home/examples-form-runner.xml /downloads/orbeon/WEB-INF/resources/apps/home/examples-form-runner.xml
+
+
+\#----------Deployin orbeon
+\#RUN cp -r /downloads/orbeon \$CATALINA\(_{\text{HOME}}\)/webapps
+
+
+
+
+\#------
+\#Download jdbc connectors for mysql and postgresql
+\#to configure orbeon to work whith relational database
+\#------
+
+\#RUN unzip -d /downloads /downloads/mysql-connector-java-8.0.11.zip  
+\#RUN mv /downloads/mysql-connector-java-8.0.11/mysql-connector-java-8.0.11.jar  \$CATALINA\(_{\text{HOME}}\)/lib
+
+
+
+\#RUN cp -f /downloads/postgresql-42.2.4.jar \$CATALINA\(_{\text{HOME}}\)/lib
+
+
+\#------
+\#Download and installing existdb
+\#to configure orbeon to work whith relational database
+\#The download was made manually in /downloads dir
+\#------
+\#RUN cp /downloads/exist-4.3.0.war \$CATALINA\(_{\text{HOME}}\)/webapps
+
+
+
+
+
+\#CMD \$LIFERAY\(_{\text{HOME}}\)/tomcat-8.0.32/bin/startup.sh \&\& tail -f \$LIFERAY\(_{\text{HOME}}\)/tomcat-8.0.32/logs/catalina.out
+WORKDIR \$CATALINA\(_{\text{HOME}}\)
+EXPOSE 8080
+CMD ["catalina.sh", "run"]
+\end{document}

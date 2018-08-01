@@ -26,3 +26,4 @@ nodejs/DojoCliAppTest1
 maven/nexus-data
 noncommitit/*
 data-dir*
+**/*.tmp

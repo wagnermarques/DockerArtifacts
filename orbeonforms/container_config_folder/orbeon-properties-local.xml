@@ -10,6 +10,35 @@
 <properties xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:oxf="http://www.orbeon.com/oxf/processors">
 
+  <!--Language -->
+  <property
+           as="xs:string"
+           name="oxf.fr.available-languages.orbeon.builder"
+           value="pt"/>
+
+  <!-- custom javascript
+   <property
+       as="xs:string"
+       name="oxf.fr.js.custom.uri.*.*"
+       value="/forms/acme/assets/acme.js
+              forms/acme/sales/assets/acme-sales.js"/>
+   
+   <property
+       as="xs:string"
+       name="​oxf.fr.detail.js.custom.uri​"
+       value="/forms/acme/assets/acme.js
+              forms/acme/sales/assets/acme-sales.js"/>
+   
+   <property
+       as="xs:string"
+       name="oxf.fr.summary.js.custom.uri​"
+       value="/forms/acme/assets/acme.js
+              forms/acme/sales/assets/acme-sales.js"/>
+   
+  -->
+
+
+
   <!--
       https://doc.orbeon.com/configuration/properties/form-runner      
   -->
@@ -20,7 +49,7 @@
 <property
       as="xs:anyURI"
       name="oxf.fr.default-logo.uri.*.*"
-      value="/apps/fr/style/orbeon-logo-trimmed-transparent-42.png"/>
+      value="/apps/fr/style/logo.jpg"/>
     
 <!--
        <property

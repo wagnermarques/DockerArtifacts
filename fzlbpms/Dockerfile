@@ -93,27 +93,18 @@ ENV PATH=$PATH:$GRADLE_HOME/bin
 RUN gradle --version
 
 
-
-#LIFERAY: Download and Installing
-RUN unzip $LIFERAY7_DOWNLOADED_FILE_NAME 
-RUN rm $LIFERAY7_DOWNLOADED_FILE_NAME
-
-
-
-
 #INSTALLING ORBEONFORMS
 RUN unzip -d /opt $ORBEONFORMS_DOWNLOADED_FILE
 RUN rm $ORBEONFORMS_DOWNLOADED_FILE
-#RUN cp $ORBEONFORMS_HOME/orbeon.war /opt/liferay/tomcat-9.0.6/webapps
-
 
 
 #KARAF
 RUN wget http://ftp.unicamp.br/pub/apache/karaf/4.2.0/apache-karaf-4.2.0.tar.gz
-RUN tar xvf apache-karaf-4.2.0
-RUN ls -l
-
-
+RUN tar xvf apache-karaf-4.2.0.tar.gz
+RUN rm apache-karaf-4.2.0.tar.gz
+RUN mv apache-karaf-4.2.0 /opt
+ENV KARAF_HOME=/opt/apache-karaf-4.2.0
+ENV PATH=:$PATH:$KARAF_HOME/bin
 
 #---------- All downloads firts to facilitate rebuild image
 
@@ -122,11 +113,16 @@ RUN tar xf tomcat9.tar.gz &&  mv apache-tomcat-9.0.10 /opt/tomcat9
 RUN chmod +x $CATALINA_HOME/bin/*.sh
 ENV PATH=:$PATH:$CATALINA_HOME/bin
 
+RUN rm apache-ant-1.10.5-bin.zip
+RUN rm apache-maven-3.5.4-bin.zip
+RUN rm gradle-4.8.1-bin.zip
+
+RUN ls -l
 
 EXPOSE 8080
 
-ENV CATALINA_HOME=/opt/liferay/tomcat-9.0.6
-RUN cp /container_config_folder/portal-ext.properties /opt/liferay/
-CMD $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catalina.out
+
+
+CMD $CATALINA_HOME/bin/catalina.sh run && apache-karaf-4.2.0/bin/karaf	 
 
  

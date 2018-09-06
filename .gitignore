@@ -27,3 +27,5 @@ maven/nexus-data
 noncommitit/*
 data-dir*
 **/*.tmp
+**/*ipgg*
+**/*.csv

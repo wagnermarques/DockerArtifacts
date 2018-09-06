@@ -4,13 +4,13 @@ MAINTAINER wagnerdocri@gmail.com
 
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV https_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV https_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 ENV TOMCATFILE=apache-tomcat-8.5.31.tar.gz
-ENV tomcat8DwnLing=http://mirror.nbtelecom.com.br/apache/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz
+ENV tomcat8DwnLing=https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz
 
 ENV CATALINA_HOME=/opt/apache-tomcat-8.5.31
 

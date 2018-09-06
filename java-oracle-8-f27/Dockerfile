@@ -42,6 +42,10 @@ RUN alternatives --install /usr/bin/java   java     $JAVA_HOME/bin/java 2000000
 RUN alternatives --install /usr/bin/javaws javaws   $JAVA_HOME/bin/javaws 2000000
 RUN alternatives --install /usr/bin/javac  javac    $JAVA_HOME/bin/javac 2000000
 RUN alternatives --install /usr/bin/jar    jar      $JAVA_HOME/bin/jar 2000000
+RUN alternatives --set java $JAVA_HOME/bin/java
+RUN alternatives --set javaws $JAVA_HOME/bin/javaws
+RUN alternatives --set javac $JAVA_HOME/bin/javac
+RUN alternatives --set jar $JAVA_HOME/bin/jar
 
 
 # Define default command.

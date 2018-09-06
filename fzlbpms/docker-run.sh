@@ -1,36 +1,27 @@
 #!/bin/bash
- 
-CONTAINER_NAME=$1
-HOST_PORT=$2
-CONTAINER_IP=$3
 
-mkdir -p $(pwd)/../fzlbpms-containers-shared-dir/$CONTAINER_NAME #dir for each liferay containers shared folders
-SHARED_FOLDER=$(pwd)/../fzlbpms-containers-shared-dir/$CONTAINER_NAME
+CONTAINER_NAME=fzlbpms 
+HOST_TOMCAT_PORT=8062
+HOST_KARAF_PORT=9111
+CONTAINER_IP=192.168.33.161
 
-if [ "x$CONTAINER_NAME" = "x" ]; then
-    {
-        CONTAINER_NAME=fzlbpms
-        HOST_PORT=8061
-        CONTAINER_IP=192.168.33.161
-    }
-fi
+SHARED_FOLDER="$(pwd)/$CONTAINER_NAME"
 
-echo "Running... fzlbpms/docker-run.sh <$CONTAINER_NAME> at host port <$HOST_PORT> and ip <$CONTAINER_IP>."
 IMG_NAME=wagnermarques/fzlbpms:0.0.1
-
 
 docker run \
        --name "$CONTAINER_NAME" -h "$CONTAINER_HOST_NAME" \
        --net fzl_network_bridge --ip "$CONTAINER_IP" \
-       -v "$SHARED_FOLDER":/fzlbpms-containers-shared-dir/$CONTAINER_NAME \
-       -p "$HOST_PORT":8080 \
+       -v "$SHARED_FOLDER":/shared-dir \
+       -p "$HOST_TOMCAT_PORT":8080 -p "$HOST_KARAF_PORT":8101 \
        -d "$IMG_NAME" 
        
 echo Container name: $CONTAINER_NAME
 echo Container ip: $CONTAINER_IP
 echo Container host ports:  $HOST_PORT
 echo SHARED_FOLDER: $SHARED_FOLDER
-echo http://localhost:$HOST_PORT
+echo http://localhost:$HOST_TOMCAT_PORT
+echo http://localhost:$HOST_KARAF_PORT
 
 
 

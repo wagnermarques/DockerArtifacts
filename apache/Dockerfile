@@ -19,6 +19,7 @@ ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 RUN dnf -y update 
 RUN dnf -y install httpd php php-common php-fpm php-pdo php-gd php-pgsql 
 RUN dnf -y install php-xml php-pecl-memcache php-pecl-memcached php-mcrypt php-mbstring 
+RUN dnf -y install findutils
 RUN dnf clean all
  
 
@@ -35,8 +36,9 @@ RUN echo "Apache index.html Response from Container" >> /var/www/html/index.html
 EXPOSE 80
 
 # Simple startup script to avoid some issues observed with container restart
-ADD httpd.conf /etc/httpd/conf/httpd.conf
-ADD run-apache.sh /run-apache.sh
+ADD ./container_config_folder/httpd.conf /etc/httpd/conf/httpd.conf
+ADD ./container_config_folder/php.ini /etc/php.ini
+ADD ./container_config_folder/run-apache.sh /run-apache.sh
 
 RUN chmod -v +x /run-apache.sh
 

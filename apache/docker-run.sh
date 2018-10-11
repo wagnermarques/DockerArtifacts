@@ -25,5 +25,5 @@ echo Container name: $CONTAINER_NAME
 echo Container ip: $CONTAINER_IP
 echo Container host ports:  9900:80
 echo SHARED_FOLDER: $CONTAINER_SHARED_FOLDER
-echo http://localhost:$HOST_PORT
+echo http://docker_host_ip:9900
 

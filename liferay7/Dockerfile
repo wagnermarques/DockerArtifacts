@@ -2,14 +2,13 @@ FROM wagnermarques/fzl_java-oracle8-f27:0.0.1
 
 MAINTAINER wagnerdocri@gmail.com
 
-#if behind a proxy just uncomment this lines
+#if you are not behind a proxy just comment this lines
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
 ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
 ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
 ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 ENV use_proxy=yes
-
 
 
 RUN dnf -y update
@@ -19,13 +18,11 @@ RUN dnf -y install findutils git\
     tar wget unzip  && dnf clean all
 
 
-
 ADD ./scripts /scripts
 ADD ./container_config_folder /container_config_folder
 
 #needed just if you are behind a proxy
 RUN cp /container_config_folder/.wgetrc  ~/
-
 
 
 #LIFERAY: Download and Installing
@@ -34,8 +31,6 @@ ENV LIFERAY7_DOWNLOADED_FILE_NAME=liferay-ce-portal-tomcat-7.1.0-ga1-20180703012
 RUN wget $LIFERAY7_DOWNLOAD_LINK
 RUN unzip $LIFERAY7_DOWNLOADED_FILE_NAME 
 RUN rm $LIFERAY7_DOWNLOADED_FILE_NAME
-
-
 
 
 #INSTALLING ANT

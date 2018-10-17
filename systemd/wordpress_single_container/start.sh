@@ -16,13 +16,17 @@ echo ssh user password: $SSH_USERPASS
 
 __mysql_config() {
 # Hack to get MySQL up and running... I need to look into it more.
-dnf -y erase community-mysql community-mysql-server
-rm -rf /var/lib/mysql/ /etc/my.cnf
-dnf -y install community-mysql community-mysql-server
-mysql_install_db
-chown -R mysql:mysql /var/lib/mysql
-/usr/bin/mysqld_safe & 
-sleep 10
+    #dnf -y erase community-mysql community-mysql-server
+    dnf -y install community-mysql community-mysql-server
+    dnf -y install mariadb mariadb-server
+    rm -rf /var/lib/mysql/ /etc/my.cnf
+    ls /usr/bin/
+    
+    mysql_install_db
+    chown -R mysql:mysql /var/lib/mysql
+    #/usr/bin/mysqld_safe &
+    
+    sleep 10
 }
 
 __handle_passwords() {

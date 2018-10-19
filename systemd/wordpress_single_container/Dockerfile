@@ -1,7 +1,18 @@
-FROM fedora
-MAINTAINER http://fedoraproject.org/wiki/Cloud
-RUN dnf -y update && dnf clean all
-RUN dnf -y install httpd php php-mysql php-gd pwgen supervisor bash-completion openssh-server psmisc tar && dnf clean all
+FROM fedora:28
+
+MAINTAINER wagnerdocri@gmail.com
+
+
+#dnf needs proxy config in this way, but wget...
+#uncomment accodingly your proxy configuration
+ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
+
+RUN dnf -y update
+RUN dnf -y install mariadb mariadb-server httpd php php-gd pwgen supervisor bash-completion openssh-server psmisc tar php-pecl-apcu php-cli php-pear php-pdo php-pgsql php-pecl-mongodb php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml
+RUN dnf clean all
+
 ADD ./start.sh /start.sh
 ADD ./foreground.sh /etc/apache2/foreground.sh
 ADD ./supervisord.conf /etc/supervisord.conf
@@ -14,5 +25,4 @@ RUN chmod 755 /start.sh
 RUN chmod 755 /etc/apache2/foreground.sh
 RUN mkdir /var/run/sshd
 EXPOSE 80
-EXPOSE 22
 CMD ["/bin/bash", "/start.sh"]

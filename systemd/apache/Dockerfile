@@ -1,8 +1,17 @@
 FROM fedora:rawhide
-MAINTAINER http://fedoraproject.org/wiki/Cloud
+MAINTAINER wagnerdocri@gmail.com
 
-RUN dnf -y update && dnf clean all
-RUN dnf -y install httpd && dnf clean all && \
+#dnf needs proxy config in this way, but wget...
+#uncomment accodingly your proxy configuration
+ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
+
+
+RUN dnf -y update
+RUN dnf -y install httpd php php-common
+RUN dnf -y install php-pecl-apcu php-cli php-pear php-pdo php-mysqlnd php-pgsql php-pecl-mongodb php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml
+RUN dnf -y clean all && \
 systemctl enable httpd.service
 
 EXPOSE 80

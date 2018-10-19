@@ -7,28 +7,28 @@ MAINTAINER wagnerdocri@gmail.com
 ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/              
 ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/                                                                                                                        
-                                                                                                                                                              
+                                                                                                                                                         
 RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf
 RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf                                                                             
 RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf                                                                                                                        
-                                                               
+
+ADD /Downloads /Downloads
+RUN ls /Downloads
+
+
 # Java Version and other
 
 ##ENV JDK_RPM_FILE_NAME=
 ENV JDKFILE=jdk-8u131-linux-x64.tar.gz
 ENV JAVA_HOME=/opt/jdk/jdk1.8.0_131
 
-#ENV JDK_FILENAME=jdk-8u121-linux-x64.tar.gz
 #PATH=${PATH}:/opt/jdk/bin 
 
 RUN dnf -y update
 RUN dnf -y install tar wget  && dnf clean all
 
 RUN mkdir -p /opt/jdk
-RUN wget --output-document /opt/jdk/$JDKFILE \
-         --no-cookies --no-check-certificate \
-         --header "Cookie:s_nr=1484102101551; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/$JDKFILE"
-                                                                                        
+
 RUN cd /opt/jdk && tar xvf $JDKFILE 
 
 #FROM: https://gist.github.com/voor/b2dd473db296d9eae004

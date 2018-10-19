@@ -5,22 +5,21 @@ MAINTAINER wagnerdocri@gmail.com
 ADD ./container_config_folder /container_config_folder
 
 #if you are not behind a proxy, comments this out                                                                                                                               
-ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                        
-ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                         
-ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/                                                                                                                         
-ENV use_proxy=on
+#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                        
+#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/                                                                                                                         
+#ENV all_proxy=http://wagner:nicoals1*@192.168.0.2:3128/                                                                                                                         
+#ENV use_proxy=on
 
-RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf                                                                                                                  
-RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf                                                                                                                           
-RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf                                                                                                                        
+#RUN echo "proxy=http://192.168.0.2:3128/" >> /etc/dnf/dnf.conf                                                                                                                  
+#RUN echo "proxy_username=wagner" >> /etc/dnf/dnf.conf                                                                                                                           
+#RUN echo "proxy_password=nicolas1*" >> /etc/dnf/dnf.conf                                                                                                                        
 
 RUN dnf -y update && dnf -y install git unzip wget nodejs && dnf clean all
 
 
-
 #if you are not behind a proxy, comments this out
-RUN npm config set proxy http://wagner:nicolas1*@192.168.0.2:3128/
-RUN npm config set https-proxy http://wagner:nicolas1*@192.168.0.2:3128/
+#RUN npm config set proxy http://wagner:nicolas1*@192.168.0.2:3128/
+#RUN npm config set https-proxy http://wagner:nicolas1*@192.168.0.2:3128/
 
 RUN npm install -g cordova
 RUN chown -R root:root /usr/lib/node_modules/cordova #in the future change to normal user
@@ -38,7 +37,6 @@ RUN cp /container_config_folder/.wgetrc  ~/
 #if you are not behind a proxy, comments this out
 #RUN wget --output-document /opt/$GRADLE_ZIP_FILE_NAME -e use_proxy=$use_proxy -e http_proxy=$http_proxy -e https_proxy=$http_proxy $GRADLE_DOWNLOAD_URL
 RUN wget --output-document /opt/$GRADLE_ZIP_FILE_NAME $GRADLE_DOWNLOAD_URL
-
 
 
 RUN unzip -d /opt /opt/$GRADLE_ZIP_FILE_NAME && mv /opt/$GRADLE_UNZIPED_FOLDER_NAME /opt/gradle

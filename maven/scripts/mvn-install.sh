@@ -1,11 +1,5 @@
 #!/bin/bash
 
-MVN_PROJECTS_DIR_IN_CONTAINER=/container_mvn_projects
+PROJECT_DIR_NAME=$1
+cd "/mvn_projects/$PROJECT_DIR_NAME" && mvn install
 
-PROJECT_DIR=$1
-
-cd "$MVN_PROJECTS_DIR_IN_CONTAINER/$PROJECT_DIR"
-
-ls -la
-
-#mvn install

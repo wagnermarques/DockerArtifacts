@@ -24,9 +24,9 @@ ADD settings.xml /usr/share/maven/conf/settings.xml
 
 
 # when issue docker exec -it fzl_maven mvn archetype:generate
-# the project will be created in /opt/container_mvn_projects
+# the project will be created in /mvn_projects
 # to create the project out of container, please provide volume -v to override this place
-RUN mkdir /container_mvn_projects
+RUN mkdir /mvn_projects
 
 
 
@@ -86,9 +86,7 @@ WORKDIR ${NEXUS_HOME}
 # Could be used for images based on this Docker image to specify default mirrored repository
 #ENV mavenRepositoryUrl http://localhost:8081/nexus/content/groups/public/
 #ADD settings.xml /usr/share/maven/conf/settings.xml
-
-ADD scripts /scripts
-RUN chmod +x /scripts/*.sh
+RUN  mkdir -p /scripts
 
 ENV PATH=${PATH}:$JAVA_HOME/bin
 

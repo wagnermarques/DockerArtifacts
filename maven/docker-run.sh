@@ -25,6 +25,9 @@ fi
 
 SHARED_DIR=$(pwd)/../maven_containers_shared_dir/$CONTAINER_NAME
 MVN_PROJECTS_DIR=$(pwd)/../../
+CONTAINER_SCRIPTS=$(pwd)/scripts
+chmod +x -R $(pwd)/scripts/*.sh
+
 NEXUS_DATA_DIR="$SHARED_DIR/nexus-data"
 
 if [ ! -d $SHARED_DIR ];
@@ -53,5 +56,10 @@ docker run  \
        -p $PORT_MAPPING \
        -v $MVN_PROJECTS_DIR:/mvn_projects \
        -v $NEXUS_DATA_DIR:/nexus-data \
+       -v $CONTAINER_SCRIPTS:/scripts \
        $IMG
-  
+
+echo ">>> --name $CONTAINER_NAME"
+echo ">>> -p $PORT_MAPPING"
+echo ">>> -v $MVN_PROJECTS_DIR:/mvn_projects"
+echo ">>> -v $NEXUS_DATA_DIR:/nexus-data "

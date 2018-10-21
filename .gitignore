@@ -3,6 +3,8 @@ liferay7-containers-shared-dir/*
 liferay7/container_config_folder/downloads/*
 apache-containers-shared-dir/*
 data-dir-for-mariadb/*
+maven_containers_shared_dir/*
+
 **/target
 **/*.pdf
 **/*.jar

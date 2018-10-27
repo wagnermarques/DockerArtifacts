@@ -38,7 +38,7 @@ docker run \
        --name "$CONTAINER_NAME" -h "$CONTAINER_HOST_NAME" \
        --net fzl_network_bridge --ip "$CONTAINER_IP" \
        -v $CONTAINER_DATA_DIR:/node_project \
-       -p "$CONTAINER_PORT":"$CONTAINER_PORT" \
+       -p "$CONTAINER_PORT":3000 \
        -d "$IMG_NAME" "bash:$CONTAINER_RUN_CMD"
 
 

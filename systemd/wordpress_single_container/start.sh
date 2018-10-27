@@ -7,42 +7,40 @@ fi
 }
 
 __create_user() {
-# Create a user to SSH into as.
-SSH_USERPASS=`pwgen -c -n -1 8`
-useradd -G wheel user
-echo user:$SSH_USERPASS | chpasswd
-echo ssh user password: $SSH_USERPASS
+    # Create a user to SSH into as.
+    SSH_USERPASS=`pwgen -c -n -1 8`
+    useradd -G wheel user
+    echo user:$SSH_USERPASS | chpasswd
+    echo ssh user password: $SSH_USERPASS
 }
 
 __mysql_config() {
-# Hack to get MySQL up and running... I need to look into it more.
-    #dnf -y erase community-mysql community-mysql-server
+    # Hack to get MySQL up and running... I need to look into it more.
+    dnf -y erase community-mysql community-mysql-server
+    echo ">>> __mysql_config() {..."
     dnf -y install community-mysql community-mysql-server
-    dnf -y install mariadb mariadb-server
     rm -rf /var/lib/mysql/ /etc/my.cnf
-    ls /usr/bin/
-    
     mysql_install_db
     chown -R mysql:mysql /var/lib/mysql
-    #/usr/bin/mysqld_safe &
-    
+    find / -name mysqld_safe
+    /usr/bin/mysqld_safe &    
     sleep 10
 }
 
 __handle_passwords() {
-# Here we generate random passwords (thank you pwgen!). The first two are for mysql users, the last batch for random keys in wp-config.php
-WORDPRESS_DB="wordpress"
-MYSQL_PASSWORD=`pwgen -c -n -1 12`
-WORDPRESS_PASSWORD=`pwgen -c -n -1 12`
-# This is so the passwords show up in logs. 
-echo mysql root password: $MYSQL_PASSWORD
-echo wordpress password: $WORDPRESS_PASSWORD
-echo $MYSQL_PASSWORD > /mysql-root-pw.txt
-echo $WORDPRESS_PASSWORD > /wordpress-db-pw.txt
-# There used to be a huge ugly line of sed and cat and pipe and stuff below,
-# but thanks to @djfiander's thing at https://gist.github.com/djfiander/6141138
-# there isn't now.
-sed -e "s/database_name_here/$WORDPRESS_DB/
+    # Here we generate random passwords (thank you pwgen!). The first two are for mysql users, the last batch for random keys in wp-config.php
+    WORDPRESS_DB="wordpress"
+    MYSQL_PASSWORD='pwgen -c -n -1 12'
+    WORDPRESS_PASSWORD='pwgen -c -n -1 12'
+    # This is so the passwords show up in logs. 
+    echo mysql root password: $MYSQL_PASSWORD
+    echo wordpress password: $WORDPRESS_PASSWORD
+    echo $MYSQL_PASSWORD > /mysql-root-pw.txt
+    echo $WORDPRESS_PASSWORD > /wordpress-db-pw.txt
+    # There used to be a huge ugly line of sed and cat and pipe and stuff below,
+    # but thanks to @djfiander's thing at https://gist.github.com/djfiander/6141138
+    # there isn't now.
+    sed -e "s/database_name_here/$WORDPRESS_DB/
 s/username_here/$WORDPRESS_DB/
 s/password_here/$WORDPRESS_PASSWORD/
 /'AUTH_KEY'/s/put your unique phrase here/`pwgen -c -n -1 65`/
@@ -72,10 +70,17 @@ supervisord -n
 }
 
 # Call all functions
+echo "running __check..."
 __check
+echo "running __create_user..."
 __create_user
+echo "running __mysql_config..."
 __mysql_config
+echo "running __handle_passwords..."
 __handle_passwords
+echo "running __httpd_perms..."
 __httpd_perms
+echo "running __start_mysql..."
 __start_mysql
+echo "running __run_supervisor..."
 __run_supervisor

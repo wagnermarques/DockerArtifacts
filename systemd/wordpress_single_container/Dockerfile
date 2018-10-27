@@ -10,7 +10,7 @@ ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
 ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 
 RUN dnf -y update
-RUN dnf -y install mariadb mariadb-server httpd php php-gd pwgen supervisor bash-completion openssh-server psmisc tar php-pecl-apcu php-cli php-pear php-pdo php-pgsql php-pecl-mongodb php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml
+RUN dnf -y install findutils community-mysql community-mysql-server httpd php php-gd pwgen supervisor bash-completion openssh-server psmisc tar php-pecl-apcu php-cli php-pear php-pdo php-pgsql php-pecl-mongodb php-pecl-memcache php-pecl-memcached php-gd php-mbstring php-mcrypt php-xml
 RUN dnf clean all
 
 ADD ./start.sh /start.sh

@@ -17,7 +17,6 @@ ADD ./container_config_folder /container_config_folder
 RUN dnf -y update && dnf -y install git unzip wget nodejs && dnf clean all
 
 
-
 #if you are not behind a proxy, comments this out
 #RUN npm config set proxy http://wagner:nicolas1*@192.168.0.2:3128/
 #RUN npm config set https-proxy http://wagner:nicolas1*@192.168.0.2:3128/
@@ -33,12 +32,11 @@ ENV GRADLE_UNZIPED_FOLDER_NAME=gradle-4.5-rc-1
 ENV GRADLE_HOME=/opt/gradle
 
 #if you are not behind a proxy, comments this out
-#RUN cp /container_config_folder/.wgetrc  ~/
+RUN cp /container_config_folder/.wgetrc  ~/
 
 #if you are not behind a proxy, comments this out
 #RUN wget --output-document /opt/$GRADLE_ZIP_FILE_NAME -e use_proxy=$use_proxy -e http_proxy=$http_proxy -e https_proxy=$http_proxy $GRADLE_DOWNLOAD_URL
 RUN wget --output-document /opt/$GRADLE_ZIP_FILE_NAME $GRADLE_DOWNLOAD_URL
-
 
 
 RUN unzip -d /opt /opt/$GRADLE_ZIP_FILE_NAME && mv /opt/$GRADLE_UNZIPED_FOLDER_NAME /opt/gradle

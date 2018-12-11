@@ -31,9 +31,9 @@ RUN cd /opt && tar -zxvf  $TOMCATFILE
 #this file still does not existe but we issue tail -f against it to see the logs
 RUN > $CATALINA_HOME/logs/catalina.out
 
-ADD conf/dnf.conf /etc/dnf/ 
-ADD conf $CATALINA_HOME/conf
-
+ADD conf_dnf/dnf.conf /etc/dnf/ 
+ADD conf_tomcat/server.xml $CATALINA_HOME/conf
+ADD conf_tomcat/tomcat-users.xml $CATALINA_HOME/conf
 
 ADD /webapps/manager/META-INF/ $CATALINA_HOME/webapps/manager/META-INF/
 

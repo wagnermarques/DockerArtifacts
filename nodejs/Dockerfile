@@ -9,7 +9,8 @@ ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 
 # Install nodejs and npm
 RUN dnf -y update
-RUN dnf -y install nodejs npm git gcc-c++ 
+#gyp ERR! stack Error: Can't find Python executable "python", you can set the PYTHON env variable.
+RUN dnf -y install nodejs npm git gcc-c++ python
 RUN dnf clean all
 
 RUN npm config set proxy http://cid2:cid2@192.168.0.2:3128/

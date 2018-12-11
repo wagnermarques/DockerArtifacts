@@ -1,10 +1,10 @@
 #!/bin/bash
 
-DATA_DIR=$(pwd)/../data-dir-for-maven
-MVN_PROJECTS_DIR=$DATA_DIR/mvnprojects
-NEXUS_DATA_DIR=$DATA_DIR/nexus-data
+SHARED_FOLDER="$(pwd)/../maven-containers-shared-dir/"
+MVN_PROJECTS_DIR="$SHARED_FOLDER/sources"
+NEXUS_DATA_DIR="$SHARED_FOLDER/nexus/nexus-data"
 
-[ -d $DATA_DIR ] || mkdir -p $DATA_DIR
+[ -d $SHARED_FOLDER ] || mkdir -p $SHARED_FOLDER
 [ -d $MVN_PROJECTS_DIR ] || mkdir -p $MVN_PROJECTS_DIR
 [ -d $NEXUS_DATA_DIR ] || mkdir -p $NEXUS_DATA_DIR
 

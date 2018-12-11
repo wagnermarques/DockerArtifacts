@@ -1,12 +1,23 @@
-FROM wagnermarques/java-oracle8:0.0.1
+FROM wagnermarques/fzl_java-oracle8-f27:0.0.1
 
 #
 #based on: https://hub.docker.com/r/sonatype/docker-nexus3/~/dockerfile/
 #
 
-RUN dnf clean all && dnf -y update &&  dnf -y upgrade                                                                              
-RUN dnf -y install tar wget curl findutils
 
+#if you are not behind a proxy just comment this lines
+#dnf needs proxy config in this way, but wget...
+#uncomment accodingly your proxy configuration
+ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
+ENV use_proxy=yes
+
+
+
+RUN dnf -y update &&  dnf -y upgrade                                                                              
+RUN dnf -y install tar wget curl findutils
+RUN dnf -y clean all
 
 #------
 # Download and
@@ -38,10 +49,9 @@ RUN mkdir /container_mvn_projects
 # https://github.com/sonatype/docker-nexus/blob/master/oss/Dockerfile
 #------
 
-ENV NexusTarFileName=nexus-3.2.1-01-unix.tar.gz
-ENV NexusDownloadLink=http://download.sonatype.com/nexus/3/$NexusTarFileName 
-ENV NexusUncopressedDirName=nexus-3.2.1-01
-
+ENV NexusTarFileName=nexus-3.14.0-04-unix.tar.gz
+ENV NexusDownloadLink=https://sonatype-download.global.ssl.fastly.net/repository/repositoryManager/3/$NexusTarFileName 
+ENV NexusUncopressedDirName=nexus-3.14.0-04
 ENV NEXUS_HOME=/opt/$NexusUncopressedDirName \
     NEXUS_DATA=/nexus-data \                    
     NEXUS_CONTEXT='' \

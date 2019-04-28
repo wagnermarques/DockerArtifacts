@@ -27,6 +27,7 @@ android-java-oracle-8-fed27/downloads/*
 *.tar
 nodejs/DojoCliAppTest1
 maven/nexus-data
+maven/nexus-scripting/nexus-scripting-examples
 noncommitit/*
 data-dir*
 **/*.tmp

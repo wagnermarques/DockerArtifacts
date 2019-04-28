@@ -8,16 +8,16 @@ FROM wagnermarques/fzl_java-oracle8-f27:0.0.1
 #if you are not behind a proxy just comment this lines
 #dnf needs proxy config in this way, but wget...
 #uncomment accodingly your proxy configuration
-ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
-ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
-ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
-ENV use_proxy=yes
+#ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV use_proxy=yes
 
 
-
-RUN dnf -y update &&  dnf -y upgrade                                                                              
+RUN dnf -y update &&  dnf -y upgrade
 RUN dnf -y install tar wget curl findutils
 RUN dnf -y clean all
+
 
 #------
 # Download and
@@ -25,7 +25,7 @@ RUN dnf -y clean all
 #------
 
 ENV M2_HOME=/usr/share/maven
-ENV MAVEN_VERSION 3.2.5
+ENV MAVEN_VERSION 3.6.1
 RUN curl -sSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar xzf - -C /usr/share \
 && mv /usr/share/apache-maven-$MAVEN_VERSION /usr/share/maven \
 && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
@@ -40,7 +40,6 @@ ADD settings.xml /usr/share/maven/conf/settings.xml
 RUN mkdir /mvn_projects
 
 
-
 #------
 # Download and
 # Installing and runing nexus
@@ -49,9 +48,9 @@ RUN mkdir /mvn_projects
 # https://github.com/sonatype/docker-nexus/blob/master/oss/Dockerfile
 #------
 
-ENV NexusTarFileName=nexus-3.14.0-04-unix.tar.gz
+ENV NexusTarFileName=nexus-3.16.1-02-unix.tar.gz
 ENV NexusDownloadLink=https://sonatype-download.global.ssl.fastly.net/repository/repositoryManager/3/$NexusTarFileName 
-ENV NexusUncopressedDirName=nexus-3.14.0-04
+ENV NexusUncopressedDirName=nexus-3.16.1-02
 ENV NEXUS_HOME=/opt/$NexusUncopressedDirName \
     NEXUS_DATA=/nexus-data \                    
     NEXUS_CONTEXT='' \

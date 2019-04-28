@@ -1,4 +1,5 @@
 #!/bin/bash
-PGPASSWORD='admin123'
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=admin123
+export PGPASSWORD='sessp@ipgg'
+export POSTGRES_USER=postgres
+export POSTGRES_PASSWORD=sessp@ipgg
+echo $PGPASSWORD

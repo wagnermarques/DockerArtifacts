@@ -2,34 +2,32 @@ FROM fedora:27
 
 MAINTAINER wagnerdocri@gmail.com
 
-ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
-ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
-ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
+#ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 
 
 # Install nodejs and npm
 RUN dnf -y update
+
 #gyp ERR! stack Error: Can't find Python executable "python", you can set the PYTHON env variable.
 RUN dnf -y install nodejs npm git gcc-c++ python
 RUN dnf clean all
 
-RUN npm config set proxy http://cid2:cid2@192.168.0.2:3128/
+#RUN npm config set proxy http://cid2:cid2@192.168.0.2:3128/
 
 
-# Show nodejs and npm versions installed
-RUN node -v
-RUN npm -v
+RUN npm install -g jquery
+RUN npm install -g express
+RUN npm install -g http-server #to have a local server run
 
-RUN npm install -g grunt-cli
+RUN npm install -g grunt-cli grunt-tslint
 RUN npm install -g yo generator-generator
 RUN npm install -g webpack
 
 RUN npm install -g typescript
 RUN npm install -g ts-loader  #links webpack to complie typescript
-RUN npm install -g jquery  #to use jquery in your project
-RUN npm install -g express
-
-RUN npm install -g http-server #to have a local server run
+RUN npm install -g @dojo/cli-create-app
 
 
 #
@@ -41,9 +39,9 @@ RUN npm install -g http-server #to have a local server run
 #    create - Provides a skeleton template for Dojo 2 projects
 #    eject - Disconnects a project from @dojo/cli allowing advanced users to customise configuration
 #    version - Reports the version of @dojo/cli and any commands that are installed
-
 RUN npm install -g @dojo/cli
-#In order to create your first Dojo 2 application, you need to globally install the @dojo/cli-create-app command which creates a template project to get started:
+
+#In order to create your first Dojo 3 application, you need to globally install the @dojo/cli-create-app command which creates a template project to get started:
 RUN npm install -g @dojo/cli-create-app
 
 

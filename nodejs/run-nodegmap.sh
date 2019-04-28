@@ -34,6 +34,14 @@ CONTAINER_RUN_CMD="cd /node_project/node_projects/$PROJECT_NAME && npm install &
 
 CONTAINER_PORT=3001
 
+echo ">>> Running command below..."
+echo ">>> docker run \ "
+echo ">>>     --name \"$CONTAINER_NAME\" -h \"$CONTAINER_HOST_NAME\" \ ";
+echo ">>>     --net fzl_network_bridge --ip "$CONTAINER_IP" \ "
+echo ">>>      -v $CONTAINER_DATA_DIR:/node_project \ "
+echo ">>>      -p \"$CONTAINER_PORT\":3000 \ "
+echo ">>>      -d \"$IMG_NAME\" \"bash:$CONTAINER_RUN_CMD\" "
+
 docker run \
        --name "$CONTAINER_NAME" -h "$CONTAINER_HOST_NAME" \
        --net fzl_network_bridge --ip "$CONTAINER_IP" \

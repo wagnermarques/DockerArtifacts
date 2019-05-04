@@ -1,11 +1,10 @@
 #!/bin/bash
 
-SHARED_FOLDER="/home/wagner/wagnerdocri@gmail.com3/fzlbpms/fzlbpms_shared/docker/maven/"
+FZL_SHARED_FOLDER="/home/wagner/wagnerdocri@gmail.com3/fzlbpms/fzlbpms_shared/docker/maven/"
 NEXUS_DATA_DIR="$SHARED_FOLDER/nexus/nexus-data"
-MVN_PROJECTS_DIR="/home/wagner/wagnerdocri@gmail.com3/envs/env-dev/sources"
+MVN_PROJECTS_DIR="/home/wagner/wagnerdocri@gmail.com3/envs/env-dev/sources/"
 
-[ -d $SHARED_FOLDER ] || mkdir -p $SHARED_FOLDER
-[ -d $MVN_PROJECTS_DIR ] || mkdir -p $MVN_PROJECTS_DIR
+[ -d $FZL_SHARED_FOLDER ] || mkdir -p $FZL_SHARED_FOLDER
 [ -d $NEXUS_DATA_DIR ] || mkdir -p $NEXUS_DATA_DIR
 
 

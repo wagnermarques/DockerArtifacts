@@ -1,0 +1,137 @@
+[Mon May 06 01:29:28.780020 2019] [suexec:notice] [pid 11:tid 139932773243136] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 01:29:28.791531 2019] [lbmethod_heartbeat:notice] [pid 11:tid 139932773243136] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 01:29:28.791968 2019] [http2:warn] [pid 11:tid 139932773243136] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 01:29:28.903336 2019] [mpm_event:notice] [pid 11:tid 139932773243136] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 01:29:28.903417 2019] [core:notice] [pid 11:tid 139932773243136] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 02:22:01.322551 2019] [mpm_event:notice] [pid 11:tid 139932773243136] AH00491: caught SIGTERM, shutting down
+[Mon May 06 02:23:08.607478 2019] [suexec:notice] [pid 11:tid 139931144964352] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 02:23:08.622879 2019] [lbmethod_heartbeat:notice] [pid 11:tid 139931144964352] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 02:23:08.623534 2019] [http2:warn] [pid 11:tid 139931144964352] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 02:23:08.689046 2019] [mpm_event:notice] [pid 11:tid 139931144964352] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 02:23:08.689123 2019] [core:notice] [pid 11:tid 139931144964352] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 02:23:43.306756 2019] [proxy:error] [pid 25:tid 139930799159040] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 02:23:43.306816 2019] [proxy_fcgi:error] [pid 25:tid 139930799159040] [client 192.168.33.10:57700] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:22:04.787037 2019] [mpm_event:notice] [pid 11:tid 139931144964352] AH00491: caught SIGTERM, shutting down
+[Mon May 06 12:22:45.540234 2019] [suexec:notice] [pid 11:tid 140445081823488] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 12:22:45.565791 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140445081823488] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 12:22:45.566436 2019] [http2:warn] [pid 11:tid 140445081823488] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 12:22:45.655330 2019] [mpm_event:notice] [pid 11:tid 140445081823488] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 12:22:45.655400 2019] [core:notice] [pid 11:tid 140445081823488] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 12:23:19.270901 2019] [proxy:error] [pid 27:tid 140444719232768] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:23:19.270954 2019] [proxy_fcgi:error] [pid 27:tid 140444719232768] [client 192.168.33.10:60188] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:32:19.854251 2019] [mpm_event:notice] [pid 11:tid 140445081823488] AH00491: caught SIGTERM, shutting down
+[Mon May 06 12:32:28.121175 2019] [suexec:notice] [pid 11:tid 140673587751168] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 12:32:28.132206 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140673587751168] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 12:32:28.132664 2019] [http2:warn] [pid 11:tid 140673587751168] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 12:32:28.134768 2019] [mpm_event:notice] [pid 11:tid 140673587751168] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 12:32:28.134807 2019] [core:notice] [pid 11:tid 140673587751168] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 12:33:27.536640 2019] [proxy:error] [pid 26:tid 140673097381632] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:33:27.536718 2019] [proxy_fcgi:error] [pid 26:tid 140673097381632] [client 192.168.33.10:60562] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:33:40.599961 2019] [proxy:error] [pid 26:tid 140673072203520] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:33:40.599994 2019] [proxy_fcgi:error] [pid 26:tid 140673072203520] [client 192.168.33.10:60566] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:35:18.394224 2019] [mpm_event:notice] [pid 11:tid 140673587751168] AH00491: caught SIGTERM, shutting down
+[Mon May 06 12:35:25.773094 2019] [suexec:notice] [pid 11:tid 140640250759424] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 12:35:25.784251 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140640250759424] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 12:35:25.784770 2019] [http2:warn] [pid 11:tid 140640250759424] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 12:35:25.786887 2019] [mpm_event:notice] [pid 11:tid 140640250759424] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 12:35:25.786926 2019] [core:notice] [pid 11:tid 140640250759424] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 12:35:52.880149 2019] [proxy:error] [pid 27:tid 140639828170496] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:35:52.880193 2019] [proxy_fcgi:error] [pid 27:tid 140639828170496] [client 192.168.33.10:60576] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:40:02.042056 2019] [mpm_event:notice] [pid 11:tid 140640250759424] AH00491: caught SIGTERM, shutting down
+[Mon May 06 12:40:21.744701 2019] [suexec:notice] [pid 12:tid 139744655522048] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 12:40:21.759027 2019] [lbmethod_heartbeat:notice] [pid 12:tid 139744655522048] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 12:40:21.759638 2019] [http2:warn] [pid 12:tid 139744655522048] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 12:40:21.761825 2019] [mpm_event:notice] [pid 12:tid 139744655522048] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 12:40:21.761862 2019] [core:notice] [pid 12:tid 139744655522048] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 12:41:07.139676 2019] [proxy:error] [pid 26:tid 139744292931328] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:41:07.139747 2019] [proxy_fcgi:error] [pid 26:tid 139744292931328] [client 192.168.33.10:60606] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:44:43.254520 2019] [mpm_event:notice] [pid 12:tid 139744655522048] AH00491: caught SIGTERM, shutting down
+[Mon May 06 12:45:14.715808 2019] [suexec:notice] [pid 11:tid 140701063227648] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 12:45:14.744878 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140701063227648] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 12:45:14.745458 2019] [http2:warn] [pid 11:tid 140701063227648] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 12:45:14.791888 2019] [mpm_event:notice] [pid 11:tid 140701063227648] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 12:45:14.791952 2019] [core:notice] [pid 11:tid 140701063227648] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 12:46:15.548101 2019] [proxy:error] [pid 36:tid 140700725815040] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:46:15.548147 2019] [proxy_fcgi:error] [pid 36:tid 140700725815040] [client 192.168.33.10:60674] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:53:23.530328 2019] [mpm_event:notice] [pid 11:tid 140701063227648] AH00491: caught SIGTERM, shutting down
+[Mon May 06 12:53:39.428847 2019] [suexec:notice] [pid 11:tid 140250176796928] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 12:53:39.440439 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140250176796928] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 12:53:39.441021 2019] [http2:warn] [pid 11:tid 140250176796928] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 12:53:39.443667 2019] [mpm_event:notice] [pid 11:tid 140250176796928] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 12:53:39.443710 2019] [core:notice] [pid 11:tid 140250176796928] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 12:54:25.403544 2019] [proxy:error] [pid 22:tid 140249371948800] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:54:25.403629 2019] [proxy_fcgi:error] [pid 22:tid 140249371948800] [client 192.168.33.10:60772] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 12:55:11.336851 2019] [mpm_event:notice] [pid 11:tid 140250176796928] AH00491: caught SIGTERM, shutting down
+[Mon May 06 12:55:27.949195 2019] [suexec:notice] [pid 11:tid 140083520231680] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 12:55:27.960546 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140083520231680] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 12:55:27.961157 2019] [http2:warn] [pid 11:tid 140083520231680] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 12:55:27.963824 2019] [mpm_event:notice] [pid 11:tid 140083520231680] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 12:55:27.963860 2019] [core:notice] [pid 11:tid 140083520231680] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 12:55:35.264089 2019] [proxy:error] [pid 26:tid 140083101427456] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 12:55:35.264180 2019] [proxy_fcgi:error] [pid 26:tid 140083101427456] [client 192.168.33.10:60778] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 13:01:14.016001 2019] [mpm_event:notice] [pid 11:tid 140083520231680] AH00491: caught SIGTERM, shutting down
+[Mon May 06 18:11:02.748426 2019] [suexec:notice] [pid 12:tid 140427792382208] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 18:11:02.812337 2019] [lbmethod_heartbeat:notice] [pid 12:tid 140427792382208] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 18:11:02.812995 2019] [http2:warn] [pid 12:tid 140427792382208] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 18:11:02.816006 2019] [mpm_event:notice] [pid 12:tid 140427792382208] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 18:11:02.816045 2019] [core:notice] [pid 12:tid 140427792382208] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 18:15:09.276805 2019] [proxy:error] [pid 37:tid 140427344721664] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 18:15:09.276848 2019] [proxy_fcgi:error] [pid 37:tid 140427344721664] [client 192.168.33.10:36404] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 19:04:21.256940 2019] [mpm_event:notice] [pid 12:tid 140427792382208] AH00491: caught SIGTERM, shutting down
+[Mon May 06 19:04:42.783110 2019] [suexec:notice] [pid 13:tid 140410471520512] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 19:04:42.796382 2019] [lbmethod_heartbeat:notice] [pid 13:tid 140410471520512] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 19:04:42.797273 2019] [http2:warn] [pid 13:tid 140410471520512] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 19:04:42.800463 2019] [mpm_event:notice] [pid 13:tid 140410471520512] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 19:04:42.800494 2019] [core:notice] [pid 13:tid 140410471520512] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 19:05:56.878305 2019] [proxy:error] [pid 29:tid 140409955100416] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 19:05:56.878351 2019] [proxy_fcgi:error] [pid 29:tid 140409955100416] [client 192.168.33.10:36968] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 19:31:32.242077 2019] [mpm_event:notice] [pid 13:tid 140410471520512] AH00491: caught SIGTERM, shutting down
+[Mon May 06 22:57:11.752477 2019] [suexec:notice] [pid 11:tid 140394962966784] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 22:57:11.777311 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140394962966784] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 22:57:11.777713 2019] [http2:warn] [pid 11:tid 140394962966784] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 22:57:11.779952 2019] [mpm_event:notice] [pid 11:tid 140394962966784] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 22:57:11.780009 2019] [core:notice] [pid 11:tid 140394962966784] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 22:57:47.481013 2019] [proxy:error] [pid 35:tid 140394625554176] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 22:57:47.481134 2019] [proxy_fcgi:error] [pid 35:tid 140394625554176] [client 192.168.33.10:57016] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 23:25:13.692282 2019] [mpm_event:notice] [pid 11:tid 140394962966784] AH00491: caught SIGTERM, shutting down
+[Mon May 06 23:25:37.768837 2019] [suexec:notice] [pid 11:tid 139690644297984] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 23:25:37.782151 2019] [lbmethod_heartbeat:notice] [pid 11:tid 139690644297984] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 23:25:37.783464 2019] [http2:warn] [pid 11:tid 139690644297984] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 23:25:37.788258 2019] [mpm_event:notice] [pid 11:tid 139690644297984] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 23:25:37.788308 2019] [core:notice] [pid 11:tid 139690644297984] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 23:26:41.505754 2019] [proxy:error] [pid 27:tid 139690103330560] (2)No such file or directory: AH02454: FCGI: attempt to connect to Unix domain socket /run/php-fpm/www.sock (*) failed
+[Mon May 06 23:26:41.505847 2019] [proxy_fcgi:error] [pid 27:tid 139690103330560] [client 192.168.33.10:57776] AH01079: failed to make connection to backend: httpd-UDS
+[Mon May 06 23:33:24.859524 2019] [mpm_event:notice] [pid 11:tid 139690644297984] AH00491: caught SIGTERM, shutting down
+[Mon May 06 23:35:11.564364 2019] [suexec:notice] [pid 11:tid 140629713672448] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 23:35:11.576758 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140629713672448] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 23:35:11.577364 2019] [http2:warn] [pid 11:tid 140629713672448] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 23:35:11.579486 2019] [mpm_event:notice] [pid 11:tid 140629713672448] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 23:35:11.579521 2019] [core:notice] [pid 11:tid 140629713672448] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 23:36:34.282531 2019] [mpm_event:notice] [pid 11:tid 140629713672448] AH00491: caught SIGTERM, shutting down
+[Mon May 06 23:37:01.845399 2019] [suexec:notice] [pid 11:tid 140382072637696] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 23:37:01.860056 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140382072637696] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 23:37:01.860597 2019] [http2:warn] [pid 11:tid 140382072637696] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 23:37:01.862833 2019] [mpm_event:notice] [pid 11:tid 140382072637696] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 23:37:01.862864 2019] [core:notice] [pid 11:tid 140382072637696] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 06 23:37:15.800043 2019] [mpm_event:notice] [pid 11:tid 140382072637696] AH00491: caught SIGTERM, shutting down
+[Mon May 06 23:37:21.391860 2019] [suexec:notice] [pid 11:tid 140152717588736] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Mon May 06 23:37:21.403797 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140152717588736] AH02282: No slotmem from mod_heartmonitor
+[Mon May 06 23:37:21.404201 2019] [http2:warn] [pid 11:tid 140152717588736] AH02951: mod_ssl does not seem to be enabled
+[Mon May 06 23:37:21.406323 2019] [mpm_event:notice] [pid 11:tid 140152717588736] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 06 23:37:21.406395 2019] [core:notice] [pid 11:tid 140152717588736] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'

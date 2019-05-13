@@ -135,3 +135,32 @@ AH00558: httpd: Could not reliably determine the server's fully qualified domain
 [Mon May 06 23:37:21.404201 2019] [http2:warn] [pid 11:tid 140152717588736] AH02951: mod_ssl does not seem to be enabled
 [Mon May 06 23:37:21.406323 2019] [mpm_event:notice] [pid 11:tid 140152717588736] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
 [Mon May 06 23:37:21.406395 2019] [core:notice] [pid 11:tid 140152717588736] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 07 00:15:05.414146 2019] [mpm_event:notice] [pid 11:tid 140152717588736] AH00491: caught SIGTERM, shutting down
+[Tue May 07 00:15:32.005245 2019] [suexec:notice] [pid 12:tid 140264045828352] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Tue May 07 00:15:32.018162 2019] [lbmethod_heartbeat:notice] [pid 12:tid 140264045828352] AH02282: No slotmem from mod_heartmonitor
+[Tue May 07 00:15:32.018666 2019] [http2:warn] [pid 12:tid 140264045828352] AH02951: mod_ssl does not seem to be enabled
+[Tue May 07 00:15:32.020545 2019] [mpm_event:notice] [pid 12:tid 140264045828352] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Tue May 07 00:15:32.020579 2019] [core:notice] [pid 12:tid 140264045828352] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 07 00:16:05.212501 2019] [mpm_event:notice] [pid 12:tid 140264045828352] AH00491: caught SIGTERM, shutting down
+[Tue May 07 15:39:23.270716 2019] [suexec:notice] [pid 11:tid 140600933472512] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Tue May 07 15:39:23.319935 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140600933472512] AH02282: No slotmem from mod_heartmonitor
+[Tue May 07 15:39:23.320587 2019] [http2:warn] [pid 11:tid 140600933472512] AH02951: mod_ssl does not seem to be enabled
+[Tue May 07 15:39:23.323805 2019] [mpm_event:notice] [pid 11:tid 140600933472512] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Tue May 07 15:39:23.323846 2019] [core:notice] [pid 11:tid 140600933472512] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 07 19:20:37.847900 2019] [mpm_event:notice] [pid 11:tid 140600933472512] AH00491: caught SIGTERM, shutting down
+[Tue May 07 21:16:32.699850 2019] [suexec:notice] [pid 10:tid 139948176419072] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Tue May 07 21:16:32.789780 2019] [lbmethod_heartbeat:notice] [pid 10:tid 139948176419072] AH02282: No slotmem from mod_heartmonitor
+[Tue May 07 21:16:32.790529 2019] [http2:warn] [pid 10:tid 139948176419072] AH02951: mod_ssl does not seem to be enabled
+[Tue May 07 21:16:32.793774 2019] [mpm_event:notice] [pid 10:tid 139948176419072] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Tue May 07 21:16:32.793807 2019] [core:notice] [pid 10:tid 139948176419072] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 07 21:23:19.399674 2019] [mpm_event:notice] [pid 10:tid 139948176419072] AH00491: caught SIGTERM, shutting down
+[Tue May 07 21:23:33.014495 2019] [suexec:notice] [pid 11:tid 140221454539008] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.30. Set the 'ServerName' directive globally to suppress this message
+[Tue May 07 21:23:33.025391 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140221454539008] AH02282: No slotmem from mod_heartmonitor
+[Tue May 07 21:23:33.025877 2019] [http2:warn] [pid 11:tid 140221454539008] AH02951: mod_ssl does not seem to be enabled
+[Tue May 07 21:23:33.028020 2019] [mpm_event:notice] [pid 11:tid 140221454539008] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Tue May 07 21:23:33.028047 2019] [core:notice] [pid 11:tid 140221454539008] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 07 21:24:34.395286 2019] [mpm_event:notice] [pid 11:tid 140221454539008] AH00491: caught SIGTERM, shutting down

@@ -1,4 +1,4 @@
-FROM fedora:27
+FROM fedora:29
 
 MAINTAINER wagnerdocri@gmail.com
 
@@ -11,7 +11,7 @@ MAINTAINER wagnerdocri@gmail.com
 RUN dnf -y update
 
 #gyp ERR! stack Error: Can't find Python executable "python", you can set the PYTHON env variable.
-RUN dnf -y install nodejs npm git gcc-c++ python
+RUN dnf -y install nodejs npm git python
 RUN dnf clean all
 
 #RUN npm config set proxy http://cid2:cid2@192.168.0.2:3128/
@@ -27,8 +27,6 @@ RUN npm install -g webpack
 
 RUN npm install -g typescript
 RUN npm install -g ts-loader  #links webpack to complie typescript
-RUN npm install -g @dojo/cli-create-app
-
 
 #
 # Configurations for dojo2 apps

@@ -20,10 +20,14 @@ Some [guidelines](https://github.com/projectatomic/container-best-practices) for
 We welcome contributions.
 
 ** containers info
-   | container --name                   | imgname                                           |           --ip | --net              |     ports | obs |
-   | fzl_vnc                            | wagnermarques/fzl_vnc:0.0.1                       | 192.168.33.155 | fzl_network_bridge | 5901:5901 |     |
-   | fzl_firefox                        | wagnermarques/fzl_firefox:0.0.1                   | 192.168.33.157 | fzl_network_bridge | 5902:5901 |     |
-   | fzl_eclipse_jee_oxygen_java8_fed27 | wagnermarques/eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901 |     |
+   | container --name                   | imgname                                           |           --ip | --net              | ports                  | obs |
+   | fzl_vnc                            | wagnermarques/fzl_vnc:0.0.1                       | 192.168.33.155 | fzl_network_bridge | 5901:5901              |     |
+   | fzl_firefox                        | wagnermarques/fzl_firefox:0.0.1                   | 192.168.33.157 | fzl_network_bridge | 5902:5901              |     |
+   | fzl_eclipse_jee_oxygen_java8_fed27 | wagnermarques/eclipse-jee-oxigen-jdk8-fed27:0.0.1 | 192.168.33.158 | fzl_network_bridge | 5903:5901              |     |
+   | nodegmap                           |                                                   |  192.168.33.30 |                    | 3001->3000             |     |
+   | fzl_nodejs_game_clickduplo         |                                                   |  192.168.33.32 |                    | 0.0.0.0:3003->3000/tcp |     |
+   | fzl_nodejs_nodechat                |                                                   |  192.168.33.34 |                    | 0.0.0.0:3005->3000/tcp |     |
+   | fzl_mariadb310fc29                 |                                                   |  192.168.33.33 |                    |                        |     |
 
 
 

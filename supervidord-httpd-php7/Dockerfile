@@ -7,9 +7,11 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 RUN dnf -y update && dnf -y install httpd
-RUN dnf -y install php php-cli \
-        php-fpm php-mysqlnd php-zip php-devel php-gd php-mcrypt php-mbstring \
-        php-curl php-xml php-pear php-bcmath php-json
+RUN dnf -y install php php-cli php-fpm \
+        php-pgsql php-pdo-dblib php-pdo \
+        php-devel php-zip php-mysqlnd php-gd php-mcrypt php-mbstring \
+        php-curl php-xml php-pear php-bcmath php-json \
+        php-react-http-client php-cli
 RUN dnf clean all
 
 #https://medium.com/@shrikeh/setting-up-nginx-and-php-fpm-in-docker-with-unix-sockets-6fdfbdc19f91

@@ -1,0 +1,30 @@
+[Tue May 21 15:06:28.049126 2019] [suexec:notice] [pid 11:tid 140348436453632] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.55. Set the 'ServerName' directive globally to suppress this message
+[Tue May 21 15:06:28.070985 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140348436453632] AH02282: No slotmem from mod_heartmonitor
+[Tue May 21 15:06:28.071883 2019] [http2:warn] [pid 11:tid 140348436453632] AH02951: mod_ssl does not seem to be enabled
+[Tue May 21 15:06:28.076115 2019] [mpm_event:notice] [pid 11:tid 140348436453632] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Tue May 21 15:06:28.076614 2019] [core:notice] [pid 11:tid 140348436453632] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 21 16:46:39.124132 2019] [mpm_event:notice] [pid 11:tid 140348436453632] AH00491: caught SIGTERM, shutting down
+[Tue May 21 16:49:25.699457 2019] [suexec:notice] [pid 11:tid 140076949248256] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.55. Set the 'ServerName' directive globally to suppress this message
+[Tue May 21 16:49:25.722464 2019] [lbmethod_heartbeat:notice] [pid 11:tid 140076949248256] AH02282: No slotmem from mod_heartmonitor
+[Tue May 21 16:49:25.723124 2019] [http2:warn] [pid 11:tid 140076949248256] AH02951: mod_ssl does not seem to be enabled
+[Tue May 21 16:49:25.725821 2019] [mpm_event:notice] [pid 11:tid 140076949248256] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Tue May 21 16:49:25.726208 2019] [core:notice] [pid 11:tid 140076949248256] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 21 17:00:33.239316 2019] [mpm_event:notice] [pid 11:tid 140076949248256] AH00491: caught SIGTERM, shutting down
+[Tue May 21 17:00:45.620005 2019] [suexec:notice] [pid 11:tid 139895111969024] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.55. Set the 'ServerName' directive globally to suppress this message
+[Tue May 21 17:00:45.647221 2019] [lbmethod_heartbeat:notice] [pid 11:tid 139895111969024] AH02282: No slotmem from mod_heartmonitor
+[Tue May 21 17:00:45.647897 2019] [http2:warn] [pid 11:tid 139895111969024] AH02951: mod_ssl does not seem to be enabled
+[Tue May 21 17:00:45.650403 2019] [mpm_event:notice] [pid 11:tid 139895111969024] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Tue May 21 17:00:45.650452 2019] [core:notice] [pid 11:tid 139895111969024] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue May 21 19:40:42.040009 2019] [mpm_event:notice] [pid 11:tid 139895111969024] AH00491: caught SIGTERM, shutting down
+[Mon May 27 17:36:11.352891 2019] [suexec:notice] [pid 11:tid 139978639440128] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 192.168.33.55. Set the 'ServerName' directive globally to suppress this message
+[Mon May 27 17:36:11.411105 2019] [lbmethod_heartbeat:notice] [pid 11:tid 139978639440128] AH02282: No slotmem from mod_heartmonitor
+[Mon May 27 17:36:11.411782 2019] [http2:warn] [pid 11:tid 139978639440128] AH02951: mod_ssl does not seem to be enabled
+[Mon May 27 17:36:11.415162 2019] [mpm_event:notice] [pid 11:tid 139978639440128] AH00489: Apache/2.4.39 (Fedora) configured -- resuming normal operations
+[Mon May 27 17:36:11.415204 2019] [core:notice] [pid 11:tid 139978639440128] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Mon May 27 17:40:27.675016 2019] [proxy_fcgi:error] [pid 251:tid 139978176702208] (70007)The timeout specified has expired: [client 192.168.33.10:48486] AH01075: Error dispatching request to :8071: (polling), referer: http://localhost:8071/wordpress/wp-login.php
+[Mon May 27 17:44:51.987052 2019] [proxy_fcgi:error] [pid 34:tid 139977413359360] (70007)The timeout specified has expired: [client 192.168.33.10:48588] AH01075: Error dispatching request to :8071: (polling), referer: http://localhost:8071/wordpress/wp-admin/
+[Mon May 27 18:03:31.289484 2019] [mpm_event:notice] [pid 11:tid 139978639440128] AH00491: caught SIGTERM, shutting down

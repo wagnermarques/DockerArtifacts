@@ -1,6 +1,8 @@
 nodejs-containers-shared-dir/*
 liferay7-containers-shared-dir/*
 liferay7/container_config_folder/downloads/*
+supervisord-wordpress/wordpress
+supervisord-wordpress/www/html/wordpress
 apache-containers-shared-dir/*
 data-dir-for-mariadb/*
 maven_containers_shared_dir/*
@@ -8,6 +10,8 @@ maven_containers_shared_dir/*
 **/target
 **/*.pdf
 **/*.jar
+**/*.zip
+**/*.tar
 **/*.war
 **/Download/*
 **/pdf/*

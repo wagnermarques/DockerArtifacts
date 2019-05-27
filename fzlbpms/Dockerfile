@@ -45,6 +45,7 @@ RUN wget --output-document  $MAVEN_DOWNLOADED_FILE $MAVEN_DOWNLOAD_LINK
 RUN wget --output-document  $ANT_DOWNLOADED_FILE $ANT_DOWNLOAD_LINK
 RUN wget --output-document /tomcat9.tar.gz  -e use_proxy=on -e http_proxy=$http_proxy -e https_proxy=$http_proxy $TOMCAT9_DOWNLOAD_LINK
 
+
 RUN wget --output-document  $ORBEONFORMS_DOWNLOADED_FILE $ORBEONFORMS_DOWNLOAD_LINK
 
 RUN wget --output-document /postgresql-42.2.4.jar https://jdbc.postgresql.org/download/postgresql-42.2.4.jar

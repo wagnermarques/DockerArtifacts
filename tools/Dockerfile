@@ -1,4 +1,4 @@
-FROM fedora
+FROM docker.io/fedora
 MAINTAINER http://fedoraproject.org/wiki/Cloud
 
 ENV container docker
@@ -7,30 +7,28 @@ LABEL RUN="docker run -it --name NAME --privileged --ipc=host --net=host --pid=h
 RUN [ -e /etc/yum.conf ] && sed -i '/tsflags=nodocs/d' /etc/yum.conf || true
 
 # Reinstall all packages to get man pages for them
-RUN dnf -y reinstall "*" && dnf clean all
+RUN dnf -y update && dnf -y reinstall "*" && dnf clean all
 
 # Install all useful packages
-RUN dnf -y install \
-           kernel \
-           e2fsprogs \
-           sos \
-           fpaste \
-           crash \
-           strace \
-           ltrace \
-           tcpdump \
+RUN dnf -y remove vim-minimal && \
+    dnf -y install \
            abrt \
-           pcp \
-           systemtap \
-           perf \
+           bash-completion \
            bc \
            blktrace \
            btrfs-progs \
+           crash \
+           dnf-plugins-core \
+           docker \
+           docker-selinux \
+           e2fsprogs \
            ethtool \
            file \
            findutils \
+           fpaste \
            gcc \
            gdb \
+           gdb-gdbserver \
            git \
            glibc-common \
            glibc-utils \
@@ -38,8 +36,12 @@ RUN dnf -y install \
            iotop \
            iproute \
            iputils \
+           kernel \
+           kubernetes-client \
+           kubernetes-devel \
+           kubernetes-master \
+           kubernetes-node \
            less \
-           pciutils \
            ltrace \
            mailx \
            man-db \
@@ -48,36 +50,31 @@ RUN dnf -y install \
            net-tools \
            numactl \
            numactl-devel \
+           ostree \
            passwd \
+           pciutils \
+           pcp \
            perf \
            procps-ng \
            psmisc \
+           python-dnf-plugins-extras* \
+           python-docker-py \
+           python-rhsm \
+           rootfiles \
+           rpm-ostree \
            screen \
+           sos \
            strace \
+           subscription-manager \
            sysstat \
+           systemtap \
            systemtap-client \
            tar \
            tcpdump \
            vim-enhanced \
-           xauth \
            which \
-           ostree \
-           rpm-ostree \
-           docker \
-           python-docker-py \
-           docker-selinux \
-           kubernetes-client \
-           kubernetes-node \
-           kubernetes-devel \
-           kubernetes-master \
-           gdb-gdbserver \
-           vim-minimal \
-           bash-completion \
-           subscription-manager \
-           python-rhsm \
-           rootfiles \
-           python-dnf-plugins-extras* \
-           dnf-plugins-core && dnf clean all
+           xauth \
+           && dnf clean all
 
 # Set default command
 CMD ["/usr/bin/bash"]

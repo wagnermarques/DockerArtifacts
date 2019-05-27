@@ -19,6 +19,7 @@ tomcat7.0.56/downloads/*
 android-java-oracle-8-fed27/downloads/*
 **/*.html
 *.log
+<<<<<<< HEAD
 \#*
 *#
 .#*
@@ -34,3 +35,6 @@ data-dir*
 **/*ipgg*
 **/*.csv
 bkpImgs
+=======
+*.swp
+>>>>>>> 959b18c844e96b14323f8bb4d528633385859333

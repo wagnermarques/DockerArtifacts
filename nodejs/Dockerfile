@@ -7,6 +7,9 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 
 
+# ATOMIC CLI run command
+LABEL RUN='docker run -d -p 8080:8080 $IMAGE'
+
 # Install nodejs and npm
 RUN dnf -y update
 
@@ -16,6 +19,12 @@ RUN dnf clean all
 
 #RUN npm config set proxy http://cid2:cid2@192.168.0.2:3128/
 
+<<<<<<< HEAD
+=======
+# Set production environment for nodejs application
+ENV NODE_ENV=production \
+    PATH=/src/node_modules/.bin/:$PATH
+>>>>>>> 959b18c844e96b14323f8bb4d528633385859333
 
 RUN npm install -g jquery
 RUN npm install -g express

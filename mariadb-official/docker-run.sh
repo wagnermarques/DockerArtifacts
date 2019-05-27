@@ -1,17 +1,9 @@
 #!/bin/bash
 #https://hub.docker.com/_/mariadb/
 
-CONTAINER_NAME=$1
-HOST_PORT=$2
-CONTAINER_IP=$3
-
-if [ "x$CONTAINER_NAME" = "x" ]; then
-    {
-        CONTAINER_NAME=mariadb
-        HOST_PORT=3306
-        CONTAINER_IP=192.168.33.151
-    }
-fi
+CONTAINER_NAME=mariadb
+HOST_PORT=3306
+CONTAINER_IP=192.168.33.151
 
 echo "Running... docker-run.sh <$CONTAINER_NAME> at host port <$HOST_PORT> and ip <$CONTAINER_IP>."
 
@@ -27,4 +19,3 @@ docker run \
        -p $HOST_PORT:3306 \
        -e MYSQL_ROOT_PASSWORD=admin123 \
        -d mariadb:10.3 
-

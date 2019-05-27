@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM fedora:28
 
 MAINTAINER wagnerdocri@gmail.com
@@ -8,6 +9,13 @@ ENV http_proxy=http://cid2:cid2@192.168.0.2:3128/
 ENV ftp_proxy=http://cid2:cid2@192.168.0.2:3128/
 ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 
+=======
+FROM docker.io/fedora
+MAINTAINER http://fedoraproject.org/wiki/Cloud
+>>>>>>> 959b18c844e96b14323f8bb4d528633385859333
+
+# The following label is used to run the image with the Atomic tool.  It is not required and will be skipped by a `docker run`. 
+LABEL RUN='docker run -d -p 80:80 $IMAGE'
 
 # Updating dependencies, installing Apache and cleaning dnf caches to reduce container size
 # php-fpm.x86_64 : PHP FastCGI Process Manager

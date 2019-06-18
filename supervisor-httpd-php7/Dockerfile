@@ -7,7 +7,7 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 RUN dnf -y update && dnf -y install httpd
-RUN dnf -y install php php-cli php-fpm \
+RUN dnf -y install httpd php php-cli php-fpm \
         php-pgsql php-pdo-dblib php-pdo \
         php-devel php-zip php-mysqlnd php-gd php-mcrypt php-mbstring \
         php-curl php-xml php-pear php-bcmath php-json \

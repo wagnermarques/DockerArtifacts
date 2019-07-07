@@ -1,0 +1,5 @@
+_site
+.sass-cache
+.jekyll-metadata
+/vendor/bundle
+/jekyll-websites/bootstrap-4-github-pages

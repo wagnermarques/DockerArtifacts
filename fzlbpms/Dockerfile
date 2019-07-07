@@ -137,10 +137,13 @@ RUN rm $ANT_DOWNLOADED_FILE
 RUN rm $MAVEN_DOWNLOADED_FILE
 RUN rm $GRADLE_DOWNLOADED_FILE
 
-EXPOSE 8080 8101
+EXPOSE 8101 8181
+#8101: Karaf ssh default port
+#1099
+#44444
+#8181 http default port
 
 
-
-CMD apache-karaf-4.2.0/bin/karaf	 
+CMD /opt/apache-karaf-4.2.6/bin/karaf server
 
  

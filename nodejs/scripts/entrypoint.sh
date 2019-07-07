@@ -13,7 +13,6 @@ if [ "$PARAM1" = "bash" ];
 then
     printf "==>[entrypoint.sh] %s\n" "about to running $PARAM2 command"
 
-#    cd /node_project    
     echo $PARAM2 | tr '&&' '\n' | while read cmd; do
         $cmd
     done

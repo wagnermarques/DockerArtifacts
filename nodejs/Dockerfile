@@ -7,9 +7,6 @@ MAINTAINER wagnerdocri@gmail.com
 #ENV all_proxy=http://cid2:cid2@192.168.0.2:3128/
 
 
-# ATOMIC CLI run command
-LABEL RUN='docker run -d -p 8080:8080 $IMAGE'
-
 # Install nodejs and npm
 RUN dnf -y update
 
@@ -18,13 +15,6 @@ RUN dnf -y install nodejs npm git python
 RUN dnf clean all
 
 #RUN npm config set proxy http://cid2:cid2@192.168.0.2:3128/
-
-<<<<<<< HEAD
-=======
-# Set production environment for nodejs application
-ENV NODE_ENV=production \
-    PATH=/src/node_modules/.bin/:$PATH
->>>>>>> 959b18c844e96b14323f8bb4d528633385859333
 
 RUN npm install -g jquery
 RUN npm install -g express
@@ -37,18 +27,7 @@ RUN npm install -g webpack
 RUN npm install -g typescript
 RUN npm install -g ts-loader  #links webpack to complie typescript
 
-#
-# Configurations for dojo2 apps
-# from http://dojo.io/tutorials/000_local_installation/index.html
-#
-#This command installs the Dojo command-line tool (@dojo/cli) to simplify development tasks related to creating, testing, and building your applications. Initially, the @dojo/cli tool comes with three commands:
-
-#    create - Provides a skeleton template for Dojo 2 projects
-#    eject - Disconnects a project from @dojo/cli allowing advanced users to customise configuration
-#    version - Reports the version of @dojo/cli and any commands that are installed
 RUN npm install -g @dojo/cli
-
-#In order to create your first Dojo 3 application, you need to globally install the @dojo/cli-create-app command which creates a template project to get started:
 RUN npm install -g @dojo/cli-create-app
 
 
@@ -60,6 +39,7 @@ EXPOSE 3000
 ENV NODE_ENV=production
 
 ADD scripts /scripts
+run bash /scripts/build-bpmnjs.sh
 RUN mkdir /node_project
 # I am not intent to run a single app withing de container but several, or just to build them with
 # pre configured isolated (by container) global node module

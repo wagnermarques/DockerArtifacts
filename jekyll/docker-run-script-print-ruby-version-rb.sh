@@ -5,7 +5,9 @@ CONTAINER_NAME=fzl_jekyll
 
 chmod +x ./scripts/*
 
-docker run -d --rm \
+docker rm $CONTAINER_NAME
+
+docker run -d \
        -v $(pwd)/scripts:/scripts \
        --name $CONTAINER_NAME \
        -p 4040:80 $IMG_NAME "bash;$CMD"

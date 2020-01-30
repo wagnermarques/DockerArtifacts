@@ -1,4 +1,4 @@
-FROM wagnermarques/fzl_vnc:0.0.1
+FROM fedora
 
 MAINTAINER wagnerdocri@gmail.com
 

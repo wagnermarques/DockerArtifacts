@@ -29,11 +29,13 @@ RUN ~/.rbenv/bin/rbenv init -
 #https://stackoverflow.com/questions/18681462/rbenv-shell-not-command
 ENV PATH=$PATH:/home/developer/.rbenv/bin:/home/developer/.rbenv/shims:
 
-RUN curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
+#RUN curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash
 
 RUN rbenv install $RUBY_VERSION
 RUN rbenv rehash
 RUN rbenv global $RUBY_VERSION
 RUN ruby -v
+
+RUN gem install bundler jekyll
 
 ENTRYPOINT ["/entrypoint.sh"]

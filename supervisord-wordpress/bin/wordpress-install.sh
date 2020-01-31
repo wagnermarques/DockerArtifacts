@@ -1,7 +1,8 @@
 #!/bin/bash
 
+thisFileDir=$(pwd)
 
-cd /var/www/html
+cd ../www/html
 
 if [ -d wordpress ];
 then
@@ -11,10 +12,11 @@ fi
 
 curl -o latest-pt_BR.zip https://br.wordpress.org/latest-pt_BR.zip
 unzip -f latest-pt_BR.zip
-ls -l
-#rm -f latest-pt_BR.zip
-#cd /container_config_folder
-#mysql -u root -h 192.168.33.151 -padmin123 < config_database.sql
+rm -f latest-pt_BR.zip
+
+cd $thisFileDir
+docker exec -it wordpress_mariadb mysql -u root -padmin123 < config_database.sql
+
 
 #cp ../../container_config_folder/wp-config.php wordpress/
 #ls -l  wordpress

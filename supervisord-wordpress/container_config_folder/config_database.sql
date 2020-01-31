@@ -1,2 +1,2 @@
-CREATE DATABASE moodle;
-grant all privileges on moodle.* to 'moodle'@'%' identified by 'moodle123';
+CREATE DATABASE wordpress;
+grant all privileges on wordpress.* to 'wordpress'@'%' identified by 'Admin@ipgg';

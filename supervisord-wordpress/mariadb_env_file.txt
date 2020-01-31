@@ -1,0 +1,4 @@
+MYSQL_ROOT_PASSWORD=Admin@ipgg
+MYSQL_DATABASE=wordpress
+MYSQL_USER=administrador
+MYSQL_PASSWORD=Admin@ipgg

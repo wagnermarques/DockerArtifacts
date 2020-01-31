@@ -1,0 +1,9 @@
+#!/bin/bash
+export MYSQL_ROOT_PASSWORD=Admin@ipgg
+export MYSQL_DATABASE=wpdb
+export MYSQL_USER=administrador
+export MYSQL_PASSWORD=Admin@ipgg
+export WORDPRESS_DB_USER=root
+export WORDPRESS_DB_PASSWORD=$MYSQL_ROOT_PASSWORD
+export WORDPRESS_DB_NAME=$MYSQL_DATABASE
+

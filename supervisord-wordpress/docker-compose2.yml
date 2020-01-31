@@ -1,0 +1,40 @@
+version: '3'
+services:
+  db:
+    image: mariadb:10.4.12
+    container_name: wp_mariadb
+    volumes:
+      - ./container_data/db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      
+  supervisor-httpd-php7:
+    container_name: wp_supervisor-httpd-php7
+    depends_on:
+      - db
+    build: ../supervisor-httpd-php7
+    image: supervisor-httpd-php7
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      volumes:
+        ../supervisor-httpd-php7/www:/var/www/html
+        ../supervisor-httpd-php7/container_config_folder:/etc/supervisord/conf.d/
+        ../supervisor-httpd-php7/supervisor_log:/var/log/supervisord
+        ../supervisor-httpd-php7/scripts:/scripts
+        
+    supervisord-wordpress:
+      container_name: wp_supervisord-wordpress
+      depends_on:
+        - supervisor-httpd-php7
+      build: ../supervisord-wordpress
+      image: wp_supervisord-wordpress        

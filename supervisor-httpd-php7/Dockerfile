@@ -2,9 +2,9 @@ FROM wagnermarques/fzl_supervisord:0.0.1
 
 MAINTAINER wagnerdocri@gmail.com
 
-#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 RUN dnf -y update && dnf -y install httpd
 RUN dnf -y install httpd php php-cli php-fpm \

@@ -1,0 +1,25 @@
+version: '3.3'
+services:
+  db:
+    image: mariadb:10.4.12
+    container_name: wordpress_mariadb
+    restart: always
+    volumes:
+      - ./container_data/db_data:/var/lib/mysql
+    env_file: mariadb_env_file.txt
+    ports:
+      - 3306:3306
+  wordpress:    
+    build: .
+    image: wagnermarques/fzl_wordpress:0.0.1
+    container_name: fzl_wordpress
+    restart: always
+    ports:
+      - 8070:80
+    volumes:
+      - ./supervisor_log:/var/log/supervisord
+      - ./container_config_folder/supervisord/conf.d:/etc/supervisord/conf.d
+      - ./scripts:/scripts
+      - ./www:/var/www/html
+
+#https://docs.docker.com/compose/compose-file/

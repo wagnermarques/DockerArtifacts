@@ -1,8 +1,5 @@
-FROM docker.io/fedora
-MAINTAINER http://fedoraproject.org/wiki/Cloud
-
-# Atomic RUN label, enables the atomic cli
-LABEL RUN='docker run --name ssh -d -p 2200:22 $IMAGE'
+FROM docker.io/fedora:31
+MAINTAINER wagnerdocri@gmail.com
 
 EXPOSE 22
 

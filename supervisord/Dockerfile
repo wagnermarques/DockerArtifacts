@@ -1,10 +1,10 @@
-FROM fedora:29
+FROM fedora:31
 
 MAINTAINER wagnerdocri@gmail.com
 
-ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
-ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+#ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
 
 RUN dnf -y update
 RUN dnf -y install python-pip  
@@ -22,6 +22,11 @@ RUN rm -f /etc/ssh/ssh_config.d/*
 # so any supervisord-*.conf in /container_config_folder/ is automatically
 # imported in supervidord.conf without COPY necessity.
 # if its not what you want change it
+
+RUN mkdir -p /etc/supervisord/conf.d/
+RUN mkdir -p /var/log/supervisord
+RUN mkdir -p /scripts
+
 COPY /container_config_folder/supervisord.conf            /etc/supervisord.conf
 COPY /container_config_folder/supervisord-sshd.conf       /etc/supervisord/conf.d/
 COPY /container_config_folder/supervisord-test.conf       /etc/supervisord/conf.d/
@@ -30,9 +35,6 @@ COPY /container_config_folder/ssh_config                  /etc/ssh/ssh_config
 COPY /container_config_folder/ssh-05-redhat.conf          /etc/ssh/ssh_config.d/
 
 
-RUN mkdir -p /etc/supervisord/conf.d/
-RUN mkdir -p /var/log/supervisord
-RUN mkdir -p /scripts
 
 #fzladmin user
 RUN mkdir -p /etc/sudoers.d/ && touch /etc/sudoers.d/fzladmin 
@@ -51,4 +53,5 @@ VOLUME /var/log/supervisord
 VOLUME /scripts
 EXPOSE 22
 
-CMD /usr/bin/supervisord -c /etc/supervisord.conf
+CMD /usr/local/bin/supervisord -c /etc/supervisord.conf
+

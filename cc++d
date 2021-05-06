@@ -1,0 +1,11 @@
+FROM fedora
+
+#https://developer.fedoraproject.org/tech/languages/c/c_installation.html
+
+MAINTAINER wagnerdocri@gmail.com
+
+# install main packages:
+RUN dnf -y update && dnf clean all
+RUN dnf -y gcc clang
+
+

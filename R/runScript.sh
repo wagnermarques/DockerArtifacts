@@ -3,7 +3,7 @@
 # Usage:
 # runScript.sh /path/to/R/script.R
 # 
-# This script will run script.R insite container
+# This script will run your script.R inside container
 # The container name will be the name of the R script file
 # The container will be removed after script runs
 #

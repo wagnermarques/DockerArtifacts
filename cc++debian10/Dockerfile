@@ -4,11 +4,21 @@ FROM debian:10-slim
 
 MAINTAINER wagnerdocri@gmail.com
 
-RUN apt-get update && apt-get upgrade --yes && apt-get install sudo locales --yes
+
+#dnf needs proxy config in this way, but wget...
+#uncomment accodingly your proxy configuration
+ENV http_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV ftp_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+ENV all_proxy=http://wagner:nicolas1*@192.168.0.2:3128/
+
+ADD apt.conf /etc/apt/apt.conf
+
+RUN apt update && apt upgrade --yes && apt install sudo locales --yes
 
 RUN adduser developer && echo "developer ALL=PASSWD: ALL" > /etc/sudoers.d/developer
 
-RUN apt-get install git build-essential manpages-dev cmake --yes
+RUN apt install htop git build-essential manpages-dev cmake --yes
+
 
 WORKDIR /projeto
 

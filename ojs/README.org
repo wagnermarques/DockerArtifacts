@@ -1,0 +1,5 @@
+OJS_CLI_INSTALL: Set to 1 to enable automatic installation
+
+OJS_ADMIN_USERNAME, OJS_ADMIN_PASSWORD, OJS_ADMIN_EMAIL: Admin credentials
+
+OJS_DB_USER, OJS_DB_PASSWORD: Database credentials

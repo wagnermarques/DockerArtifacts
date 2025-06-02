@@ -1,0 +1,36 @@
+version: '3.8' # Specifies the Docker Compose file format version
+
+services:
+  jupyterlab:
+    # --- Option 1: Use a pre-built image from Docker Hub ---
+    # This image includes Python, JupyterLab, conda, and common data science libraries
+    # like pandas, numpy, scipy, matplotlib, seaborn, scikit-learn.
+    #image: jupyter/datascience-notebook:latest # You can pin to a specific version tag if needed
+
+    # --- Option 2: Build a custom image using a Dockerfile (see Dockerfile example below) ---
+    # If you create a Dockerfile in the same directory to add more packages, uncomment this
+    # and comment out the 'image:' line above.
+    build:
+       context: .
+       dockerfile: Dockerfile # Assuming your Dockerfile is named Dockerfile
+
+    container_name: jupyter_notebook # A friendly name for your running container
+    ports:
+      - "10000:8888" # Maps port 10000 on your host machine to port 8888 in the container
+                     # You'll access JupyterLab at http://localhost:10000
+    volumes:
+      - ./projects:/home/jovyan/work # Mounts a 'work' directory from your current local directory
+                                 # into the container at /home/jovyan/work.
+                                 # Your notebooks and data should go into this local 'work' folder.
+    environment:
+      - JUPYTER_ENABLE_LAB=yes # Ensures JupyterLab starts by default
+      - JUPYTER_TOKEN=yoursecuretoken # << CHANGE THIS to a strong, unique token/password!
+                                      # If you remove this line, a token will be generated and
+                                      # printed in the container logs when you start it.
+      # - GRANT_SUDO=yes # Uncomment if you need the 'jovyan' user to have sudo privileges
+                         # within the container for system-level package installations (use with caution).
+      # - CHOWN_HOME=yes # Optional: If you experience permission issues with the mounted volume
+      # - CHOWN_HOME_OPTS='-R'
+      # For Linux/macOS, to help with file permissions on the mounted volume:
+      # user: "${UID_LOCAL}:${GID_LOCAL}" # You'd need to define these in a .env file or pass them
+    restart: unless-stopped # Restarts the container unless it's explicitly stopped, or on Docker daemon restart

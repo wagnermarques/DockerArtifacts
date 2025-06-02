@@ -1,0 +1,32 @@
+services:
+  # Serviço para o Apache PHP
+  servidorapache:
+    build:
+      context: . 
+      dockerfile: Dockerfile 
+    container_name: laravelapp
+    ports:
+      - "8080:80"
+    volumes:  
+      - ./projetos:/var/www/html
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql8
+      DB_DATABASE: bdtcc
+      DB_USERNAME: root
+      DB_PASSWORD: 1234
+
+  # Serviço para o MySQL 8
+  mysql:
+    image: mysql:8
+    container_name: mysql8      
+    environment:      
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: bdtcc
+    volumes:
+      - db_data:/var/lib/mysql
+
+# Definição dos volumes nomeados
+volumes:
+  db_data:

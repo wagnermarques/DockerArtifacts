@@ -1,0 +1,9 @@
+#+Title: Ambiente de desenvolvimento nodejs/angular
+
+* como utilizar
+** clonar o projeto DockerArtifacts
+
+** entrar na pasta do projeto clonado
+** buildar o container
+** utilizar o container pra criar um projeto
+

@@ -1,0 +1,15 @@
+services:
+  ambdev_angular:
+    image: ambdev_angular:0.0.1
+    build:
+      context: .
+      target: development
+    container_name: ambdev_angular
+    ports:
+      - "4200:4200"
+    volumes:
+      # Monta o diretorio do projeto local no diretorio /app do container
+      # Isso permite que as alteracoes no seu codigo local reflitam instantaneamente no container (live-reload)
+      - ./../../src-projects/guiaregional:/apps
+      # Adiciona um volume anonimo para node_modules para evitar que a pasta local sobrescreva a do container
+      - /app/node_modules

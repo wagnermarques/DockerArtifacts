@@ -4,7 +4,8 @@ FROM node:24-alpine as development
 WORKDIR /app
 
 #COPY package*.json ./
-RUN npm apk add git
+RUN apk add --no-cache git
+
 RUN npm install -g @angular/cli
 
 #COPY . .

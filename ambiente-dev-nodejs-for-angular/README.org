@@ -2,8 +2,108 @@
 
 * como utilizar
 ** clonar o projeto DockerArtifacts
+#+name: 
+#+begin_src shell
+wgn@fedora:~$ git clone https://github.com/wagnermarques/DockerArtifacts.git
+Cloning into 'DockerArtifacts'...
+remote: Enumerating objects: 4708, done.
+remote: Counting objects: 100% (213/213), done.
+remote: Compressing objects: 100% (158/158), done.
+remote: Total 4708 (delta 33), reused 197 (delta 24), pack-reused 4495 (from 1)
+Receiving objects: 100% (4708/4708), 5.47 MiB | 1.76 MiB/s, done.
+Resolving deltas: 100% (2090/2090), done.
+#+end_src
 
-** entrar na pasta do projeto clonado
+
+
+** entrar na pasta "./DockerArtifacts/ambiente-dev-nodejs-for-angular"
+#+name: 
+#+begin_src shell
+wgn@fedora:~$ cd DockerArtifacts/ambiente-dev-nodejs-for-angular/
+wgn@fedora:~/DockerArtifacts/ambiente-dev-nodejs-for-angular$ ls -la ./bin/
+total 16
+drwxr-xr-x 1 wgn wgn  120 jul  5 20:14 .
+drwxr-xr-x 1 wgn wgn   90 jul  5 20:14 ..
+-rwxr-xr-x 1 wgn wgn   55 jul  5 20:14 docker-exec-it-bash.sh
+-rw-r--r-- 1 wgn wgn   11 jul  5 20:14 envvars-setup.sh
+-rwxr-xr-x 1 wgn wgn 2377 jul  5 20:14 ng-new.sh
+-rwxr-xr-x 1 wgn wgn   24 jul  5 20:14 node.sh
+-rwxr-xr-x 1 wgn wgn    0 jul  5 20:14 npm.sh
+#+end_src
+
 ** buildar o container
+#+name: 
+#+begin_src shell
+wgn@fedora:~/DockerArtifacts/ambiente-dev-nodejs-for-angular/build-containers/nodejs$ docker compose build
+ambdev_angular  Built                                        
+#+end_src
+
+
 ** utilizar o container pra criar um projeto
+#+name:
+#+begin_src shell
+wgn@fedora:~/DockerArtifacts/ambiente-dev-nodejs-for-angular$ ./bin/ng-new.sh meuprojetoangular
+Verificando o status do cont�iner: ambdev_angular...
+Cont�iner n�o est� em execu��o. Usando 'docker run' com um cont�iner tempor�rio...
+ 
+Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.dev/cli/analytics.
+
+   No
+Global setting: disabled
+Local setting: No local workspace configuration file.
+Effective status: disabled
+✔ Do you want to create a 'zoneless' application without zone.js (Developer Preview)? No
+⠋ Installing packages (npm)...(node:1) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Packages installed successfully.
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+fatal: detected dubious ownership in repository at '/apps/meuprojetoangular'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /apps/meuprojetoangular
+Nothing to be done.
+
+Projeto 'meuprojetoangular' criado com sucesso em ../src-projects/
+Corrigindo permiss�es de arquivo...
+[sudo] senha para wgn: 
+Permiss�es corrigidas. Processo conclu�do!
+wgn@fedora:~/DockerArtifacts/ambiente-dev-nodejs-for-angular$ 
+
+#+end_src
+
+** verificando o projeto criado
+#+name: 
+#+begin_src shell
+wgn@fedora:~/DockerArtifacts/ambiente-dev-nodejs-for-angular$ ls -l src-projects/meuprojetoangular/
+total 324
+-rw-r--r-- 1 wgn wgn   2429 jul  5 20:15 angular.json
+drwxr-xr-x 1 wgn wgn   7608 jul  5 20:17 node_modules
+-rw-r--r-- 1 wgn wgn   1093 jul  5 20:15 package.json
+-rw-r--r-- 1 wgn wgn 306526 jul  5 20:30 package-lock.json
+drwxr-xr-x 1 wgn wgn     22 jul  5 20:15 public
+-rw-r--r-- 1 wgn wgn   1480 jul  5 20:15 README.md
+drwxr-xr-x 1 wgn wgn     60 jul  5 20:15 src
+-rw-r--r-- 1 wgn wgn    429 jul  5 20:15 tsconfig.app.json
+-rw-r--r-- 1 wgn wgn    992 jul  5 20:15 tsconfig.json
+-rw-r--r-- 1 wgn wgn    408 jul  5 20:15 tsconfig.spec.json
+wgn@fedora:~/DockerArtifacts/ambiente-dev-nodejs-for-angular$ 
+
+#+end_src
+
+
+** editando o projeto
+
+wgn@fedora:~/DockerArtifacts/ambiente-dev-nodejs-for-angular/src-projects/meuprojetoangular$ code .
+
 

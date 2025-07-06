@@ -8,8 +8,5 @@ services:
     ports:
       - "4200:4200"
     volumes:
-      # Monta o diretorio do projeto local no diretorio /app do container
-      # Isso permite que as alteracoes no seu codigo local reflitam instantaneamente no container (live-reload)
-      - ./../../src-projects/guiaregional:/apps
-      # Adiciona um volume anonimo para node_modules para evitar que a pasta local sobrescreva a do container
+      - ./../../src-projects/${PROJECT_TO_SERVE}:/app
       - /app/node_modules

@@ -66,15 +66,14 @@ echo "📦 Gerando o componente em: 'src/app/${full_component_path}'..."
 # Comando do Angular CLI. A flag --project não é mais necessária, pois o workdir já estará correto.
 NG_GENERATE_COMMAND="ng generate component ${full_component_path}"
 
-# *** CORREÇÃO PRINCIPAL AQUI ***
 # O diretório de trabalho dentro do contêiner agora é dinâmico
 CONTAINER_WORKDIR="/app/${chosen_project}"
 
 function roda_ng_generate_with_docker_exec(){
   echo "🐳 Contêiner encontrado em execução. Usando 'docker exec'..."
-  # Define o workdir para o projeto específico
-  docker exec -it -w "$CONTAINER_WORKDIR" "$RUNNING_CONTAINER_ID" /bin/sh -c "$NG_GENERATE_COMMAND"
+  docker exec -it -w "/app" "$RUNNING_CONTAINER_ID" /bin/sh -c "$NG_GENERATE_COMMAND"
 }
+
 
 function roda_ng_generate_with_docker_run(){
   echo "🐳 Contêiner não está em execução. Usando 'docker run' em modo temporário..."

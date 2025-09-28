@@ -1,0 +1,8 @@
+#+Tile: moodle ubuntu container
+
+Esse container faz download do moodle, sobre um apache2 e deixa o moodle acessivel na porta 8080.
+
+Se quizer um container com moodle especifico, fruto de um gitclone, usar o container moodle-cloned-ubuntu
+
+Esse container com moodle padrao do download e interessante pra testes num moodle de industria puro enquanto o container "moodle-cloned-ubuntu" e bom pra testar um moodle clonado de um repositorio.
+

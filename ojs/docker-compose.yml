@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  ojs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ojs
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ojs_data:/var/www/html/files
+      - ojs_config:/var/www/html/config
+      - ojs_public:/var/www/html/public
+    environment:
+      - SERVERNAME=localhost
+      - OJS_CLI_INSTALL=1
+      - OJS_DB_HOST=db
+      - OJS_DB_PORT=3306
+      - OJS_DB_NAME=ojs
+      - OJS_DB_USER=ojs_user
+      - OJS_DB_PASSWORD=ojs_password
+      - OJS_ADMIN_USERNAME=admin
+      - OJS_ADMIN_PASSWORD=admin_password
+      - OJS_ADMIN_EMAIL=admin@example.com
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.5
+    container_name: ojs_db
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=ojs
+      - MYSQL_USER=ojs_user
+      - MYSQL_PASSWORD=ojs_password
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  ojs_data:
+  ojs_config:
+  ojs_public:
+  db_data:

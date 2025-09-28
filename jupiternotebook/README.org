@@ -1,0 +1,10 @@
+#+Title: Como usar este container (jupyter notebook)
+
+cd DockerfileArfifacs/jupiternotebook
+
+docker-compose up -d
+
+
+http://127.0.0.1:10000/lab?token=
+
+

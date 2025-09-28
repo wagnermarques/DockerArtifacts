@@ -1,0 +1,12 @@
+services:
+  ambdev_angular:
+    image: ambdev_angular:0.0.1
+    build:
+      context: .
+      target: development
+    container_name: ambdev_angular
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./../../src-projects/${PROJECT_TO_SERVE}:/app
+      - /app/node_modules
